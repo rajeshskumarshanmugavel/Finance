@@ -1,0 +1,10 @@
+::ng-deep{
+    .btn-close{
+        font: normal normal normal 14px/1 FontAwesome;
+        line-height: 0 !important;
+        font-size: 1rem !important;
+    }
+    .btn-close::after{
+        content: "\f00d";
+    }
+}

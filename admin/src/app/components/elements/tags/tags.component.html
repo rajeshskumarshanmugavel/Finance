@@ -1,0 +1,333 @@
+<app-page-header [title]="'TAGS'" [items]="['Elements']" [active_item]="'Tags'"></app-page-header>
+<!-- row -->
+<div class="row">
+  <div class="col-xl-6 col-lg-12">
+    <!-- div -->
+    <div class="card">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <div class="main-content-label mg-b-5">
+            DEFAULT TAG
+          </div>
+          <p class="mg-b-20">It is Very Easy to Customize and it uses in your website aplication.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse1.toggle()"
+              [attr.aria-expanded]="!isCollapsed1">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        
+        <div class="text-wrap">
+          <div class="example">
+            <div class="tags">
+              <span class="tag">First tag<a href="javascript:void(0)" class="tag-addon"><i
+                    class="fe fe-x"></i></a></span>
+              <span class="tag">Second tag<a href="javascript:void(0)" class="tag-addon"><i
+                    class="fe fe-x"></i></a></span>
+              <span class="tag">Third tag<a href="javascript:void(0)" class="tag-addon"><i
+                    class="fe fe-x"></i></a></span>
+              <span class="tag">Fourth tag<a href="javascript:void(0)" class="tag-addon"><i
+                    class="fe fe-x"></i></a></span>
+            </div>
+          </div>
+
+          <div class="" #collapse1="ngbCollapse" [(ngbCollapse)]="isCollapsed1">
+            <pre>
+<code highlight='<div class="example">
+  <div class="tags">
+    <span class="tag">First tag<a href="javascript:void(0)" class="tag-addon"><i
+          class="fe fe-x"></i></a></span>
+    <span class="tag">Second tag<a href="javascript:void(0)" class="tag-addon"><i
+          class="fe fe-x"></i></a></span>
+    <span class="tag">Third tag<a href="javascript:void(0)" class="tag-addon"><i
+          class="fe fe-x"></i></a></span>
+    <span class="tag">Fourth tag<a href="javascript:void(0)" class="tag-addon"><i
+          class="fe fe-x"></i></a></span>
+  </div>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/div-->
+
+  <!--div-->
+  <div class="col-xl-6 col-lg-12">
+    <div class="card">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <div class="main-content-label mg-b-5">
+            Link Tag
+          </div>
+          <p class="mg-b-20">It is Very Easy to Customize and it uses in your website aplication.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse2.toggle()"
+              [attr.aria-expanded]="!isCollapsed2">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        
+        <div class="text-wrap">
+          <div class="example">
+            <div class="tags">
+              <span class="tag tag-rounded">First tag<a href="javascript:void(0)" class="tag-addon rounded-pill"><i
+                    class="fe fe-x"></i></a></span>
+              <span class="tag tag-rounded">Second tag<a href="javascript:void(0)" class="tag-addon rounded-pill"><i
+                    class="fe fe-x"></i></a></span>
+              <span class="tag tag-rounded">Third tag<a href="javascript:void(0)" class="tag-addon rounded-pill"><i
+                    class="fe fe-x"></i></a></span>
+              <span class="tag tag-rounded">Fourth tag<a href="javascript:void(0)" class="tag-addon rounded-pill "><i
+                    class="fe fe-x"></i></a></span>
+            </div>
+          </div>
+          <div class="" #collapse2="ngbCollapse" [(ngbCollapse)]="isCollapsed2">
+            <pre>
+<code highlight='<div class="example">
+  <div class="tags">
+    <span class="tag tag-rounded">First tag<a href="javascript:void(0)" class="tag-addon rounded-pill"><i
+          class="fe fe-x"></i></a></span>
+    <span class="tag tag-rounded">Second tag<a href="javascript:void(0)" class="tag-addon rounded-pill"><i
+          class="fe fe-x"></i></a></span>
+    <span class="tag tag-rounded">Third tag<a href="javascript:void(0)" class="tag-addon rounded-pill"><i
+          class="fe fe-x"></i></a></span>
+    <span class="tag tag-rounded">Fourth tag<a href="javascript:void(0)" class="tag-addon rounded-pill "><i
+          class="fe fe-x"></i></a></span>
+  </div>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/div-->
+
+  <!--div-->
+  <div class="col-xl-6 col-lg-12">
+    <div class="card">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <div class="main-content-label mg-b-5">
+            Default Tags Addon
+          </div>
+          <p class="mg-b-20">It is Very Easy to Customize and it uses in your website aplication.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse3.toggle()"
+              [attr.aria-expanded]="!isCollapsed3">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <div class="tags">
+              <span class="tag tag-default bg-light">
+                One
+                <a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+              </span>
+              <span class="tag tag-default  bg-light">
+                Two
+                <a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+              </span>
+              <span class="tag tag-default  bg-light">
+                Three
+                <a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+              </span>
+              <span class="tag tag-default  bg-light">
+                Four
+                <a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+              </span>
+            </div>
+          </div>
+          <div class="" #collapse3="ngbCollapse" [(ngbCollapse)]="isCollapsed3">
+            <pre>
+<code highlight='<div class="example">
+  <div class="tags">
+    <span class="tag tag-default bg-light">
+      One
+      <a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+    </span>
+    <span class="tag tag-default  bg-light">
+      Two
+      <a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+    </span>
+    <span class="tag tag-default  bg-light">
+      Three
+      <a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+    </span>
+    <span class="tag tag-default  bg-light">
+      Four
+      <a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+    </span>
+  </div>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/div-->
+
+  <!--div-->
+  <div class="col-xl-6 col-lg-12">
+    <div class="card">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <div class="main-content-label mg-b-5">
+            Colored tags
+          </div>
+          <p class="mg-b-20">It is Very Easy to Customize and it uses in your website aplication.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse4.toggle()"
+              [attr.aria-expanded]="!isCollapsed4">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <div class="tags">
+              <span class="tag tag-primary br-5">primary tag<a href="javascript:void(0)" class="tag-addon bg-primary"><i
+                    class="fe fe-x"></i></a> </span>
+              <span class="tag tag-secondary br-5">secondary tag<a href="javascript:void(0)"
+                  class="tag-addon bg-secondary"><i class="fe fe-x"></i></a> </span>
+              <span class="tag tag-success br-5">success tag<a href="javascript:void(0)" class="tag-addon bg-success"><i
+                    class="fe fe-x"></i></a> </span>
+              <span class="tag tag-warning br-5">warning tag<a href="javascript:void(0)" class="tag-addon bg-warning"><i
+                    class="fe fe-x"></i></a> </span>
+              <span class="tag tag-teal br-5">teal tag<a href="javascript:void(0)" class="tag-addon bg-teal"><i
+                    class="fe fe-x"></i></a> </span>
+              <span class="tag tag-danger br-5">danger tag<a href="javascript:void(0)" class="tag-addon bg-danger"><i
+                    class="fe fe-x"></i></a> </span>
+            </div>
+          </div>
+          <div class="" #collapse4="ngbCollapse" [(ngbCollapse)]="isCollapsed4">
+            <pre>
+<code highlight='<div class="example">
+  <div class="tags">
+    <span class="tag tag-primary br-5">primary tag<a href="javascript:void(0)" class="tag-addon bg-primary"><i
+          class="fe fe-x"></i></a> </span>
+    <span class="tag tag-secondary br-5">secondary tag<a href="javascript:void(0)"
+        class="tag-addon bg-secondary"><i class="fe fe-x"></i></a> </span>
+    <span class="tag tag-success br-5">success tag<a href="javascript:void(0)" class="tag-addon bg-success"><i
+          class="fe fe-x"></i></a> </span>
+    <span class="tag tag-warning br-5">warning tag<a href="javascript:void(0)" class="tag-addon bg-warning"><i
+          class="fe fe-x"></i></a> </span>
+    <span class="tag tag-teal br-5">teal tag<a href="javascript:void(0)" class="tag-addon bg-teal"><i
+          class="fe fe-x"></i></a> </span>
+    <span class="tag tag-danger br-5">danger tag<a href="javascript:void(0)" class="tag-addon bg-danger"><i
+          class="fe fe-x"></i></a> </span>
+  </div>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/div-->
+
+  <!--div-->
+  <div class="col-xl-12 col-lg-12">
+    <div class="card">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <div class="main-content-label mg-b-5">
+            Input Tags
+          </div>
+          <p class="mg-b-20">It is Very Easy to Customize and it uses in your website aplication.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse5.toggle()"
+              [attr.aria-expanded]="!isCollapsed5">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        
+        <div class="text-wrap">
+          <div class="example">
+            <div class="form-group">
+              <ng-select [items]="companies" [addTag]="addTagPromise" [multiple]="true" bindLabel="name"
+                [loading]="loading" [(ngModel)]="selectedCompanies">
+                <ng-template ng-tag-tmp let-search="searchTerm">
+                  <b>create new</b>: {{search}}
+                </ng-template>
+              </ng-select>
+            </div>
+          </div>
+          <div class="" #collapse5="ngbCollapse" [(ngbCollapse)]="isCollapsed5">
+            <pre>
+<code highlight=' <div class="example">
+  <div class="form-group">
+    <ng-select [items]="companies" [addTag]="addTagPromise" [multiple]="true" bindLabel="name"
+      [loading]="loading" [(ngModel)]="selectedCompanies">
+      <ng-template ng-tag-tmp let-search="searchTerm">
+        <b>create new</b>: { {search}}
+      </ng-template>
+    </ng-select>
+  </div>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/div-->
+
+  <!--div-->
+  <div class="col-xl-12 col-lg-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="main-content-label mg-b-5">
+          Multiple select Tags
+        </div>
+        <p class="mg-b-10">Multiple Select</p>
+        <ng-select [multiple]="true">
+          <ng-option>
+            Firefox
+          </ng-option>
+          <ng-option value="Chrome">
+            Chrome
+          </ng-option>
+          <ng-option value="Safari">
+            Safari
+          </ng-option>
+          <ng-option value="Opera">
+            Opera
+          </ng-option>
+          <ng-option value="Internet Explorer">
+            Internet Explorer
+          </ng-option>
+        </ng-select>
+      </div>
+    </div>
+  </div>
+  <!--/div-->
+</div>
+<!-- /row -->

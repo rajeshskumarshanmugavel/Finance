@@ -1,0 +1,256 @@
+<app-page-header [title]="'ADVANCED FORMS'" [items]="['Forms']" [active_item]="'Advanced forms'"></app-page-header>
+<!-- row -->
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Multiple Select Styles</h3>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="form-group">
+              <label class="form-label">Basic MutipleSelect</label>
+              <ng-select [items]="month$ | async" [multiple]="true" [closeOnSelect]="false" [searchable]="false"
+                bindLabel="month" placeholder="Select month" [(ngModel)]="selectedMonth">
+              </ng-select>
+            </div>
+            <form [formGroup]="heroForm" novalidate>
+              <label class="form-label">Disabled MutipleSelect</label>
+              <ng-select [items]="month" [selectOnTab]="true" bindValue="month" labelForId="month" [multiple]="true"
+                placeholder="Select month" formControlName="month">
+              </ng-select>
+              <br>
+              <button class="btn btn-secondary btn-sm" (click)="toggleAgeDisable()">Toggle disabled</button>
+            </form>
+            <form [formGroup]="cityForm">
+              <label for="state" class="form-label">Show/Hide</label>
+              <ng-select *ngIf="isCitiesControlVisible" [items]="cities" bindLabel="name" bindValue="id"
+                labelForId="state" [multiple]="true" placeholder="Select cities" clearAllText="Clear"
+                formControlName="selectedCitiesIds">
+              </ng-select>
+              <br>
+              <button (click)="toggleCitiesControl()" class="btn btn-sm btn-secondary me-1">Show/Hide</button>
+              <button (click)="clearCities()" class="btn btn-sm btn-secondary">Clear</button>
+            </form>
+          </div>
+          <div class="col-lg-6">
+            <div class="form-group">
+              <label class="form-label">Group-Option MutipleSelect</label>
+              <ng-select [items]="people" [multiple]="true" bindLabel="name" groupBy="gender" [selectableGroup]="true"
+                [selectableGroupAsModel]="false" [closeOnSelect]="false" bindValue="id" [(ngModel)]="selectedPeople">
+                <ng-template ng-optgroup-tmp let-item="item" let-item$="item$" let-index="index">
+                  <input id="item-{{index}}" type="checkbox" [ngModel]="item$.selected" /> {{item.gender | uppercase}}
+                </ng-template>
+                <ng-template ng-option-tmp let-item="item" let-item$="item$" let-index="index">
+                  <input id="item-{{index}}" type="checkbox" [ngModel]="item$.selected" /> {{item.name}}
+                </ng-template>
+              </ng-select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Group by functional expression</label>
+              <ng-select [items]="accounts" bindLabel="name" bindValue="name" [groupBy]="groupByFn"
+                [groupValue]="groupValueFn" [multiple]="true" [(ngModel)]="GroupAccount">
+                <ng-template ng-optgroup-tmp let-item="item">
+                  <span style="vertical-align: middle;">{{item.name}}</span>
+                  <span class="ml-1 badge badge-secondary">{{item.total}}</span>
+                </ng-template>
+              </ng-select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Selectable groups</label>
+              <ng-select [items]="accounts" bindLabel="name" groupBy="country" [multiple]="true" [closeOnSelect]="false"
+                [selectableGroup]="true" [selectableGroupAsModel]="false" [compareWith]="compareAccounts"
+                [(ngModel)]="selectedAccounts">
+                <ng-template ng-optgroup-tmp let-item="item">
+                  {{item.country || 'Unnamed group'}}
+                </ng-template>
+              </ng-select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Selectable groups with hidden selected items</label>
+              <ng-select [items]="accounts" bindLabel="name" groupBy="country" [multiple]="true" [hideSelected]="true"
+                [closeOnSelect]="false" [selectableGroup]="true" [compareWith]="hidecompareAccounts"
+                [(ngModel)]="hideselectedAccounts">
+                <ng-template ng-optgroup-tmp let-item="item">
+                  {{item.country || 'Unnamed group'}}
+                </ng-template>
+              </ng-select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12 col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <div>
+          <h6 class="card-title mb-1">Multiple Select Styles</h6>
+          <p class="text-muted card-sub-title">First import a latest version of jquery in your page. Then the
+            jquery.sumoselect.min.js and its css (sumoselect.css)</p>
+        </div>
+        <div class="mb-4">
+          <p class="mg-b-10">Multiple Select-1</p>
+          <ng-select [items]="people$ | async" [multiple]="true" [closeOnSelect]="false" [searchable]="false"
+            bindLabel="name" placeholder="Select people" [(ngModel)]="selectedPeopleMultiple"></ng-select>
+        </div>
+        <div>
+          <p class="mg-b-10">Multiple Select-2 create tag</p>
+          <ng-select [items]="companies" [addTag]="addTagPromise" [multiple]="true" bindLabel="name" [loading]="loading"
+            [(ngModel)]="selectedCompanies">
+            <ng-template ng-tag-tmp let-search="searchTerm">
+              <b>create new</b>: {{search}}
+            </ng-template>
+          </ng-select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /row -->
+
+<!-- row -->
+<div class="row">
+  <div class="col-lg-12 col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <div>
+          <h6 class="card-title mb-1">Telephone Input</h6>
+          <p class="text-muted card-sub-title">A JavaScript plugin for entering and validating international telephone
+            numbers. It adds a flag dropdown to any input, detects the user's country, displays a relevant placeholder
+            and provides formatting/validation methods.</p>
+        </div>
+        <div class="input-group telephone-input">
+          <form [formGroup]="myForm" (ngSubmit)="submitPhone()" class="d-flex">
+            <div class="form-width">
+              <mat-form-field appearance="outline">
+                <ngx-mat-intl-tel-input formControlName="phone" [preferredCountries]="['de', 'us']"
+                  [enablePlaceholder]="true" [enableSearch]="true" name="phone" #phone>
+                </ngx-mat-intl-tel-input>
+                <mat-hint>eg : {{phone.selectedCountry?.placeHolder}}</mat-hint>
+              </mat-form-field>
+            </div>
+            <span class="mg-t-2 input-group-btn">
+              <button class="btn ripple btn-primary ms-3" type="submit">Submit</button>
+            </span>
+          </form>
+        </div>
+        <div class="mg-t-10" *ngIf="phoneNumber">
+          Entered Phone number : {{phoneNumber}}
+        </div>
+        <div class="mg-t-10 error" *ngIf="phoneValue.touched &&phoneValue.invalid">phone number invalid</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /row -->
+
+<!-- row -->
+<div class="row">
+  <div class="col-lg-12 col-md-12">
+    <div class="card">
+      <div class=" card-body">
+        <div class="row">
+          <div class="col-lg-4 col-sm-12 mb-2">
+            <ngx-dropzone (change)="onSelect($event)">
+              <ngx-dropzone-label>Drop it!</ngx-dropzone-label>
+              <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+                <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+              </ngx-dropzone-preview>
+            </ngx-dropzone>
+          </div>
+          <div class="col-lg-4 col-sm-12 mb-2">
+            <ngx-dropzone (change)="onSelect($event)" [disabled]="true" [expandable]="true">
+              <ngx-dropzone-label>Disabled</ngx-dropzone-label>
+              <ngx-dropzone-preview *ngFor="let f of filesDisabled">
+                <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+              </ngx-dropzone-preview>
+            </ngx-dropzone>
+          </div>
+          <div class="col-lg-4 col-sm-12 mb-2">
+            <ngx-dropzone (change)="onPreviewFileSelect($event)">
+              <ngx-dropzone-label>
+                <div>
+                  <h2>preview file</h2>
+                </div>
+              </ngx-dropzone-label>
+              <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of filesPreview" [file]="f"
+                [removable]="true" (removed)="onPreviewFileRemove(f)">
+                <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+              </ngx-dropzone-image-preview>
+            </ngx-dropzone>
+          </div>
+        </div>
+        <div class="input-group file-browser mb-5 mt-3">
+
+          <div class="col-12">
+            <div class="text-center">
+              <input class="form-control" type="file" (change)="onChange($event)">
+
+              <button (click)="onUpload()" class="btn btn-success mt-1 mb-1">
+                Upload
+              </button>
+            </div>
+          </div>
+          <div class="col-12">
+            <!--Flag variable is used here-->
+            <div class="container" *ngIf="loading">
+              <h3>Loading ...</h3>
+            </div>
+            <!-- Shareable short link of  uoloaded file -->
+            <div class="container text-center jumbotron" *ngIf="shortLink">
+              <h2> Visit Here</h2>
+              <a href="{{shortLink}}">{{shortLink}}</a>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="form-group mb-0">
+          <div class="row">
+            <div class="col-md-4 col-sm-12">
+              <div class="box-title">Controls</div>
+
+              <div class="action-container">
+                <div class="action-button" (click)='toggleType()'>
+                  {{(type == "component") ? "Switch to directive" : "Switch to component"}}</div>
+
+                <div class="action-button" (click)='toggleDisabled()'>Toggle disabled state</div>
+
+                <div class="action-button" (click)='toggleMultiUpload()'>
+                  {{(config.maxFiles !== 1) ? "Upload single file" : "Upload multiple files"}}</div>
+
+                <div class="action-button" (click)='toggleAutoReset()'>
+                  {{config.autoReset ? "Turn off auto reset" : "Turn on auto reset"}}</div>
+
+                <div class="action-button" (click)='toggleClickAction()'>
+                  {{config.clickable ? "Turn off click action" : "Turn on click action"}}</div>
+
+                <div class="action-button" (click)='resetDropzoneUploads()'>Reset upload area</div>
+              </div>
+            </div>
+
+            <div class="col-md-8 col-sm-12">
+              <div class="box-title">Dropzone</div>
+
+              <div class="content-container">
+                <dropzone *ngIf="type === 'component'" class="dropzone-container" [config]="config"
+                  [disabled]="disabled" [message]="'Click or drag images here to upload'" (init)="onUploadInit($event)"
+                  (error)="onUploadError($event)" (success)="onUploadSuccess($event)"></dropzone>
+
+                <div *ngIf="type === 'directive'" class="dropzone dropzone-container" [dropzone]="config"
+                  [disabled]="disabled" (init)="onUploadInit($event)" (error)="onUploadError($event)"
+                  (success)="onUploadSuccess($event)"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- row closed -->

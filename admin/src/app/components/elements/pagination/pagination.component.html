@@ -1,0 +1,235 @@
+<app-page-header [title]="'PAGINATION'" [items]="['Elements']" [active_item]="'Pagination'"></app-page-header>
+<!-- row -->
+<div class="row">
+  <div class="col-xl-12 col-lg-12">
+    <div class="card">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">BASIC PAGINATION</h6>
+          <p class="text-muted card-sub-title">Below are basic pagination navigation.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse1.toggle()"
+              [attr.aria-expanded]="!isCollapsed1">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <ngb-pagination [collectionSize]="30" [page]="1" aria-label="Default pagination"></ngb-pagination>
+          </div>
+
+          <div class="" #collapse1="ngbCollapse" [(ngbCollapse)]="isCollapsed1">
+            <pre>
+<code highlight='<div class="example">
+  <ngb-pagination [collectionSize]="30" [page]="1" aria-label="Default pagination"></ngb-pagination>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card custom-card">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">CIRCLED PAGINATION</h6>
+          <p class="text-muted card-sub-title">Below are basic pagination navigation in circle.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse2.toggle()"
+              [attr.aria-expanded]="!isCollapsed2">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <ngb-pagination [collectionSize]="30" [page]="1" aria-label="Default pagination" class="pagination-circled mb-0"></ngb-pagination>
+          </div>
+          <div class="" #collapse2="ngbCollapse" [(ngbCollapse)]="isCollapsed2">
+            <pre>
+<code highlight='<ngb-pagination [collectionSize]="30" [page]="1" aria-label="Default pagination" class="pagination-circled mb-0"></ngb-pagination>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">OUT-LINE PAGINATION</h6>
+          <p class="text-muted card-sub-title">Below are basic pagination navigation.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse3.toggle()"
+              [attr.aria-expanded]="!isCollapsed3">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <ngb-pagination [collectionSize]="30" [page]="1" [boundaryLinks]="true"></ngb-pagination>
+            <ngb-pagination [collectionSize]="40" [page]="1" [maxSize]="2" [rotate]="true" [boundaryLinks]="true">
+            </ngb-pagination>
+          </div>
+          <div class="" #collapse3="ngbCollapse" [(ngbCollapse)]="isCollapsed3">
+            <pre>
+<code highlight='<div class="example">
+  <ngb-pagination [collectionSize]="30" [page]="1" [boundaryLinks]="true"></ngb-pagination>
+  <ngb-pagination [collectionSize]="40" [page]="1" [maxSize]="2" [rotate]="true" [boundaryLinks]="true">
+  </ngb-pagination>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card custom-card">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">PAGINATION FOR DARK BACKGROUND</h6>
+          <p class="text-muted card-sub-title">Below are basic pagination navigation for dark background.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse4.toggle()"
+              [attr.aria-expanded]="!isCollapsed4">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example  bg-dark">
+            <div class="pd-20 bg-gray-800">
+              <ul class="pagination pagination-dark mb-0 mg-b-0">
+                <li class="page-item"><a class="page-link" href="javascript:void(0);"><i
+                      class="icon ion-ios-arrow-back"></i></a></li>
+                <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
+                <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+                <li class="page-item"><a class="page-link" href="javascript:void(0);"><i
+                      class="icon ion-ios-arrow-forward"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="" #collapse4="ngbCollapse" [(ngbCollapse)]="isCollapsed4">
+            <pre>
+<code highlight='<div class="example  bg-dark">
+  <div class="pd-20 bg-gray-800">
+    <ul class="pagination pagination-dark mb-0 mg-b-0">
+      <li class="page-item"><a class="page-link" href="javascript:void(0);"><i
+            class="icon ion-ios-arrow-back"></i></a></li>
+      <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
+      <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+      <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+      <li class="page-item"><a class="page-link" href="javascript:void(0);"><i
+            class="icon ion-ios-arrow-forward"></i></a></li>
+    </ul>
+  </div>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card custom-card">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">VARIANT PAGINATION</h6>
+          <p class="text-muted card-sub-title">Below are the pagination button with custom symbol..</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse5.toggle()"
+              [attr.aria-expanded]="!isCollapsed5">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <div class="row row-sm">
+              <div class="col-sm-6 col-lg-4 m-auto">
+                <ngb-pagination [collectionSize]="40" [(page)]="page1" aria-label="Custom pagination">
+                  <ng-template ngbPaginationPrevious>Prev</ng-template>
+                  <ng-template ngbPaginationNext>Next</ng-template>
+                  <ng-template ngbPaginationNumber let-p>{{ getPageSymbol(p) }}</ng-template>
+                </ngb-pagination>
+              </div><!-- col-4 -->
+            </div>
+          </div>
+          <div class="" #collapse5="ngbCollapse" [(ngbCollapse)]="isCollapsed5">
+            <pre>
+<code highlight='<div class="example">
+  <div class="row row-sm">
+    <div class="col-sm-6 col-lg-4 m-auto">
+      <ngb-pagination [collectionSize]="40" [(page)]="page1" aria-label="Custom pagination">
+        <ng-template ngbPaginationPrevious>Prev</ng-template>
+        <ng-template ngbPaginationNext>Next</ng-template>
+        <ng-template ngbPaginationNumber let-p>{ { getPageSymbol( p ) }}</ng-template>
+      </ngb-pagination>
+    </div><!-- col-4 -->
+  </div>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card custom-card">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Pagination Sizes</h6>
+          <p class="text-muted card-sub-title">Fancy larger, default and smaller pagination Add </p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse6.toggle()"
+              [attr.aria-expanded]="!isCollapsed6">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <ngb-pagination class="d-flex justify-content-start" [collectionSize]="30" [(page)]="page"></ngb-pagination>
+            <ngb-pagination class="d-flex justify-content-center" [collectionSize]="30" [(page)]="page">
+            </ngb-pagination>
+            <ngb-pagination class="d-flex justify-content-end" [collectionSize]="30" [(page)]="page"></ngb-pagination>
+          </div>
+          <div class="" #collapse6="ngbCollapse" [(ngbCollapse)]="isCollapsed6">
+            <pre>
+<code highlight='<div class="example">
+  <ngb-pagination class="d-flex justify-content-start" [collectionSize]="30" [(page)]="page"></ngb-pagination>
+  <ngb-pagination class="d-flex justify-content-center" [collectionSize]="30" [(page)]="page">
+  </ngb-pagination>
+  <ngb-pagination class="d-flex justify-content-end" [collectionSize]="30" [(page)]="page"></ngb-pagination>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- /row -->

@@ -1,0 +1,344 @@
+<p class="mt-6"></p>
+<div class="left-content">
+    <span class="main-content-title mg-b-0 mg-b-lg-1">Manage Screens</span>
+</div>
+
+<div class="overflow-scroll card" style="padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;">
+    <div class="row md-col-12 d-flex justify-content-between">
+        <div class="md-col-6 form-group form-inline">
+            Search: <input class="form-control ms-2" type="text" name="searchTerm" [(ngModel)]="service.searchTerm"/>
+            <span class="ml-3" *ngIf="service.loading$ | async"><span class="spinner-border spinner-border-sm"></span></span>
+        </div>
+        <div class="md-col-6">
+            <button class="demo-button btn btn-primary me-2" (click)="clearFields(); openCenter(addModal)"> Create Screen </button>
+        </div>
+    </div>
+
+    
+    
+    <!-- Screen Table -->
+    <table class="table table-striped border">
+        <thead>
+            <tr>
+                <th scope="col" sortable="screenId" (sort)="onSort($event)">Screen ID</th>
+                <th scope="col" sortable="location" (sort)="onSort($event)">Location</th>
+                <th scope="col" sortable="resWidth" (sort)="onSort($event)">Resolution (W X H)</th>
+                <th scope="col" sortable="width" (sort)="onSort($event)">Screen (W X H)</th>
+                <th scope="col" sortable="loop" (sort)="onSort($event)">Slot</th>
+                <th scope="col" sortable="NoOFscreens" (sort)="onSort($event)">No Of Screens</th>
+                <th scope="col" sortable="latitude" (sort)="onSort($event)"> Latitude</th>
+                <th scope="col" sortable="longitude" (sort)="onSort($event)">Longitude</th>
+                <th scope="col" sortable="mediaType" (sort)="onSort($event)"> Media Type</th>
+                <th scope="col" sortable="Environment" (sort)="onSort($event)">environment</th>
+                <th scope="col" sortable="sector" (sort)="onSort($event)"> Sector</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let screen of service.screens$ | async; track item; let i = index;">
+                <td><ngb-highlight [result]="screen.NoScreenId" [term]="service.searchTerm"></ngb-highlight></td>
+                <td><ngb-highlight [result]="screen.location" [term]="service.searchTerm"></ngb-highlight></td>
+                <td><ngb-highlight [result]="screen.resWidth" [term]="service.searchTerm"></ngb-highlight> X <ngb-highlight [result]="screen.resHeight" [term]="service.searchTerm"></ngb-highlight></td>
+                <td><ngb-highlight [result]="screen.width" [term]="service.searchTerm"></ngb-highlight> X <ngb-highlight [result]="screen.height" [term]="service.searchTerm"></ngb-highlight></td>
+                <td><ngb-highlight [result]="screen.loop" [term]="service.searchTerm"></ngb-highlight></td>
+                <td><ngb-highlight [result]="screen.NoOFscreens" [term]="service.searchTerm"></ngb-highlight></td>
+                <td><ngb-highlight [result]="screen.latitude" [term]="service.searchTerm"></ngb-highlight></td>
+                <td><ngb-highlight [result]="screen.longitude" [term]="service.searchTerm"></ngb-highlight></td>
+                <td><ngb-highlight [result]="screen.mediaType" [term]="service.searchTerm"></ngb-highlight></td>
+                <td><ngb-highlight [result]="screen.environment" [term]="service.searchTerm"></ngb-highlight></td>
+                <td><ngb-highlight [result]="screen.sector" [term]="service.searchTerm"></ngb-highlight></td>
+                <td>
+                    <a href="javascript:void(0)" class="btn btn-success btn-sm br-5 me-2" (click)="onEdit(screen.id); openCenter(editModal)">
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="16" class="table-edit">
+                                <path  d="M0 0h24v24H0V0z" fill="none"></path>
+                                <path  d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM5.92 19H5v-.92l9.06-9.06.92.92L5.92 19zM20.71 5.63l-2.34-2.34c-.2-.2-.45-.29-.71-.29s-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41z"></path>
+                            </svg>
+                        </i>
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-danger btn-sm br-5" (click)="onDelete(screen.id); openCenter(confirmModal);">
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="16" class="table-delete"><path _ngcontent-ng-c60281099="" d="M0 0h24v24H0V0z" fill="none"></path>
+                                <path  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9zm7.5-5l-1-1h-5l-1 1H5v2h14V4h-3.5z"></path>
+                            </svg>
+                        </i>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Pagination -->
+    <div class="d-flex justify-content-between p-2">
+        <ngb-pagination [collectionSize]="(service.total$ | async)!" [(page)]="service.page" [pageSize]="service.pageSize"></ngb-pagination>
+        <ng-select class="" style="width: auto; overflow: visible;" name="pageSize" [(ngModel)]="service.pageSize">
+            <ng-option value="5">5</ng-option>
+            <ng-option ng-option-selected value="10">10</ng-option>
+            <ng-option value="25">25</ng-option>
+        </ng-select>
+    </div>
+    
+    <!-- Add Modal -->
+    <ng-template #addModal let-modal>
+        <div class="modal-header">
+          <h6 class="modal-title">Create Screen</h6>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Screen Name</label>
+                        <input type="text" class="form-control" [(ngModel)]="screenName" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">NetWork Screen ID</label>
+                        <input type="text" class="form-control" [(ngModel)]="NoScreenId" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Location</label>
+                        <input type="text" class="form-control" [(ngModel)]="location" [ngModelOptions]="{standalone: true}">
+                    </div>
+
+                    <div class="mb-3 col-md-3">
+                        <label class="text-black font-w500">Resolution(W)</label>
+                        <input type="text" class="form-control" [(ngModel)]="resWidth" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="mb-3 col-md-3">
+                        <label class="text-black font-w500">Resolution(H)</label>
+                        <input type="text" class="form-control" [(ngModel)]="resHeight" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    
+                </div> 
+                <div class="row">
+                   
+                    <div class="mb-3 col-md-3">
+                        <label class="text-black font-w500">Screen (W)</label>
+                        <input type="text" class="form-control" [(ngModel)]="width" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="mb-3 col-md-3">
+                        <label class="text-black font-w500"> Screen (H)</label>
+                        <input type="text" class="form-control" [(ngModel)]="height" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Slots</label>
+                        <input type="text" class="form-control" [(ngModel)]="loop" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    
+                </div> 
+               
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">NO Of Screens</label>
+                        <input type="text" class="form-control" [(ngModel)]="NoOFscreens" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Latitude</label>
+                        <input type="text" class="form-control" [(ngModel)]="latitude" [ngModelOptions]="{standalone: true}">
+                    </div>
+                   
+                </div> 
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Longitude</label>
+                        <input type="text" class="form-control" [(ngModel)]="longitude" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Media Type</label>
+                        <select class="form-select " [(ngModel)]="mediaType"  [ngModelOptions]="{standalone: true}" >
+                            <option value="" default selected>Select </option> 
+                            <option value="small">Small</option> 
+                            <option value="large"> Large</option> 
+                        </select>
+                    </div>
+                    
+                </div> 
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Environment</label>
+                         <select class="form-select " [(ngModel)]="environment"  [ngModelOptions]="{standalone: true}" >
+                            <option value="" default selected>Select </option> 
+                            <option value="Indoor">Indoor</option> 
+                            <option value="Outdoor">Outdoor</option> 
+                        </select>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Sector</label>
+                         <select class="form-select " [(ngModel)]="sector"  [ngModelOptions]="{standalone: true}" >
+                            <option value="" default selected>Select </option> 
+                            <option value="Shopping Mall">Shopping Mall</option> 
+                            <option value="Hospital"> Hospital</option> 
+                            <option value="Airport"> Airport </option> 
+                        </select>
+                    </div>
+                    
+                </div> 
+                <div class="row">  
+                    <div class="mb-3" *ngIf="isError">
+                        <label class="mb-1 form-label text-danger">{{errorMessage}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary light" (click)="onCreate(modal);">Create</button>
+                    </div>
+                </div>  
+            </form>
+        </div>
+    </ng-template>
+
+    <!-- Edit Modal -->
+    <ng-template #editModal let-modal>
+        <div class="modal-header">
+          <h6 class="modal-title">Edit Screen</h6>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Screen Name</label>
+                        <input type="text" class="form-control" [(ngModel)]="screenName" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">NetWork Screen ID</label>
+                        <input type="text" class="form-control" [(ngModel)]="NoScreenId" [ngModelOptions]="{standalone: true}">
+                    </div>
+                   
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Location</label>
+                        <input type="text" class="form-control" [(ngModel)]="location" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="mb-3 col-md-3">
+                        <label class="text-black font-w500">Resolution (W)</label>
+                        <input type="text" class="form-control" [(ngModel)]="resWidth" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="mb-3 col-md-3">
+                        <label class="text-black font-w500">Resolution (H)</label>
+                        <input type="text" class="form-control" [(ngModel)]="resHeight" [ngModelOptions]="{standalone: true}">
+                    </div>
+                  </div> 
+                
+                  <div class="row">
+                    
+                    <div class="mb-3 col-md-3">
+                        <label class="text-black font-w500">Screen (W)</label>
+                        <input type="text" class="form-control" [(ngModel)]="width" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="mb-3 col-md-3">
+                        <label class="text-black font-w500">Screen (H)</label>
+                        <input type="text" class="form-control" [(ngModel)]="height" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Slot</label>
+                        <input type="text" class="form-control" [(ngModel)]="loop" [ngModelOptions]="{standalone: true}">
+                    </div>
+                 </div> 
+                
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">NO Of Screens</label>
+                        <input type="text" class="form-control" [(ngModel)]="NoOFscreens" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Latitude</label>
+                        <input type="text" class="form-control" [(ngModel)]="latitude" [ngModelOptions]="{standalone: true}">
+                    </div>
+                   
+                </div> 
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Longitude</label>
+                        <input type="text" class="form-control" [(ngModel)]="longitude" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Media Type</label>
+                        <select class="form-select " [(ngModel)]="mediaType"  [ngModelOptions]="{standalone: true}" >
+                            <option value="" default selected>Select </option> 
+                            <option value="small">Small</option> 
+                            <option value="large"> Large</option> 
+                        </select>
+                    </div>
+                    
+                </div> 
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Environment</label>
+                        <select class="form-select " [(ngModel)]="environment"  [ngModelOptions]="{standalone: true}" >
+                            <option value="" default selected>Select </option> 
+                            <option value="Indoor">Indoor</option> 
+                            <option value="Outdoor">Outdoor</option> 
+                        </select>
+
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Sector</label>
+                        <select class="form-select " [(ngModel)]="sector"  [ngModelOptions]="{standalone: true}" >
+                            <option value="" default selected>Select </option> 
+                            <option value="Shopping Mall">Shopping Mall</option> 
+                            <option value="Hospital"> Hospital</option> 
+                            <option value="Airport"> Airport </option> 
+                        </select>
+                    </div>
+                    
+                </div> 
+                <div class="row">  
+                    <div class="mb-3" *ngIf="isError">
+                        <label class="mb-1 form-label text-danger">{{errorMessage}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary light" (click)="onSave(modal);">Save</button>
+                    </div>
+                </div>  
+            </form>
+        </div>
+    </ng-template>
+
+    <!-- Confirm Modal -->
+    <ng-template #confirmModal let-modal>
+        <div class="modal-header">
+            <h5 class="modal-title">Confirm Delete</h5>
+            <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body data-picker-costem">
+            <form>
+                <div class="mb-3">
+                    <label class="text-black font-w500">Do you want to delete?</label>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary light" style="margin-left: 10px;" (click)="modal.dismiss(); onConfirmYes();">Yes</button>
+                    <button type="button" class="btn btn-primary light" style="margin-left: 20px;" (click)="modal.dismiss();">No</button>
+                </div>
+            </form>
+        </div>
+    </ng-template>
+
+    <!-- Message Modal -->
+    <ng-template #messageModal let-modal>
+        <div class="modal-header">
+            <h5 class="modal-title">{{messageHeader}}</h5>
+            <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body data-picker-costem">
+            <form>
+                <div class="mb-3">
+                    <label class="text-black font-w500">{{message}}</label>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary light" style="margin-left: 10px;" (click)="modal.dismiss();">OK</button>
+                </div>
+            </form>
+        </div>
+    </ng-template>
+ </div>

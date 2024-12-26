@@ -1,0 +1,149 @@
+<app-page-header [title]="'MAIL COMPOSE'" [items]="['Mail']" [active_item]="'Mail compose'"></app-page-header>
+<!-- row opened -->
+<div class="row row-sm">
+  <!-- Col -->
+  <div class="col-lg-4 col-xl-3 col-md-12 col-sm-12">
+    <div class="card mg-b-20">
+      <div class="main-content-left main-content-left-mail card-body">
+        <a class="btn btn-primary btn-compose" id="btnCompose"  (click)="open(content)">Compose</a>
+        <div class="main-mail-menu">
+          <nav class="nav main-nav-column mg-b-20">
+            <a class="nav-link thumb active" href="javascript:void(0);" routerLink="/mail/mail"><i class="far fa-envelope"></i> Inbox
+              <span>18</span></a>
+            <a class="nav-link thumb" href="javascript:void(0);"><i class="far fa-star"></i> Starred <span>8</span></a>
+            <a class="nav-link thumb" href="javascript:void(0);"><i class="far fa-clock"></i> Snoozed <span>6</span></a>
+            <a class="nav-link thumb" href="javascript:void(0);"><i class="far fa-bookmark"></i> Important
+              <span>15</span></a>
+            <a class="nav-link thumb" href="javascript:void(0);"><i class="far fa-paper-plane"></i> Sent Mail
+              <span>24</span></a>
+            <a class="nav-link thumb" href="javascript:void(0);"><i class="far fa-hourglass"></i> Drafts
+              <span>2</span></a>
+            <a class="nav-link thumb" href="javascript:void(0);"><i class="far fa-dot-circle"></i> Spam
+              <span>32</span></a>
+            <a class="nav-link thumb" href="javascript:void(0);"><i class="far fa-comments"></i> Chats
+              <span>14</span></a>
+            <a class="nav-link thumb" href="javascript:void(0);"><i class="far fa-user-circle"></i> Contacts
+              <span>547</span></a>
+            <a class="nav-link thumb" href="javascript:void(0);"><i class="fe fe-trash"></i> Trash <span>365</span></a>
+          </nav>
+          <label class="main-content-label main-content-label-sm">Settings</label>
+          <nav class="nav main-nav-column">
+            <a class="nav-link active" href="javascript:void(0);">Email Settings</a>
+          </nav>
+        </div><!-- main-mail-menu -->
+      </div>
+    </div>
+  </div>
+  <!-- /Col -->
+  <div class="col-xl-9 col-lg-8 col-md-12 col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Compose new message</h3>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <div class="row align-items-center">
+              <label class="col-sm-2">To</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row align-items-center">
+              <label class="col-sm-2">Subject</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row ">
+              <label class="col-sm-2">Message</label>
+              <div class="col-sm-10">
+                <textarea rows="10" class="form-control"></textarea>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="main-chat-footer d-sm-flex">
+        <nav class="nav">
+          <a class="nav-link" ngbTooltip="Attach"><i class="bx bx-paperclip text-muted tx-18"></i></a>
+          <a class="nav-link" ngbTooltip="Link"><i class="bx bx-link text-muted tx-18"></i></a>
+          <a class="nav-link" ngbTooltip="Photos"><i class="bx bx-image text-muted tx-18"></i></a>
+          <a class="nav-link" ngbTooltip="Delete"><i class="bx bx-trash text-muted tx-18"></i></a>
+        </nav>
+        <div class="btn-list ms-auto" ngbDropdown>
+          <a class="main-msg-send bg-primary text-white" href="javascript:;"><i class="far fa-paper-plane"></i></a>
+          <a href="javascript:void(0);" class="ms-2 br-5 p-2 border " ngbDropdownToggle><i
+              class="fe fe-more-vertical align-middle"></i></a>
+          <div ngbDropdownMenu class="tx-13">
+            <a class="dropdown-item" href="javascript:void(0);">Schedule send</a>
+            <a class="dropdown-item" href="javascript:void(0);">Mark As Important</a>
+            <a class="dropdown-item" href="javascript:void(0);">Discard</a>
+            <a class="dropdown-item" href="javascript:void(0);">Settings</a>
+            <a class="dropdown-item" href="javascript:void(0);">Help and feedback</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- row closed -->
+
+<ng-template #content let-modal>
+  <div class="modal-header main-mail-compose-header">
+    <span class="modal-title" id="modal-basic-title">New Message</span>
+    <button type="button" class="close nav" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span class="nav-link" aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <div class="main-mail-compose-body">
+          <div class="form-group mb-0">
+            <label class="form-label">To:</label>
+            <div>
+              <input class="form-control" placeholder="" type="text">
+            </div>
+          </div>
+          <div class="form-group mb-0">
+            <label class="form-label">Subject:</label>
+            <div>
+              <input class="form-control" type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" placeholder="" rows="12"></textarea>
+          </div>
+
+
+        </div>
+      </div>
+    </form>
+    <div class="modal-footer d-flex justify-content-between">
+
+      <nav class="nav mailLinks">
+        <a class="nav-link" data-toggle="tooltip" href="javascript:;" title="" data-original-title="Formatting"><i
+            class="fas fa-font"></i></a>
+        <a class="nav-link" data-toggle="tooltip" href="javascript:;" title="" data-original-title="Add attachment"><i
+            class="fas fa-paperclip"></i></a>
+        <a class="nav-link" data-toggle="tooltip" href="javascript:;" title="" data-original-title="Add photo"><i
+            class="far fa-image"></i></a>
+        <a class="nav-link" data-toggle="tooltip" href="javascript:;" title="" data-original-title="Add link"><i
+            class="fas fa-link"></i></a>
+        <a class="nav-link" data-toggle="tooltip" href="javascript:;" title="" data-original-title="Emoticons"><i
+            class="far fa-smile"></i></a>
+        <a class="nav-link" data-toggle="tooltip" href="javascript:;" title=""
+          data-original-title="Insert files into Drive"><i class="fab fa-google-drive"></i></a>
+        <a class="nav-link" data-toggle="tooltip" href="javascript:;" title="" data-original-title="Delete"><i
+            class="far fa-trash-alt"></i></a>
+      </nav>
+      <button class="btn ripple btn-primary float-end">Send</button>
+
+    </div>
+  </div>
+</ng-template>

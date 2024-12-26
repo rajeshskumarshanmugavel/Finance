@@ -1,0 +1,14 @@
+::ng-deep{
+    
+.transparent-theme{
+    .ng-select .ng-clear-wrapper{
+        color: #eee;
+    }
+    .ng-select.ng-select-opened >.ng-select-container .ng-arrow {
+        border-color: transparent transparent #fff !important;
+    }
+    .ng-select:not(.ng-select-opened) >.ng-select-container .ng-arrow {
+        border-color: #fff transparent transparent  !important;
+    }
+}
+}

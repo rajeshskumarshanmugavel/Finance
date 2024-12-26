@@ -1,0 +1,62 @@
+.has-success{
+    border: 1px solid #19b159;
+}
+.has-error{
+    border: 1px solid #f16d75;
+}
+
+.ckbox {
+    font-weight: 400;
+    position: relative;
+    display: block;
+    line-height: 1;
+}   
+.wd-250 {
+    width: 250px;
+}
+.ckbox span {
+    padding-left: 16px;
+}
+
+@media (min-width: 768px){
+    .mg-md-l-20 {
+        margin-left: 20px;
+    }
+}
+@media (min-width: 768px){
+    .mg-md-t-0 {
+        margin-top: 0;
+    }
+}
+::ng-deep{
+    @media (min-width: 768px){
+        .rtl .mg-md-l-20 {
+            margin-right: 20px;
+            margin-left: initial !important;
+        }
+        .rtl .ckbox span{
+            padding-right : 16px ;
+            padding-left: initial;
+        }
+    }
+
+    .transparent-theme{
+        .ng-select .ng-clear-wrapper{
+            color: #fff !important;
+        }
+      
+        .ng-select .ng-arrow-wrapper .ng-arrow {
+            border-top-color: #fff !important;
+        }
+        .ng-select.ng-select-opened .ng-arrow-wrapper .ng-arrow {
+            border-bottom-color: #fff !important;
+        }
+        .ng-placeholder{
+            color: #fff !important;
+        }
+        .tx-danger{
+            color: red !important;
+        }
+
+    }
+}

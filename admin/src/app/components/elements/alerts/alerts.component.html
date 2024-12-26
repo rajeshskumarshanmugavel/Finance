@@ -1,0 +1,422 @@
+<app-page-header [title]="'ALERTS'" [items]="['Elements']" [active_item]="'Alerts'"></app-page-header>
+<!-- row -->
+<div class="row">
+  <div class="col-lg-6 col-md-12 col-sm-12">
+    <div class="card" id="basic-alert">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Basic Alerts</h6>
+          <p class="text-muted card-sub-title">Use one of the four required contextual classes.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse1.toggle()"
+              [attr.aria-expanded]="!isCollapsed1">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <p *ngFor="let alert of alerts">
+              <ngb-alert [type]="alert.type" [dismissible]="false"> <strong>{{alert.title}}</strong> {{alert.message}}
+              </ngb-alert>
+            </p>
+          </div>
+          <div class="" #collapse1="ngbCollapse" [(ngbCollapse)]="isCollapsed1">
+            <pre>
+<code highlight='<div class="example">
+  <p *ngFor="let alert of alerts">
+    <ngb-alert [type]="alert.type" [dismissible]="false"> <strong>{ {alert.title}}</strong> { {alert.message}}
+    </ngb-alert>
+  </p>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-6 col-md-12 col-sm-12">
+    <div class="card" id="outline-alert">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Outline Alerts</h6>
+          <p class="text-muted card-sub-title">Use one of the four required contextual classes.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse2.toggle()"
+              [attr.aria-expanded]="!isCollapsed2">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <p *ngFor="let alert of alertsOutline">
+              <ngb-alert [type]="alert.type" (closed)="closeOutline(alert)"> <strong>{{alert.title}}</strong>
+                {{alert.message}} </ngb-alert>
+            </p>
+          </div>
+          <div class="" #collapse2="ngbCollapse" [(ngbCollapse)]="isCollapsed2">
+            <pre>
+<code highlight='<div class="example">
+  <p *ngFor="let alert of alertsOutline">
+    <ngb-alert [type]="alert.type" (closed)="closeOutline(alert)"> <strong>{ {alert.title}}</strong>
+      { {alert.message}} </ngb-alert>
+  </p>
+</div>'></code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-lg-6 col-md-12 col-sm-12">
+    <div class="card" id="solid-alert">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Solid Colored Alerts</h6>
+          <p class="text-muted card-sub-title">Use one of the four required contextual classes.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse3.toggle()"
+              [attr.aria-expanded]="!isCollapsed3">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <p *ngFor="let alert of alertsSolid">
+              <ngb-alert [type]="alert.type" (closed)="closeSolid(alert)"> <strong>{{alert.title}}</strong>
+                {{alert.message}} </ngb-alert>
+            </p>
+          </div>
+          <div class="" #collapse3="ngbCollapse" [(ngbCollapse)]="isCollapsed3">
+            <pre>
+<code highlight='<div class="example">
+  <p *ngFor="let alert of alertsSolid">
+    <ngb-alert [type]="alert.type" (closed)="closeSolid(alert)"> <strong>{ {alert.title}}</strong>
+      { {alert.message}} </ngb-alert>
+  </p>
+</div>'></code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-6 col-md-12 col-sm-12">
+    <div class="card custom-card" id="dismiss-alerts">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Dismissing Alerts</h6>
+          <p class="text-muted card-sub-title">Using the alert JavaScript plugin, it’s possible to dismiss any alert
+            inline.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse4.toggle()"
+              [attr.aria-expanded]="!isCollapsed4">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <p *ngFor="let alert of alertsDismissing">
+              <ngb-alert [type]="alert.type" (closed)="closeDismissing(alert)"> <strong>{{alert.title}}</strong>
+                {{alert.message}} </ngb-alert>
+            </p>
+          </div>
+          <div class="" #collapse4="ngbCollapse" [(ngbCollapse)]="isCollapsed4">
+            <pre>
+<code highlight='<div class="example">
+  <p *ngFor="let alert of alertsDismissing">
+    <ngb-alert [type]="alert.type" (closed)="closeDismissing(alert)"> <strong>{ {alert.title}}</strong>
+      { {alert.message}} </ngb-alert>
+  </p>
+</div>'></code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-12 col-sm-12">
+    <div class="card custom-card" id="icon-alerts">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Alert With Icon</h6>
+          <p class="text-muted card-sub-title">Alerts can also contain additional HTML elements like headings,
+            paragraphs and dividers.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse5.toggle()"
+              [attr.aria-expanded]="!isCollapsed5">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <p *ngFor="let alert of alertsIcons">
+              <ngb-alert [type]="alert.type" [dismissible]="false">
+                <span class="alert-inner--icon me-2"><i class="fe fe-{{alert.icon}}"></i></span>
+                <span class="alert-inner--text">
+                  <strong>{{alert.title}}</strong> {{alert.message}}
+                </span>
+              </ngb-alert>
+            </p>
+          </div>
+          <div class="" #collapse5="ngbCollapse" [(ngbCollapse)]="isCollapsed5">
+            <pre>
+<code highlight=' <div class="example">
+  <p *ngFor="let alert of alertsIcons">
+    <ngb-alert [type]="alert.type" [dismissible]="false">
+      <span class="alert-inner--icon me-2"><i class="fe fe-{ {alert.icon}}"></i></span>
+      <span class="alert-inner--text">
+        <strong>{ {alert.title}}</strong> { {alert.message}}
+      </span>
+    </ngb-alert>
+  </p>
+</div>'></code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-12 col-sm-12">
+    <div class="card custom-card" id="icon-dismissalerts">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Alert With Icon Dismissing</h6>
+          <p class="text-muted card-sub-title">Alerts can also contain additional HTML elements like headings,
+            paragraphs and dividers.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse6.toggle()"
+              [attr.aria-expanded]="!isCollapsed6">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <p *ngFor="let alert of alertsIcons">
+              <ngb-alert [type]="alert.type" (closed)="closeIcons(alert)">
+                <span class="alert-inner--icon me-2"><i class="fe fe-{{alert.icon}}"></i></span>
+                <span class="alert-inner--text">
+                  <strong>{{alert.title}}</strong> {{alert.message}}
+                </span>
+              </ngb-alert>
+            </p>
+          </div>
+          <div class="" #collapse6="ngbCollapse" [(ngbCollapse)]="isCollapsed6">
+            <pre>
+<code highlight='<div class="example">
+  <p *ngFor="let alert of alertsIcons">
+    <ngb-alert [type]="alert.type" (closed)="closeIcons(alert)">
+      <span class="alert-inner--icon me-2"><i class="fe fe-{ {alert.icon}}"></i></span>
+      <span class="alert-inner--text">
+        <strong>{ {alert.title}}</strong> { {alert.message}}
+      </span>
+    </ngb-alert>
+  </p>
+</div>'></code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-12 col-md-12 col-sm-12">
+    <div class="card custom-card" id="link-alerts">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Link color Alerts</h6>
+          <p class="text-muted card-sub-title">Use the <code class="highlighter-rouge">.alert-link</code> utility class
+            to quickly provide matching colored links within any alert.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse7.toggle()"
+              [attr.aria-expanded]="!isCollapsed7">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+
+        <div class="text-wrap">
+          <div class="example">
+            <ngb-alert type="primary" [dismissible]="false">
+              This is a primary alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give it
+              a click if you like.
+            </ngb-alert>
+            <ngb-alert type="secondary" [dismissible]="false">
+              This is a secondary alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give
+              it a click if you like.
+            </ngb-alert>
+            <ngb-alert type="success" [dismissible]="false">
+              This is a success alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give it
+              a click if you like.
+            </ngb-alert>
+            <ngb-alert type="danger" [dismissible]="false">
+              This is a danger alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give it
+              a click if you like.
+            </ngb-alert>
+            <ngb-alert type="warning" [dismissible]="false">
+              This is a warning alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give it
+              a click if you like.
+            </ngb-alert>
+            <ngb-alert type="info" [dismissible]="false">
+              This is a info alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give it a
+              click if you like.
+            </ngb-alert>
+            <ngb-alert type="light" [dismissible]="false">
+              This is a light alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give it a
+              click if you like.
+            </ngb-alert>
+            <ngb-alert type="dark" [dismissible]="false">
+              This is a dark alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give it a
+              click if you like.
+            </ngb-alert>
+          </div>
+          <div class="" #collapse7="ngbCollapse" [(ngbCollapse)]="isCollapsed7">
+            <pre>
+<code highlight='<div class="example">
+  <ngb-alert type="primary" [dismissible]="false">
+    This is a primary alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give it
+    a click if you like.
+  </ngb-alert>
+  <ngb-alert type="secondary" [dismissible]="false">
+    This is a secondary alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give
+    it a click if you like.
+  </ngb-alert>
+  <ngb-alert type="success" [dismissible]="false">
+    This is a success alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give it
+    a click if you like.
+  </ngb-alert>
+  <ngb-alert type="danger" [dismissible]="false">
+    This is a danger alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give it
+    a click if you like.
+  </ngb-alert>
+  <ngb-alert type="warning" [dismissible]="false">
+    This is a warning alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give it
+    a click if you like.
+  </ngb-alert>
+  <ngb-alert type="info" [dismissible]="false">
+    This is a info alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give it a
+    click if you like.
+  </ngb-alert>
+  <ngb-alert type="light" [dismissible]="false">
+    This is a light alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give it a
+    click if you like.
+  </ngb-alert>
+  <ngb-alert type="dark" [dismissible]="false">
+    This is a dark alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give it a
+    click if you like.
+  </ngb-alert>
+</div>'>
+
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-12 col-md-12 col-sm-12">
+    <div class="card custom-card" id="additional-alerts">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Additional Content Alert</h6>
+          <p class="text-muted card-sub-title">Alerts can also contain additional HTML elements like headings,
+            paragraphs and dividers.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse8.toggle()"
+              [attr.aria-expanded]="!isCollapsed8">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <ngb-alert type="success" class="mb-2" [dismissible]="false">
+              <h4 class="alert-heading"><i class="fe fe-check-circle me-2 tx-20"></i>Well done!</h4>
+              <p>Aww yeah, you successfully read this alert message. This example text is going to run a bit longer so
+                that you can see how spacing within an alert works with this kind of content.</p>
+              <hr>
+              <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+            </ngb-alert>
+            <ngb-alert type="warning" class="mb-2" [dismissible]="false">
+              <h4 class="alert-heading"><i class="fe fe-alert-octagon me-2 tx-20"></i>Warning!</h4>
+              <p>Aww yeah, you successfully read this alert message. This example text is going to run a bit longer so
+                that you can see how spacing within an alert works with this kind of content.</p>
+              <hr>
+              <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+            </ngb-alert>
+            <ngb-alert type="danger" class="mb-2" [dismissible]="false">
+              <h4 class="alert-heading"><i class="fe fe-delete me-2 tx-20"></i>Error!</h4>
+              <p>Aww yeah, you successfully read this alert message. This example text is going to run a bit longer so
+                that you can see how spacing within an alert works with this kind of content.</p>
+              <hr>
+              <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+            </ngb-alert>
+          </div>
+          <div class="" #collapse8="ngbCollapse" [(ngbCollapse)]="isCollapsed8">
+            <pre>
+<code highlight='<div class="example">
+  <ngb-alert type="success" class="mb-2" [dismissible]="false">
+    <h4 class="alert-heading"><i class="fe fe-check-circle me-2 tx-20"></i>Well done!</h4>
+    <p>Aww yeah, you successfully read this alert message. This example text is going to run a bit longer so
+      that you can see how spacing within an alert works with this kind of content.</p>
+    <hr>
+    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+  </ngb-alert>
+  <ngb-alert type="warning" class="mb-2" [dismissible]="false">
+    <h4 class="alert-heading"><i class="fe fe-alert-octagon me-2 tx-20"></i>Warning!</h4>
+    <p>Aww yeah, you successfully read this alert message. This example text is going to run a bit longer so
+      that you can see how spacing within an alert works with this kind of content.</p>
+    <hr>
+    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+  </ngb-alert>
+  <ngb-alert type="danger" class="mb-2" [dismissible]="false">
+    <h4 class="alert-heading"><i class="fe fe-delete me-2 tx-20"></i>Error!</h4>
+    <p>Aww yeah, you successfully read this alert message. This example text is going to run a bit longer so
+      that you can see how spacing within an alert works with this kind of content.</p>
+    <hr>
+    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+  </ngb-alert>
+</div>'>
+
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /row -->

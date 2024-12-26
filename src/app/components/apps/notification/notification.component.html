@@ -1,0 +1,119 @@
+<app-page-header [title]="'NOTIFICATION'" [items]="['Apps']" [active_item]="'Notification'"></app-page-header>
+<!-- row -->
+<div class="row">
+  <div class="col-md-12">
+      <div class="card mg-b-20">
+          <div class="card-body">
+              <div class="main-content-label mg-b-5">
+                  Notification Types
+              </div>
+              <p class="mg-b-20">It is Very Easy to Customize and it uses in website application.</p>
+              <div class="example border-0 p-0">
+
+
+                  <div class="mt-5">
+                      <button class="mb-2 btn btn-info me-2" (click)="createToast('info')">
+                          Info
+                      </button>
+                      <button class="mb-2 btn btn-primary me-2" (click)="createToast('primary')">
+                          Primary
+                      </button>
+                      <button class="mb-2 btn btn-secondary me-2" (click)="createToast('secondary')">
+                          Secondary
+                      </button>
+                      <button class="mb-2 btn btn-warning me-2" (click)="createToast('warning')">
+                          Warning
+                      </button>
+                      <button class="mb-2 btn btn-danger me-2" (click)="createToast('danger')">
+                          Danger
+                      </button>
+                      <button class="mb-2 btn btn-success me-2" (click)="createToast('success')">
+                          Success
+                      </button>
+                      <button class="mb-2 btn btn-primary me-2" (click)="clearToasts()">
+                          Clear All Toasts
+                      </button>
+                      <button class="mb-2 btn btn-light me-2" (click)="clearLastToast()">
+                          Clear Last Toast
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+      <div class="card">
+          <div class="card-header">
+              <div class="card-title">Basic Snackbar Notification</div>
+          </div>
+          <div class="card-body">
+              <mat-form-field appearance="fill">
+                  <mat-label>Snack bar duration (seconds)</mat-label>
+                  <input type="number" [(ngModel)]="durationInSeconds" matInput>
+                </mat-form-field>
+                
+                <button class="btn btn-primary ms-2" mat-stroked-button (click)="openSnackBarCustom()">
+                  Nofify
+                </button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+      <div class="card-title">
+          Snack-bar with custom message
+      </div>
+  </div>
+  <div class="card-body">
+      <mat-form-field appearance="fill">
+          <mat-label>Message</mat-label>
+          <input matInput value="Snackbar " #message>
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill">
+          <mat-label>Action</mat-label>
+          <input matInput value="undo" #action>
+        </mat-form-field>
+        
+        <button class="btn btn-primary ms-2" mat-stroked-button (click)="openSnackBarBasic(message.value, action.value)">Show snack-bar</button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+      <div class="card-title">
+          Snack-bar with configurable position
+      </div>
+  </div>
+  <div class="card-body">
+      <mat-form-field appearance="fill">
+          <mat-label>Horizontal position</mat-label>
+          <mat-select [(value)]="horizontalPosition">
+            <mat-option value="start">Start</mat-option>
+            <mat-option value="center">Center</mat-option>
+            <mat-option value="end">End</mat-option>
+            <mat-option value="left">Left</mat-option>
+            <mat-option value="right">Right</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Vertical position</mat-label>
+          <mat-select [(value)]="verticalPosition">
+            <mat-option value="top">Top</mat-option>
+            <mat-option value="bottom">Bottom</mat-option>
+          </mat-select>
+        </mat-form-field>
+        
+        <button class="btn btn-primary ms-2" mat-stroked-button (click)="openSnackBar()" aria-label="Show an example snack-bar">
+          Click me
+        </button>
+  </div>
+</div>
+
+<ngx-notifier [allowHTML]="true"></ngx-notifier>

@@ -1,0 +1,170 @@
+<p class="mt-6"></p>
+<div class="left-content"><span class="main-content-title mg-b-0 mg-b-lg-1"> Master Tables</span></div>
+
+<div class="overflow-scroll card" style="padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;">
+    <div class="row md-col-12">
+        <div class="md-col-6 form-group form-inline">
+            
+              <select class="form-select " [(ngModel)]="selectedOption" (change)="onOptionSelect()" >
+                 <!-- <option value="" default selected>Select an option</option>  -->
+                 <option value="industrytype" default selected>Industry Type</option> 
+                 <option value="networktype" >Network Type</option> 
+            </select>
+        </div>
+                           
+            <div class="md-col-6">
+            <button class="demo-button btn btn-primary me-2 text-end float-right" (click)="clearFields(); openCenter(addModal)"> Add Data</button>
+           </div>
+    </div>
+
+    <!-- Master table -->
+    <table class="table table-striped border">
+        <thead>
+            <tr>
+                <th scope="col">S.No</th>
+                <th scope="col" sortable="Name" >Name</th>
+                <th scope="col">Action</th> 
+            </tr>
+        </thead>
+        <tbody> 
+              <tr *ngFor="let master of service.masters$ | async; track item; let i = index;"> 
+
+                <th scope="row">{{ master.id}}</th>
+                <td><ngb-highlight [result]="master.Name" [term]="service.searchTerm"></ngb-highlight></td> 
+              
+                <td>
+                   <!-- <a href="javascript:void(0)" class="btn btn-success btn-sm br-5 me-2"> -->
+                        <a href="javascript:void(0)" class="btn btn-success btn-sm br-5 me-2" (click)="onEdit(master.id); openCenter(editModal)">
+                       <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="16" class="table-edit">
+                                <path  d="M0 0h24v24H0V0z" fill="none"></path>
+                                <path  d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM5.92 19H5v-.92l9.06-9.06.92.92L5.92 19zM20.71 5.63l-2.34-2.34c-.2-.2-.45-.29-.71-.29s-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41z"></path>
+                            </svg>
+                        </i>
+                    </a>
+                     <a href="javascript:void(0)" class="btn btn-danger btn-sm br-5" (click)="onDelete(master.id); openCenter(confirmModal);">
+                       <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="16" class="table-delete"><path _ngcontent-ng-c60281099="" d="M0 0h24v24H0V0z" fill="none"></path>
+                                <path  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9zm7.5-5l-1-1h-5l-1 1H5v2h14V4h-3.5z"></path>
+                            </svg>
+                        </i>
+                    </a> 
+                </td>
+            </tr> 
+         </tbody>
+    </table> 
+
+  <!-- Pagination -->
+  <div class="d-flex justify-content-between p-2">
+    <ngb-pagination [collectionSize]="(service.total$ | async)!" [(page)]="service.page" [pageSize]="service.pageSize"></ngb-pagination>
+    <ng-select class="" style="width: auto; overflow: visible;" name="pageSize" [(ngModel)]="service.pageSize">
+        <ng-option value="5">5</ng-option>
+        <ng-option ng-option-selected value="10">10</ng-option>
+        <ng-option value="25">25</ng-option>
+    </ng-select>
+</div>
+  
+
+      <!-- Add Form  -->
+       <ng-template #addModal let-modal>
+        <div class="modal-header">
+          <h6 class="modal-title">Add Data</h6>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Name</label>
+                        <input type="text" class="form-control" [(ngModel)]="Name" [ngModelOptions]="{standalone: true}" ng-required="true" >
+                        
+                    </div>
+                </div>
+                <div class="row">  
+                    <div class="mb-3" *ngIf="isError">
+                        <label class="mb-1 form-label text-danger">{{errorMessage}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary light" (click)="onCreate(modal);">Create</button>
+                    </div>
+                </div>  
+            </form>
+        </div>
+    </ng-template>
+
+
+   <!-- Edit Modal -->
+   <ng-template #editModal let-modal>
+    <div class="modal-header">
+      <h6 class="modal-title">Edit Data</h6>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="row">
+                <div class="mb-3 col-md-6">
+                    <label class="text-black font-w500"> Name</label>
+                    <input type="text" class="form-control" [(ngModel)]="Name" [ngModelOptions]="{standalone: true}">
+                </div>
+            </div>
+         
+            <div class="row">  
+                <div class="mb-3" *ngIf="isError">
+                    <label class="mb-1 form-label text-danger">{{errorMessage}}</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary light" (click)="onSave(modal);">Save</button>
+                </div>
+            </div>  
+        </form>
+    </div>
+</ng-template>
+
+
+
+
+<!-- Confirm Modal -->
+    <ng-template #confirmModal let-modal>
+        <div class="modal-header">
+            <h5 class="modal-title">Confirm Delete</h5>
+            <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body data-picker-costem">
+            <form>
+                <div class="mb-3">
+                    <label class="text-black font-w500">Do you want to delete?</label>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary light" style="margin-left: 10px;" (click)="modal.dismiss(); onConfirmYes();">Yes</button>
+                    <button type="button" class="btn btn-primary light" style="margin-left: 20px;" (click)="modal.dismiss();">No</button>
+                </div>
+            </form>
+        </div>
+    </ng-template>
+
+    <!-- Message Modal -->
+    <ng-template #messageModal let-modal>
+        <div class="modal-header">
+            <h5 class="modal-title">{{messageHeader}}</h5>
+            <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body data-picker-costem">
+            <form>
+                <div class="mb-3">
+                    <label class="text-black font-w500">{{message}}</label>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary light" style="margin-left: 10px;" (click)="modal.dismiss();">OK</button>
+                </div>
+            </form>
+        </div>
+    </ng-template>
+ </div>

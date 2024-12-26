@@ -1,0 +1,15 @@
+
+@import "../../../../assets/scss/variables";
+::ng-deep{
+    .fc .fc-toolbar {
+        flex-wrap: wrap !important;
+    }
+    .dark-theme{
+        .fc .fc-list-event:hover td {
+            background-color: $dark-theme !important;
+        }            
+    }
+    .fc-toolbar-chunk{
+        margin-block: 0.5rem;
+    }
+}

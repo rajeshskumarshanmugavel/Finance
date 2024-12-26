@@ -1,0 +1,28 @@
+::ng-deep {
+    .star {
+        position: relative;
+        display: inline-block;
+        color: #f0f0f2;
+    }
+    .full {
+        color:#ff9b21;
+    }
+    .half {
+        position: absolute;
+        display: inline-block;
+        overflow: hidden;
+        color:#ff9b21;
+    }
+    
+    .dark-theme {
+        .star {
+            color: #23233c;
+            &.filled {
+                color: #ff9b21;
+                &.bad {
+                    color: #f16d75;
+                }
+            }
+        }
+    }
+}

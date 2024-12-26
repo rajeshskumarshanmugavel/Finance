@@ -1,0 +1,265 @@
+<app-page-header [title]="'SHOP'" [items]="['ECommerce']" [active_item]="'Shop'"></app-page-header>
+<!-- row -->
+<div class="row row-sm">
+  <div class="col-xl-9 col-lg-8 col-md-12">
+    <div class="row row-sm">
+      <div class="col-md-6 col-lg-6 col-xl-3  col-sm-6" *ngFor="let data of shopData">
+        <div class="card">
+          <div class="card-body h-100  product-grid6">
+            <div class="pro-img-box product-image">
+              <a routerLink="/eCommerce/product-details">
+                <img class=" pic-1" src="{{data.img1}}" alt="product-image">
+                <img class="pic-2" src="{{data.img2}}" alt="product-image-1">
+              </a>
+              <ul class="icons">
+                <li><a routerLink="/eCommerce/wishlist" class="primary-gradient me-2" placement="top" ngbTooltip="Add to Wishlist"><i class="fa fa-heart"></i></a></li>
+                <li><a routerLink="/eCommerce/cart" class="secondary-gradient me-2" placement="top" ngbTooltip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                <li><a routerLink="/eCommerce/product-details" class="info-gradient" placement="top" ngbTooltip="Quick View"><i class="fas fa-eye"></i></a></li>
+              </ul>
+            </div>
+            <div class="text-center pt-2">
+              <h3 class="h6 mb-2 mt-4 font-weight-bold text-uppercase">{{data.Title}}</h3>
+              <span class="tx-15 ms-auto">
+                <i class="ion ion-md-star text-warning"></i>
+                <i class="ion ion-md-star text-warning"></i>
+                <i class="ion ion-md-star text-warning"></i>
+                <i class="ion ion-md-star-half text-warning"></i>
+                <i class="ion ion-md-star-outline text-warning"></i>
+              </span>
+              <h4 class="h5 mb-0 mt-1 text-center font-weight-bold  tx-22">{{data.newPrice}} <span
+                  class="text-secondary font-weight-normal tx-13 ms-1 prev-price">{{data.oldPrice}}</span></h4>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ngb-pagination [collectionSize]="40" [page]="1" class="product-pagination ms-auto float-end"></ngb-pagination>
+    </div>
+  </div>
+
+  <div class="col-xl-3 col-lg-4 col-md-12 mb-3 mb-md-0">
+    <div class="card">
+      <div class="card-body p-2">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search ...">
+          <span class="input-group-append">
+            <button class="btn btn-primary" type="button">Search</button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">
+          Colors
+        </h3>
+      </div>
+      <div class="card-body">
+        <div class="row gutters-xs">
+          <div class="col-auto">
+            <label class="colorinput">
+              <input name="color" type="radio" value="azure" class="colorinput-input" checked="">
+              <span class="colorinput-color bg-azure"></span>
+            </label>
+          </div>
+          <div class="col-auto">
+            <label class="colorinput">
+              <input name="color" type="radio" value="indigo" class="colorinput-input">
+              <span class="colorinput-color bg-indigo"></span>
+            </label>
+          </div>
+          <div class="col-auto">
+            <label class="colorinput">
+              <input name="color" type="radio" value="purple" class="colorinput-input">
+              <span class="colorinput-color bg-purple"></span>
+            </label>
+          </div>
+          <div class="col-auto">
+            <label class="colorinput">
+              <input name="color" type="radio" value="pink" class="colorinput-input">
+              <span class="colorinput-color bg-pink"></span>
+            </label>
+          </div>
+          <div class="col-auto">
+            <label class="colorinput">
+              <input name="color" type="radio" value="red" class="colorinput-input">
+              <span class="colorinput-color bg-red"></span>
+            </label>
+          </div>
+          <div class="col-auto">
+            <label class="colorinput">
+              <input name="color" type="radio" value="orange" class="colorinput-input">
+              <span class="colorinput-color bg-orange"></span>
+            </label>
+          </div>
+          <div class="col-auto">
+            <label class="colorinput">
+              <input name="color" type="radio" value="yellow" class="colorinput-input">
+              <span class="colorinput-color bg-yellow"></span>
+            </label>
+          </div>
+          <div class="col-auto">
+            <label class="colorinput">
+              <input name="color" type="radio" value="lime" class="colorinput-input">
+              <span class="colorinput-color bg-lime"></span>
+            </label>
+          </div>
+          <div class="col-auto">
+            <label class="colorinput">
+              <input name="color" type="radio" value="green" class="colorinput-input">
+              <span class="colorinput-color bg-green"></span>
+            </label>
+          </div>
+          <div class="col-auto">
+            <label class="colorinput">
+              <input name="color" type="radio" value="teal" class="colorinput-input">
+              <span class="colorinput-color bg-teal"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header border-bottom pt-3 pb-3 mb-0 font-weight-bold text-uppercase">Category</div>
+        <div class="card-body pb-0">
+          <div class="form-group">
+            <label class="form-label">Mens</label>
+            <ng-select name="beast" id="select-beast" placeholder="select option">
+              <ng-option value="1">Foot wear</ng-option>
+              <ng-option value="2">Top wear</ng-option>
+              <ng-option value="3">Bootom wear</ng-option>
+              <ng-option value="4">Men's Groming</ng-option>
+              <ng-option value="5">Accessories</ng-option>
+            </ng-select>
+          </div>
+          <div class="form-group mt-2">
+            <label class="form-label">Women</label>
+            <ng-select name="beast" id="select-beast1" placeholder="select option">
+              <ng-option value="1">Western wear</ng-option>
+              <ng-option value="2">Foot wear</ng-option>
+              <ng-option value="3">Top wear</ng-option>
+              <ng-option value="4">Bootom wear</ng-option>
+              <ng-option value="5">Beuty Groming</ng-option>
+              <ng-option value="6">Accessories</ng-option>
+              <ng-option value="7">jewellery</ng-option>
+            </ng-select>
+          </div>
+          <div class="form-group mt-2">
+            <label class="form-label">Baby & Kids</label>
+            <ng-select name="beast" id="select-beast2" placeholder="select option">
+              <ng-option value="1">Boys clothing</ng-option>
+              <ng-option value="2">girls Clothing</ng-option>
+              <ng-option value="3">Toys</ng-option>
+              <ng-option value="4">Baby Care</ng-option>
+              <ng-option value="5">Kids footwear</ng-option>
+            </ng-select>
+          </div>
+          <div class="form-group mt-2">
+            <label class="form-label">Electronics</label>
+            <ng-select name="beast" id="select-beast3" placeholder="select option">
+              <ng-option value="1">Mobiles</ng-option>
+              <ng-option value="2">Laptops</ng-option>
+              <ng-option value="3">Gaming & Accessories</ng-option>
+              <ng-option value="4">Health care Appliances</ng-option>
+            </ng-select>
+          </div>
+          <div class="form-group mt-2">
+            <label class="form-label">Sport,Books & More </label>
+            <ng-select name="beast" id="select-beast4" placeholder="select option">
+              <ng-option value="1">Stationery</ng-option>
+              <ng-option value="2">Books</ng-option>
+              <ng-option value="3">Gaming</ng-option>
+              <ng-option value="4">Music</ng-option>
+              <ng-option value="5">Exercise & fitness</ng-option>
+            </ng-select>
+          </div>
+        </div>
+        <div class="card-header border-bottom border-top pt-3 pb-3 mb-0 font-weight-bold text-uppercase rounded-0">
+          Rating</div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label>Brand</label>
+              <ng-select placeholder="select option">
+                <ng-option>Wallmart</ng-option>
+                <ng-option>Catseye</ng-option>
+                <ng-option>Moonsoon</ng-option>
+                <ng-option>Textmart</ng-option>
+              </ng-select>
+            </div>
+            <div class="form-group">
+              <label>Type</label>
+              <ng-select placeholder="select option">
+                <ng-option>Small</ng-option>
+                <ng-option>Medium</ng-option>
+                <ng-option>Large</ng-option>
+                <ng-option>Extra Large</ng-option>
+              </ng-select>
+            </div>
+          </form>
+        </div>
+        <div class="card-header border-bottom border-top pt-3 pb-3 mb-0 font-weight-bold text-uppercase rounded-0">
+          Rating</div>
+        <div class="py-2 px-3">
+          <label class="p-1 mt-2 d-flex align-items-center">
+            <span class="check-box mb-0">
+              <span class="ckbox"><input checked="" type="checkbox"><span></span></span>
+            </span>
+            <span class="ms-3 tx-16 my-auto">
+              <i class="ion ion-md-star  text-warning"></i>
+              <i class="ion ion-md-star  text-warning"></i>
+              <i class="ion ion-md-star  text-warning"></i>
+              <i class="ion ion-md-star  text-warning"></i>
+              <i class="ion ion-md-star  text-warning"></i>
+            </span>
+          </label>
+          <label class="p-1 mt-2 d-flex align-items-center">
+            <span class="check-box mb-0">
+              <span class="ckbox"><input checked="" type="checkbox"><span></span></span>
+            </span>
+            <span class="ms-3 tx-16 my-auto">
+              <i class="ion ion-md-star  text-warning"></i>
+              <i class="ion ion-md-star  text-warning"></i>
+              <i class="ion ion-md-star  text-warning"></i>
+              <i class="ion ion-md-star  text-warning"></i>
+            </span>
+          </label>
+          <label class="p-1 mt-2 d-flex align-items-center">
+            <span class="check-box mb-0">
+              <span class="ckbox"><input checked="" type="checkbox"><span></span></span>
+            </span>
+            <span class="ms-3 tx-16 my-auto">
+              <i class="ion ion-md-star  text-warning"></i>
+              <i class="ion ion-md-star  text-warning"></i>
+              <i class="ion ion-md-star  text-warning"></i>
+            </span>
+          </label>
+          <label class="p-1 mt-2 d-flex align-items-center">
+            <span class="checkbox mb-0">
+              <span class="check-box">
+                <span class="ckbox"><input type="checkbox"><span></span></span>
+              </span>
+            </span>
+            <span class="ms-3 tx-16 my-auto">
+              <i class="ion ion-md-star  text-warning"></i>
+              <i class="ion ion-md-star  text-warning"></i>
+            </span>
+          </label>
+          <label class="p-1 mt-2 d-flex align-items-center">
+            <span class="checkbox mb-0">
+              <span class="check-box">
+                <span class="ckbox"><input type="checkbox"><span></span></span>
+              </span>
+            </span>
+            <span class="ms-3 tx-16 my-auto">
+              <i class="ion ion-md-star  text-warning"></i>
+            </span>
+          </label>
+          <button class="btn btn-primary mt-2 mb-2 pb-2" type="submit">Filter</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- row closed -->

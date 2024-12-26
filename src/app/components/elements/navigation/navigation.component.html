@@ -1,0 +1,743 @@
+<app-page-header [title]="'NAVIGATION'" [items]="['Elements']" [active_item]="'Navigation'"></app-page-header>
+<div class="row">
+  <div class="col-xl-12 col-lg-12">
+    <div class="card custom-card" id="basic">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Basic Navigation</h6>
+          <p class="text-muted card-sub-title">Below is an example of a basic navigation</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse1.toggle()"
+              [attr.aria-expanded]="!isCollapsed1">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <div class="p-3 br-5 border">
+              <nav ngbNav #nav="ngbNav" class="main-nav flex-column flex-md-row">
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Home</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>About</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Pages</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Custom</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+              </nav>
+              <div [ngbNavOutlet]="nav"></div>
+            </div>
+          </div>
+          <div class="" #collapse1="ngbCollapse" [(ngbCollapse)]="isCollapsed1">
+            <pre>
+<code highlight='<div class="example">
+  <div class="p-3 br-5 border">
+    <nav ngbNav #nav="ngbNav" class="main-nav flex-column flex-md-row">
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Home</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>About</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Pages</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Custom</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+    </nav>
+    <div [ngbNavOutlet]="nav"></div>
+  </div>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card custom-card" id="vertical">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Vertical Navigation</h6>
+          <p class="text-muted card-sub-title">Below is an example of a basic navigation in a vertical mode</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse2.toggle()"
+              [attr.aria-expanded]="!isCollapsed2">showcode</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="card-body">
+       
+        <div class="text-wrap">
+          <div class="example">
+            <div class="p-3 br-5  border">
+              <nav ngbNav #nav1="ngbNav" class="main-nav-column">
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Home</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>About</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Pages</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Custom</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+              </nav>
+              <div [ngbNavOutlet]="nav1"></div>
+            </div>
+          </div>
+          <div class="" #collapse2="ngbCollapse" [(ngbCollapse)]="isCollapsed2">
+            <pre>
+<code highlight='<div class="example">
+  <div class="p-3 br-5  border">
+    <nav ngbNav #nav1="ngbNav" class="main-nav-column">
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Home</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>About</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Pages</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Custom</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+    </nav>
+    <div [ngbNavOutlet]="nav1"></div>
+  </div>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card custom-card" id="pill">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">ICON Navigation</h6>
+          <p class="text-muted card-sub-title">Below is an example of a pill navigation</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse3.toggle()"
+              [attr.aria-expanded]="!isCollapsed3">showcode</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <div class="p-2 br-5 ">
+              <ul ngbNav #nav2="ngbNav" [(activeId)]="active" class="nav-pills nav-pills-circle">
+                <li [ngbNavItem]="1">
+                  <a ngbNavLink class="border py-2 px-3 m-2"><span class="nav-link-icon d-block"><i class="fe fe-home"></i> Home</span></a>
+                  <ng-template ngbNavContent></ng-template>
+                </li>
+                <li [ngbNavItem]="2">
+                  <a ngbNavLink class="border py-2 px-3 m-2"><span class="nav-link-icon d-block"><i class="fe fe-unlock"></i> Lock </span></a>
+                  <ng-template ngbNavContent></ng-template>
+                </li>
+                <li [ngbNavItem]="3">
+                  <a ngbNavLink class="border py-2 px-3 m-2"><span class="nav-link-icon d-block"><i class="fe fe-play"></i> Videos</span></a>
+                  <ng-template ngbNavContent></ng-template>
+                </li>
+                <li [ngbNavItem]="4">
+                  <a ngbNavLink class="border py-2 px-3 m-2"><span class="nav-link-icon d-block"><i class="fe fe-layers"></i> Severs</span></a>
+                  <ng-template ngbNavContent></ng-template>
+                </li>
+                <li [ngbNavItem]="5">
+                  <a ngbNavLink class="border py-2 px-3 m-2"><span class="nav-link-icon d-block"><i class="fe fe-image"></i> Gallery </span></a>
+                  <ng-template ngbNavContent></ng-template>
+                </li>
+              </ul>
+              
+              <div [ngbNavOutlet]="nav2"></div>
+            </div>
+          </div>
+          <div class="" #collapse3="ngbCollapse" [(ngbCollapse)]="isCollapsed3">
+            <pre>
+<code highlight='<div class="example">
+  <div class="p-2 br-5 ">
+    <ul ngbNav #nav2="ngbNav" [(activeId)]="active" class="nav-pills nav-pills-circle">
+      <li [ngbNavItem]="1">
+        <a ngbNavLink class="border py-2 px-3 m-2"><span class="nav-link-icon d-block"><i class="fe fe-home"></i> Home</span></a>
+        <ng-template ngbNavContent></ng-template>
+      </li>
+      <li [ngbNavItem]="2">
+        <a ngbNavLink class="border py-2 px-3 m-2"><span class="nav-link-icon d-block"><i class="fe fe-unlock"></i> Lock </span></a>
+        <ng-template ngbNavContent></ng-template>
+      </li>
+      <li [ngbNavItem]="3">
+        <a ngbNavLink class="border py-2 px-3 m-2"><span class="nav-link-icon d-block"><i class="fe fe-play"></i> Videos</span></a>
+        <ng-template ngbNavContent></ng-template>
+      </li>
+      <li [ngbNavItem]="4">
+        <a ngbNavLink class="border py-2 px-3 m-2"><span class="nav-link-icon d-block"><i class="fe fe-layers"></i> Severs</span></a>
+        <ng-template ngbNavContent></ng-template>
+      </li>
+      <li [ngbNavItem]="5">
+        <a ngbNavLink class="border py-2 px-3 m-2"><span class="nav-link-icon d-block"><i class="fe fe-image"></i> Gallery </span></a>
+        <ng-template ngbNavContent></ng-template>
+      </li>
+    </ul>
+    
+    <div [ngbNavOutlet]="nav2"></div>
+  </div>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card custom-card" id="verticallpill">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Vertical Pills Navigation</h6>
+          <p class="text-muted card-sub-title">Below is an example of a pill navigation in vertical mode</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse4.toggle()"
+              [attr.aria-expanded]="!isCollapsed4">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        
+        <div class="text-wrap">
+          <div class="example">
+            <div class="p-3 br-5  border">
+              <nav ngbNav #nav3="ngbNav" class="nav-pills flex-column">
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Home</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>About</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Pages</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Custom</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+              </nav>
+              <div [ngbNavOutlet]="nav3"></div>
+            </div>
+          </div>
+          <div class="" #collapse4="ngbCollapse" [(ngbCollapse)]="isCollapsed4">
+            <pre>
+<code highlight='<div class="example">
+  <div class="p-3 br-5  border">
+    <nav ngbNav #nav3="ngbNav" class="nav-pills flex-column">
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Home</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>About</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Pages</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Custom</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+    </nav>
+    <div [ngbNavOutlet]="nav3"></div>
+  </div>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card custom-card" id="hori">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Horizontal Alignment</h6>
+          <p class="text-muted card-sub-title">A navigation with center and right in which left is the default.</p>
+        </div>
+        
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse5.toggle()"
+              [attr.aria-expanded]="!isCollapsed5">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <div class="p-3 br-5 border mb-3">
+              <nav ngbNav #nav4="ngbNav" class="main-nav flex-column flex-md-row justify-content-center">
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Home</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>About</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Pages</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Custom</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+              </nav>
+              <div [ngbNavOutlet]="nav4"></div>
+            </div>
+            <div class="p-3 br-5  border">
+              <nav ngbNav #nav5="ngbNav" class="main-nav flex-column flex-md-row justify-content-end">
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Home</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>About</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Pages</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Custom</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+              </nav>
+              <div [ngbNavOutlet]="nav5"></div>
+            </div>
+          </div>
+          <div class="" #collapse5="ngbCollapse" [(ngbCollapse)]="isCollapsed5">
+            <pre>
+<code highlight='<div class="example">
+  <div class="p-3 br-5 border mb-3">
+    <nav ngbNav #nav4="ngbNav" class="main-nav flex-column flex-md-row justify-content-center">
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Home</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>About</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Pages</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Custom</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+    </nav>
+    <div [ngbNavOutlet]="nav4"></div>
+  </div>
+  <div class="p-3 br-5  border">
+    <nav ngbNav #nav5="ngbNav" class="main-nav flex-column flex-md-row justify-content-end">
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Home</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>About</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Pages</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Custom</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+    </nav>
+    <div [ngbNavOutlet]="nav5"></div>
+  </div>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card custom-card">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">ICON NAVBAR</h6>
+          <p class="text-muted card-sub-title">A navigation with ICON NAVBAR.</p>
+        </div>        
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse6.toggle()"
+              [attr.aria-expanded]="!isCollapsed6">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example icon-navbar">
+            <ul ngbNav #nav6="ngbNav" [(activeId)]="active" class="nav-pills nav-pills-circle">
+              <li [ngbNavItem]="1">
+                <a ngbNavLink class="border py-2 px-3 m-2"><span class="nav-link-icon d-block"><i class="fe fe-home fs-20"></i></span></a>
+                <ng-template ngbNavContent></ng-template>
+              </li>
+              <li [ngbNavItem]="2">
+                <a ngbNavLink class="border py-2 px-3 m-2"><span class="nav-link-icon d-block"><i class="fe fe-unlock fs-20"></i></span></a>
+                <ng-template ngbNavContent></ng-template>
+              </li>
+              <li [ngbNavItem]="3">
+                <a ngbNavLink class="border py-2 px-3 m-2"><span class="nav-link-icon d-block"><i class="fe fe-play fs-20"></i></span></a>
+                <ng-template ngbNavContent></ng-template>
+              </li>
+              <li [ngbNavItem]="4">
+                <a ngbNavLink class="border py-2 px-3 m-2"><span class="nav-link-icon d-block"><i class="fe fe-layers fs-20"></i></span></a>
+                <ng-template ngbNavContent></ng-template>
+              </li>
+              <li [ngbNavItem]="5">
+                <a ngbNavLink class="border py-2 px-3 m-2"><span class="nav-link-icon d-block"><i class="fe fe-image fs-20"></i></span></a>
+                <ng-template ngbNavContent></ng-template>
+              </li>
+            </ul>
+            
+            <div [ngbNavOutlet]="nav6"></div>
+          </div>
+          <div class="" #collapse6="ngbCollapse" [(ngbCollapse)]="isCollapsed6">
+            <pre>
+<code highlight=' <div class="example icon-navbar">
+  <ul ngbNav #nav6="ngbNav" [(activeId)]="active" class="nav-pills nav-pills-circle">
+    <li [ngbNavItem]="1">
+      <a ngbNavLink class="border py-2 px-3 m-2"><span class="nav-link-icon d-block"><i class="fe fe-home fs-20"></i></span></a>
+      <ng-template ngbNavContent></ng-template>
+    </li>
+    <li [ngbNavItem]="2">
+      <a ngbNavLink class="border py-2 px-3 m-2"><span class="nav-link-icon d-block"><i class="fe fe-unlock fs-20"></i></span></a>
+      <ng-template ngbNavContent></ng-template>
+    </li>
+    <li [ngbNavItem]="3">
+      <a ngbNavLink class="border py-2 px-3 m-2"><span class="nav-link-icon d-block"><i class="fe fe-play fs-20"></i></span></a>
+      <ng-template ngbNavContent></ng-template>
+    </li>
+    <li [ngbNavItem]="4">
+      <a ngbNavLink class="border py-2 px-3 m-2"><span class="nav-link-icon d-block"><i class="fe fe-layers fs-20"></i></span></a>
+      <ng-template ngbNavContent></ng-template>
+    </li>
+    <li [ngbNavItem]="5">
+      <a ngbNavLink class="border py-2 px-3 m-2"><span class="nav-link-icon d-block"><i class="fe fe-image fs-20"></i></span></a>
+      <ng-template ngbNavContent></ng-template>
+    </li>
+  </ul>
+  
+  <div [ngbNavOutlet]="nav6"></div>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card custom-card" id="colored">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Colored Nav Variations</h6>
+          <p class="text-muted card-sub-title">A navigation with colored nav that wrapped the navigation.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse7.toggle()"
+              [attr.aria-expanded]="!isCollapsed7">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <div class="p-3 bg-primary br-5 mb-3">
+              <nav ngbNav #nav7="ngbNav" class="main-nav main-nav-colored-bg main-nav-dark flex-column flex-md-row">
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Home</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>About</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Pages</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Custom</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+              </nav>
+              <div [ngbNavOutlet]="nav7"></div>
+            </div>
+            <div class="p-3 br-5 bg-secondary mb-3">
+              <nav ngbNav #nav8="ngbNav" class="main-nav main-nav-colored-bg main-nav-dark flex-column flex-md-row">
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Home</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>About</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Pages</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Custom</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+              </nav>
+              <div [ngbNavOutlet]="nav8"></div>
+            </div>
+            <div class="p-3 br-5 bg-info">
+              <nav ngbNav #nav9="ngbNav" class="main-nav main-nav-colored-bg main-nav-dark flex-column flex-md-row">
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Home</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>About</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Pages</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+                <ng-container ngbNavItem>
+                  <a ngbNavLink>Custom</a>
+                  <ng-template ngbNavContent></ng-template>
+                </ng-container>
+              </nav>
+              <div [ngbNavOutlet]="nav9"></div>
+            </div>
+          </div>
+          <div class="" #collapse7="ngbCollapse" [(ngbCollapse)]="isCollapsed7">
+            <pre>
+<code highlight='<div class="example">
+  <div class="p-3 bg-primary br-5 mb-3">
+    <nav ngbNav #nav7="ngbNav" class="main-nav main-nav-colored-bg main-nav-dark flex-column flex-md-row">
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Home</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>About</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Pages</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Custom</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+    </nav>
+    <div [ngbNavOutlet]="nav7"></div>
+  </div>
+  <div class="p-3 br-5 bg-secondary mb-3">
+    <nav ngbNav #nav8="ngbNav" class="main-nav main-nav-colored-bg main-nav-dark flex-column flex-md-row">
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Home</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>About</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Pages</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Custom</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+    </nav>
+    <div [ngbNavOutlet]="nav8"></div>
+  </div>
+  <div class="p-3 br-5 bg-info">
+    <nav ngbNav #nav9="ngbNav" class="main-nav main-nav-colored-bg main-nav-dark flex-column flex-md-row">
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Home</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>About</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Pages</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Custom</a>
+        <ng-template ngbNavContent></ng-template>
+      </ng-container>
+    </nav>
+    <div [ngbNavOutlet]="nav9"></div>
+  </div>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card custom-card" id="tab">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Simple Tab Navigation</h6>
+          <p class="text-muted card-sub-title">Below is a tab navigation that have only few links.</p>
+        </div>        
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse8.toggle()"
+              [attr.aria-expanded]="!isCollapsed8">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <div class="border">
+              <div class="bg-gray-100 nav-bg">
+                <nav ngbNav #nav10="ngbNav" class="nav-tabs">
+                  <ng-container ngbNavItem>
+                    <a ngbNavLink>Home</a>
+                    <ng-template ngbNavContent>
+                      <div class="tab-pane" id="tabCont1">
+                        Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
+                        placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+                      </div>
+                    </ng-template>
+                  </ng-container>
+                  <ng-container ngbNavItem>
+                    <a ngbNavLink>About</a>
+                    <ng-template ngbNavContent>
+                      <div class="tab-pane" id="tabCont2">
+                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                        deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+                        provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
+                        fuga.
+                      </div>
+                    </ng-template>
+                  </ng-container>
+                  <ng-container ngbNavItem>
+                    <a ngbNavLink>Contact</a>
+                    <ng-template ngbNavContent>
+                      <div class="tab-pane" id="tabCont3">
+                        Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias
+                        consequatur aut perferendis doloribus asperiores repellat.
+                      </div>
+                    </ng-template>
+                  </ng-container>
+                </nav>
+              </div>
+              <div class="card-body" [ngbNavOutlet]="nav10"></div>
+            </div>
+          </div>
+          <div class="" #collapse8="ngbCollapse" [(ngbCollapse)]="isCollapsed8">
+            <pre>
+<code highlight=' <div class="example">
+  <div class="border">
+    <div class="bg-gray-100 nav-bg">
+      <nav ngbNav #nav10="ngbNav" class="nav-tabs">
+        <ng-container ngbNavItem>
+          <a ngbNavLink>Home</a>
+          <ng-template ngbNavContent>
+            <div class="tab-pane" id="tabCont1">
+              Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
+              placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+            </div>
+          </ng-template>
+        </ng-container>
+        <ng-container ngbNavItem>
+          <a ngbNavLink>About</a>
+          <ng-template ngbNavContent>
+            <div class="tab-pane" id="tabCont2">
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+              deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+              provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
+              fuga.
+            </div>
+          </ng-template>
+        </ng-container>
+        <ng-container ngbNavItem>
+          <a ngbNavLink>Contact</a>
+          <ng-template ngbNavContent>
+            <div class="tab-pane" id="tabCont3">
+              Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias
+              consequatur aut perferendis doloribus asperiores repellat.
+            </div>
+          </ng-template>
+        </ng-container>
+      </nav>
+    </div>
+    <div class="card-body" [ngbNavOutlet]="nav10"></div>
+  </div>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /row -->

@@ -1,0 +1,44 @@
+::ng-deep{
+    @media (max-width: 575.9px) {
+        ngb-popover-window.bs-popover-start
+        {
+            position: absolute;
+            inset: auto auto 0px 0px !important;
+            margin: 0px;
+            transform: translate3d(52px, -41px, 0px) !important;
+        }
+        ngb-popover-window.bs-popover-end
+        {
+            position: absolute;
+            inset: auto auto 0px 0px !important;
+            margin: 0px;
+            transform:translate3d(52px, -42px, 0px) !important;
+        }
+    }
+    .rtl{
+        @media (min-width: 576px) {
+            ngb-popover-window.bs-popover-end{
+                inset: 70px auto auto -181px !important;
+            }
+            ngb-popover-window.bs-popover-start{
+                inset: 70px -210px auto auto  !important;
+            }
+        }
+        @media (max-width: 575.9px) {
+            ngb-popover-window.bs-popover-end{
+                transform:translate3d(2px, -42px, 0px) !important;
+            }
+            ngb-popover-window.bs-popover-start{
+                transform: translate3d(2px, -41px, 0px) !important;
+            }
+        }
+        .bs-popover-end>.popover-arrow::before{
+            display: none;
+        }
+        .bs-popover-end>.popover-arrow::after, .bs-popover-auto[data-popper-placement^=end]>.popover-arrow::after {
+            right: initial !important;
+            left: -1px !important;
+            transform: rotate(178deg);
+        }
+    }
+}

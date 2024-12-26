@@ -1,0 +1,18 @@
+::ng-deep{
+    .primary-toast .toast-header{
+        background-color: var(--primary-bg-color) !important;
+        color: #fff !important;
+    }
+    .secondary-toast .toast-header{
+        background-color: #f74f75 !important;
+        color: #fff !important;
+    }
+    .success-toast .toast-header{
+        background-color: #016a59  !important;
+        color: #fff !important;
+    }
+    .info-toast .toast-header{
+        background-color: #4ec2f0 !important;
+        color: #fff !important;
+    }
+}

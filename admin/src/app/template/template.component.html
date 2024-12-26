@@ -1,0 +1,59 @@
+<p class="mt-6"></p>
+<div class="left-content"><span class="main-content-title mg-b-0 mg-b-lg-1">Manage Templates</span></div>
+<div class="overflow-scroll card" style="padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;">
+    <label for="file" class="text-black font-w800">Upload Picture or Video</label>
+    <div class="row md-col-12">
+        <div class="col md-col-4">
+            <input #file type="file" class="form-control" id="upload-brochure" accept="image/*,video/*" (change)=OnFileSelected($event) placeholder="Upload Files">
+          
+              <div *ngIf="previewUrl">
+                <div *ngIf="isImageFile; else videoPreview">
+                    <!-- <img [src]="previewUrl" alt="Preview Image" style="max-width: 100%; height: auto;" /> -->
+                    <img [src]="previewUrl" alt="Preview Image" />
+                </div>
+                <ng-template #videoPreview>
+                    <!-- <video [src]="previewUrl" controls style="max-width: 100%; height: auto;"></video> -->
+                    <video [src]="previewUrl" controls ></video>
+                </ng-template>
+              </div>
+        </div>
+        
+        <div class="col md-col-4">
+            <button type="button" class="btn btn-primary light" (click)="onUpload(modal);" [disabled]="!selectedFile" >Upload</button>
+        </div>
+    </div>
+        
+    
+    <div class="row">  
+        <div class="mb-3" *ngIf="isError">
+            <label class="mb-1 form-label text-danger">{{errorMessage}}</label>
+        </div>
+    </div>
+    
+
+    <!-- Message Modal -->
+ <ng-template #messageModal let-modal>
+    <div class="modal-header">
+        <h5 class="modal-title">{{messageHeader}}</h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body data-picker-costem">
+        <form>
+            <div class="row">
+            <div class="mb-3">
+                <label class="text-black font-w500">{{message}}</label>
+            </div>
+            
+            <div class="form-group">
+                <button type="button" class="btn btn-primary light" style="margin-left: 10px;" (click)="modal.dismiss();">OK</button>
+            </div>
+        </div>
+            
+        </form>
+    </div>
+ </ng-template>
+</div>
+
+
+    
+    

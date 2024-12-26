@@ -1,0 +1,218 @@
+<app-page-header [title]="'TOOLTIP'" [items]="['Elements']" [active_item]="'Tooltip'"></app-page-header>
+<div class="row">
+  <div class="col-xl-12 col-lg-12">
+    <!-- div -->
+    <div class="card mg-b-20" id="Tooltip">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <div class="main-content-label mg-b-5">
+            Default Tooltip
+          </div>
+          <p class="mg-b-20">It is Very Easy to Customize and it uses in your website apllication.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse1.toggle()"
+              [attr.aria-expanded]="!isCollapsed1">showcode</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="card-body">
+        
+        <div class="main-content-label main-content-label-sm mg-b-10">
+          Static Example
+        </div>
+        <div class="tooltip-static-demo mg-b-20">
+          <div class="row row-sm">
+            <div class="col-sm-6 col-lg-3">
+              <div class="tooltip bs-tooltip-top" role="tooltip">
+                <div class="tooltip-arrow"></div>
+                <div class="tooltip-inner">
+                  Tooltip on the top
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 mg-t-30 mg-sm-t-0">
+              <div class="tooltip bs-tooltip-bottom" role="tooltip">
+                <div class="tooltip-arrow"></div>
+                <div class="tooltip-inner">
+                  Tooltip on the bottom
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 mg-t-30 mg-lg-t-0">
+              <div class="tooltip bs-tooltip-start" role="tooltip">
+                <div class="tooltip-arrow"></div>
+                <div class="tooltip-inner">
+                  Tooltip on the left
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 mg-t-30 mg-lg-t-0">
+              <div class="tooltip bs-tooltip-end" role="tooltip">
+                <div class="tooltip-arrow"></div>
+                <div class="tooltip-inner">
+                  Tooltip on the right
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- tooltip-static-demo -->
+        <div class="main-content-label main-content-label-sm mg-b-10">
+          Example
+        </div>
+        <div class="text-wrap">
+          <div class="example">
+            <div class="row row-sm tx-center">
+              <div class="col-sm-6 col-lg-3">
+                <button class="btn btn-primary" placement="top" ngbTooltip="Tooltip on top" type="button">Hover me</button>
+              </div>
+              <div class="col-sm-6 col-lg-3 mg-t-30 mg-sm-t-0">
+                <button class="btn btn-primary" placement="bottom" ngbTooltip="Tooltip on bottom" type="button">Hover me</button>
+              </div>
+              <div class="col-sm-6 col-lg-3 mg-t-30 mg-lg-t-0">
+                <button class="btn btn-primary" placement="left" ngbTooltip="Tooltip on left" type="button">Hover me</button>
+              </div>
+              <div class="col-sm-6 col-lg-3 mg-t-30 mg-lg-t-0">
+                <button class="btn btn-primary" placement="right" ngbTooltip="Tooltip on right" type="button">Hover me</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="" #collapse1="ngbCollapse" [(ngbCollapse)]="isCollapsed1">
+            <pre>
+<code highlight='<div class="example">
+  <div class="row row-sm tx-center">
+    <div class="col-sm-6 col-lg-3">
+      <button class="btn btn-primary" placement="top" ngbTooltip="Tooltip on top" type="button">Hover me</button>
+    </div>
+    <div class="col-sm-6 col-lg-3 mg-t-30 mg-sm-t-0">
+      <button class="btn btn-primary" placement="bottom" ngbTooltip="Tooltip on bottom" type="button">Hover me</button>
+    </div>
+    <div class="col-sm-6 col-lg-3 mg-t-30 mg-lg-t-0">
+      <button class="btn btn-primary" placement="left" ngbTooltip="Tooltip on left" type="button">Hover me</button>
+    </div>
+    <div class="col-sm-6 col-lg-3 mg-t-30 mg-lg-t-0">
+      <button class="btn btn-primary" placement="right" ngbTooltip="Tooltip on right" type="button">Hover me</button>
+    </div>
+  </div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /div -->
+
+    <!--div-->
+    <div class="card mg-b-20" id="Tooltip2">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <div class="main-content-label mg-b-5">
+            Colored Tooltip
+          </div>
+          <p class="mg-b-20">It is Very Easy to Customize and it uses in your website apllication.</p>
+          <div class="main-content-label main-content-label-sm mg-b-10">
+            Static Example
+          </div>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse2.toggle()"
+              [attr.aria-expanded]="!isCollapsed2">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="tooltip-static-demo mg-b-20">
+          <div class="row row-sm">
+            <div class="col-sm-6 col-lg-3">
+              <div class="tooltip tooltip-primary bs-tooltip-top" role="tooltip">
+                <div class="tooltip-arrow"></div>
+                <div class="tooltip-inner">
+                  Tooltip on the top
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 mg-t-30 mg-sm-t-0">
+              <div class="tooltip tooltip-secondary bs-tooltip-bottom" role="tooltip">
+                <div class="tooltip-arrow"></div>
+                <div class="tooltip-inner">
+                  Tooltip on the bottom
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 mg-t-30 mg-lg-t-0">
+              <div class="tooltip tooltip-primary1 bs-tooltip-start" role="tooltip">
+                <div class="tooltip-arrow"></div>
+                <div class="tooltip-inner">
+                  Tooltip on the left
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 mg-t-30 mg-lg-t-0">
+              <div class="tooltip tooltip-secondary1 bs-tooltip-end" role="tooltip">
+                <div class="tooltip-arrow"></div>
+                <div class="tooltip-inner">
+                  Tooltip on the right
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- tooltip-static-demo -->
+        <div class="main-content-label main-content-label-sm mg-b-10">
+          Example
+        </div>
+        <div class="text-wrap">
+          <div class="example">
+            <div class="bg-gray-200 pd-20">
+              <div class="row row-sm tx-center">
+                <div class="col-sm-6 col-lg-3">
+                  <button class="btn btn-primary" placement="top" tooltipClass="tooltip-primary" ngbTooltip="Tooltip on top" type="button">Hover me</button>
+                </div>
+                <div class="col-sm-6 col-lg-3 mg-t-30 mg-sm-t-0">
+                  <button class="btn btn-primary" placement="bottom" tooltipClass="tooltip-secondary" ngbTooltip="Tooltip on bottom" type="button">Hover me</button>
+                </div>
+                <div class="col-sm-6 col-lg-3 mg-t-30 mg-lg-t-0">
+                  <button class="btn btn-primary" placement="left" tooltipClass="tooltip-primary1" ngbTooltip="Tooltip on left" type="button">Hover me</button>
+                </div>
+                <div class="col-sm-6 col-lg-3 mg-t-30 mg-lg-t-0">
+                  <button class="btn btn-primary" placement="right" tooltipClass="tooltip-secondary1" ngbTooltip="Tooltip on right" type="button">Hover me</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="" #collapse2="ngbCollapse" [(ngbCollapse)]="isCollapsed2">
+            <pre>
+<code highlight='<div class="example">
+  <div class="bg-gray-200 pd-20">
+    <div class="row row-sm tx-center">
+      <div class="col-sm-6 col-lg-3">
+        <button class="btn btn-primary" placement="top" tooltipClass="tooltip-primary" ngbTooltip="Tooltip on top" type="button">Hover me</button>
+      </div>
+      <div class="col-sm-6 col-lg-3 mg-t-30 mg-sm-t-0">
+        <button class="btn btn-primary" placement="bottom" tooltipClass="tooltip-secondary" ngbTooltip="Tooltip on bottom" type="button">Hover me</button>
+      </div>
+      <div class="col-sm-6 col-lg-3 mg-t-30 mg-lg-t-0">
+        <button class="btn btn-primary" placement="left" tooltipClass="tooltip-primary1" ngbTooltip="Tooltip on left" type="button">Hover me</button>
+      </div>
+      <div class="col-sm-6 col-lg-3 mg-t-30 mg-lg-t-0">
+        <button class="btn btn-primary" placement="right" tooltipClass="tooltip-secondary1" ngbTooltip="Tooltip on right" type="button">Hover me</button>
+      </div>
+    </div>
+  </div>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/div-->
+</div>
+<!-- /row -->

@@ -1,0 +1,94 @@
+::ng-deep{
+    .dark-theme{
+        .mat-button, .mat-icon-button, .mat-stroked-button {
+            color: #b7c0d6 !important;
+        }
+        .mat-form-field-label {
+            color: #eee
+        }
+        .mat-datepicker-content {
+            background-color: #373d51;
+            color: rgb(255 255 255 / 87%);
+        }
+        .mat-calendar-table-header, .mat-calendar-body-label {
+            color: rgb(255 255 255);
+        }
+        @media (hover: hover){
+            .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+                background-color: rgb(42 46 63);
+            }
+        }
+        .mat-calendar-body-cell-content, .mat-date-range-input-separator {
+            color: #e1e1ef;
+        }
+        .ngb-dp-header {
+            background-color: #343545;
+        }
+        .ngb-dp-weekdays {
+            background-color: #343545;
+        }
+        
+    }
+    .rtl .color-picker{
+        left: initial !important;
+    }
+    .transparent-theme {
+        .card .box {
+        background: #2da28f;
+        }
+        .hex-text, .rgba-text{
+            background: #2da28f;
+        }
+        .mat-datepicker-content {
+            background-color: #2da28f;
+            color: rgba(255, 255, 255, 0.87);
+        }
+        .mat-datepicker-toggle, .mat-datepicker-content .mat-calendar-next-button, .mat-datepicker-content .mat-calendar-previous-button {
+            color: rgba(255, 255, 255, 0.507);
+        }
+        .mat-calendar-body-cell-content, .mat-date-range-input-separator {
+            color: rgba(255, 255, 255, 0.829);
+        }
+        .mat-calendar-table-header, .mat-calendar-body-label {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .ngb-dp-header {
+            background-color: var(--transparent-body);
+        }
+        .ngb-dp-weekdays {
+            background-color: var(--transparent-body);
+        }
+        .ngb-dp-weekday{
+            color: #000;
+        }
+        .ng-select .ng-clear-wrapper{
+            color: #fff !important;
+        }
+      
+        .ng-select .ng-arrow-wrapper .ng-arrow {
+            border-top-color: #fff !important;
+        }
+        .ng-select.ng-select-opened .ng-arrow-wrapper .ng-arrow {
+            border-bottom-color: #fff !important;
+        }
+    }
+    
+    .form-controls {
+        display: block;
+        color: #fff;
+        border: transparent;
+        outline: none;
+        width: 100%;
+        height: 40px;
+        padding: 0.375rem 0.75rem;
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 2;
+        background-clip: padding-box;
+        border-radius: 5px;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+    button[type="button"]{
+        z-index: 0 !important;
+    }
+}

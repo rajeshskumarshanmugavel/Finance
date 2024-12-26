@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPK Editor</title>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+
+    <link rel="stylesheet" href="spk-editor.css">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+    </style>
+</head>
+
+<body>
+    <textarea class="spk-editor">
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <p>1234567890</p>
+            <p>suresh venkat</p>
+            <p>spruko technologies</p>
+            <ul>
+                <li>qweuytqw</li>
+                <li>sdfgsdf</li>
+                <li>sdfsdfsa<b>sjddfsdf<i>sadasdsdfsdf</i><u>sdkjfskdsdasd <s>asdahgsjdagsjdgsjadgjasgdjas</s>asdasdasd hfkjs</u><s>sdjfkhdkhfskd</s>sdfsdlaks</b>jsdfsdfds....</li>
+                <li>sdfsdfsa<b>sjddfsdf<i>sadasdsdfsdf</i><u>sdkjfskdsdasd <s>asdahgsjdagsjdgsjadgjasgdjas</s>asdasdasd hfkjs</u><s>sdjfkhdkhfskd</s>sdfsdlaks</b>jsdfsdfds</li><li>khdgkfjdg</li>
+                <li>abcdefghijklmnop</li>
+                <li>erteortuer</li>
+            </ul>
+            <p>this for testin ul, ol</p>
+    </textarea>
+    <button id="destroy">Destroy</button>
+    <button id="create">Create</button>
+    <textarea id="spk-editor">
+
+        <p>sdfsdfsa<b>sjddfsdf<i>sadasdsdfsdf</i><u>sdkjfskdsdasd
+            <s>asdahgsjdagsjdgsjadgjasgdjas</s>asdasdasd
+            hfkjs</u><s>sdjfkhdkhfskd</s>sdfsdlaks</b>jsdfsdfds</p>
+        <p>sdf<i>sdjgasjdga<em>jvancvajsva</em>sdhjajhdgasaD</i>asf</p>
+        <p>asdlfkjsfljs</p>
+        <p>abcdefghijklmnopqrstuvwxyz</p>
+    </textarea>
+
+    <script src="./spk-editor.js"></script>
+    <script>
+        let editor1 = new Spk(document.querySelector('.spk-editor'));
+        let editor2 = new Spk(document.querySelectorAll('#spk-editor'), {
+            config: {
+                align: ['left', 'center', 'right'],
+            },
+            placeholderText: "<div class='check'> hi, <blockquote><br> Welcome to SPK text editor.<br></blockquote> please, write text here!<br> super simple Editor</div>",
+        });
+
+        let cre = document.querySelector('#create').addEventListener('click', function(){ editor1.create(); });
+        let destroy = document.querySelector('#destroy').addEventListener('click', function(){ editor1.destroy(); });
+
+    </script>
+
+</body>
+
+</html>

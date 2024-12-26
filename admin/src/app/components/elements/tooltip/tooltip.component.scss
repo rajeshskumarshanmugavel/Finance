@@ -1,0 +1,17 @@
+::ng-deep{
+    .rtl{
+        .bs-tooltip-start .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before {
+            left: 117px;
+            right: inherit;
+        }
+        .bs-tooltip-end .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before {
+            right: 125px;
+        }
+        ngb-tooltip-window.bs-tooltip-start .tooltip-arrow::before{
+            left: 96px;
+        }
+        ngb-tooltip-window.bs-tooltip-end .tooltip-arrow::before{
+            right: 104px;
+        }
+    }
+}

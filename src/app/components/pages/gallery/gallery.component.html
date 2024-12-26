@@ -1,0 +1,11 @@
+<app-page-header [title]="'GALLERY'" [items]="['Pages']" [active_item]="'Gallery'"></app-page-header>
+
+<p class="gallery-item row" gallerize>
+  <img class="js-img-viewer my-2 col-xl-3 col-lg-4 col-sm-6 radius-20" *ngFor="let img of imageData" [src]="img.srcUrl" previewFullscreen="true">
+</p>
+<!-- Pagination -->
+<div class="row mb-5">
+  <div class="col-md-6 mt-1 d-none d-md-block text-dark">1 - 10 of 234 photos</div>
+  <ngb-pagination [collectionSize]="50" [page]="1" aria-label="Default pagination" class="pagination product-pagination ms-auto float-end"></ngb-pagination>
+</div>
+<!-- Pagination -->

@@ -1,0 +1,80 @@
+<app-page-header [title]="'RANGE SLIDER'" [items]="['Apps']" [active_item]="'Ranger Slider'"></app-page-header>
+<div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-12">
+
+  <div class="card mg-b-20">
+    <div class="card-body">
+      <div class="main-content-label mg-b-5">
+        Range Slider
+      </div>
+      <p class="mg-b-20">Default range slider Of redash.</p>
+      <div class="row row-sm">
+        <div class="col-lg-12">
+          <div *ngFor="let slider of modernsliders1">
+            <ngx-slider class="slider1" [value]="slider.value" [options]="modernSliderOptions(slider)"></ngx-slider>
+            </div>
+        </div>
+
+      </div>
+      <div class="row row-sm">
+                  <div class="col-lg-12 mg-t-20">
+          <ngx-slider class="slider1" [value]="minValue1" [highValue]="maxValue1" [options]="options1"></ngx-slider>
+        </div>
+        <div class="col-lg-12 mg-t-20">
+          <ngx-slider class="slider1" [value]="negativeValue1" [highValue]="negativeHighValue1" [options]="negativeOptions1"></ngx-slider>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <div class="card mg-b-20">
+          <div class="card-body">
+              <div class="main-content-label mg-b-5">
+                  Range Slider (Modern Skin)
+              </div>
+              <p class="mg-b-20">It is the modern skin range slider of Xino.</p>
+              <div class="row row-sm">
+        <div class="col-lg-12">
+          <div *ngFor="let slider of modernsliders2">
+            <ngx-slider class="slider2" [value]="slider.value" [options]="modernSliderOptions(slider)"></ngx-slider>
+            </div>
+        </div>
+
+      </div>
+      <div class="row row-sm">
+                  <div class="col-lg-12 mg-t-20">
+          <ngx-slider class="slider2" [value]="minValue2" [highValue]="maxValue2" [options]="options2"></ngx-slider>
+        </div>
+        <div class="col-lg-12 mg-t-20">
+          <ngx-slider class="slider2" [value]="negativeValue2" [highValue]="negativeHighValue2" [options]="negativeOptions2"></ngx-slider>
+        </div>
+      </div>
+          </div>
+      </div>
+
+      <div class="card">
+          <div class="card-body">
+              <div class="main-content-label mg-b-5">
+                  Range Slider (Outline Skin)
+              </div>
+              <p class="mg-b-20">It is the outline skin range slider of Xino.</p>
+              <div class="row row-sm">
+        <div class="col-lg-12">
+          <div *ngFor="let slider of modernsliders3">
+            <ngx-slider class="slider3"  [value]="slider.value"  [options]="modernSliderOptions(slider)"></ngx-slider>
+            </div>
+        </div>
+
+      </div>
+      <div class="row row-sm">
+                  <div class="col-lg-12 mg-t-20">
+          <ngx-slider class="slider3" [value]="minValue3" [highValue]="maxValue3" [options]="options3"></ngx-slider>
+        </div>
+        <div class="col-lg-12 mg-t-20">
+          <ngx-slider class="slider3" [value]="negativeValue3" [highValue]="negativeHighValue3" [options]="negativeOptions3"></ngx-slider>
+        </div>
+      </div>
+          </div>
+      </div>
+  </div>
+</div>

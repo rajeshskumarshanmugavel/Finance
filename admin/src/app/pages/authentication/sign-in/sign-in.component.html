@@ -1,0 +1,90 @@
+		<div class="page">
+			<div class="page-single">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-5 col-lg-6 col-md-8 col-sm-8 col-xs-10 card-sigin-main mx-auto my-auto py-4 justify-content-center">
+							<div class="card-sigin">
+								 <!-- Demo content-->
+								 <div class="main-card-signin d-md-flex">
+									 <div class="wd-100p"><div class="d-flex mb-4"><a routerLink="/dashboard/dashboard01"><img src="./assets/img/brand/favicon.png" class="sign-favicon ht-40" alt="logo"></a></div>
+										 <div class="">
+											<div class="main-signup-header">
+												<h2>Welcome back!</h2>
+												<h6 class="font-weight-semibold mb-4">Please sign in to continue.</h6>
+												<div class="panel panel-primary">
+												   <div class=" tab-menu-heading mb-2 border-bottom-0">
+													   <div class="tabs-menu1">
+														   <ul ngbNav #nav="ngbNav" [activeId]="1" class="panel-tabs">
+															<li class="me-2" [ngbNavItem]="1">
+															  <a ngbNavLink>Email</a>
+															  <ng-template ngbNavContent>
+																<form action="#">
+																	<div class="form-group">
+																		<label>Email</label> <input class="form-control" placeholder="Enter your email" type="text">
+																	</div>
+																	<div class="form-group">
+																		<label>Password</label> <input class="form-control" placeholder="Enter your password" type="password">
+																	</div><button class="btn btn-primary btn-block">Sign In</button>
+																	<div class="mt-4 d-flex mx-auto text-center justify-content-center mb-2">
+																		<a href="https://www.facebook.com/" target="_blank" class="btn btn-icon btn-facebook me-3" type="button">
+																			<span class="btn-inner--icon"> <i class="bx bxl-facebook tx-18 tx-prime"></i> </span>
+                                    </a>
+
+																		<a href="https://www.twitter.com/" target="_blank" class="btn btn-icon me-3" type="button">
+																			<span class="btn-inner--icon"> <i class="bx bxl-twitter tx-18 tx-prime"></i> </span>
+                                    </a>
+																		<a href="https://www.linkedin.com/?original_referer=https%3A%2F%2Fspruko.com%2F" target="_blank"  class="btn btn-icon me-3" type="button">
+																			<span class="btn-inner--icon"> <i class="bx bxl-linkedin tx-18 tx-prime"></i> </span>
+                                    </a>
+																		<a href="https://www.instagram.com/"  target="_blank" class="btn  btn-icon me-3" type="button">
+																			<span class="btn-inner--icon"> <i class="bx bxl-instagram tx-18 tx-prime"></i> </span>
+                                    </a>
+																	</div>
+																 </form>
+															  </ng-template>
+															</li>
+															<li [ngbNavItem]="2">
+															  <a ngbNavLink>Mobile no</a>
+															  <ng-template ngbNavContent>
+																<div id="mobile-num" class="wrap-input100 validate-input input-group mb-2">
+																	<a href="javascript:void(0);" class="input-group-text bg-white text-muted">
+																		<span>+91</span>
+																	</a>
+																	<input class="input100 form-control" type="mobile" placeholder="Mobile">
+																</div>
+																<div id="login-otp" class="justify-content-around mb-4">
+																	<input class="form-control  text-center me-2" id="txt1" maxlength="1" onkeyup="move(event, '', 'txt1', 'txt2')">
+																	<input class="form-control  text-center me-2" id="txt2" maxlength="1" onkeyup="move(event, 'txt1', 'txt2', 'txt3')">
+																	<input class="form-control  text-center me-2" id="txt3" maxlength="1" onkeyup="move(event, 'txt2', 'txt3', 'txt4')">
+																	<input class="form-control  text-center" id="txt4" maxlength="1" onkeyup="move(event, 'txt3', 'txt4', '')">
+																</div>
+																<span>Note : Login with registered mobile number to generate OTP.</span>
+																<div class="container-login100-form-btn mt-3">
+																	<a href="javascript:void(0);" class="btn login100-form-btn btn-primary" id="generate-otp">
+																		 Proceed
+																	</a>
+																</div>
+															  </ng-template>
+															</li>
+														  </ul>
+													   </div>
+												   </div>
+												   <div class="panel-body tabs-menu-body border-0 p-3">
+													   <div [ngbNavOutlet]="nav" ></div>
+												   </div>
+											   </div>
+
+												<div class="main-signin-footer text-center mt-3">
+													<p><a routerLink="/custom-pages/forget-password" class="mb-3">Forgot password?</a></p>
+													<p>Don't have an account? <a routerLink="/custom-pages/sign-up">Create an Account</a></p>
+												</div>
+											</div>
+										 </div>
+									 </div>
+								 </div>
+							 </div>
+						 </div>
+					</div>
+				</div>
+			</div>
+		</div>

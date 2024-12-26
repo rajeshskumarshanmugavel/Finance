@@ -1,0 +1,180 @@
+<app-page-header [title]="'READ MAIL'" [items]="['Mail']" [active_item]="'Read mail'"></app-page-header>
+<!-- row opened -->
+<div class="row row-sm">
+  <!-- Col -->
+  <div class="col-lg-4 col-xl-3 col-md-12 col-sm-12">
+    <div class="card mg-b-20">
+      <div class="main-content-left main-content-left-mail card-body">
+        <a class="btn btn-primary btn-compose" id="btnCompose"  (click)="open(content)">Compose</a>
+        <div class="main-mail-menu">
+          <nav class="nav main-nav-column mg-b-20">
+            <a class="nav-link thumb active" href="javascript:void(0);"  routerLink="/mail/mail"><i class="far fa-envelope"></i> Inbox
+              <span>18</span></a>
+            <a class="nav-link thumb" href="javascript:void(0);"><i class="far fa-star"></i> Starred <span>8</span></a>
+            <a class="nav-link thumb" href="javascript:void(0);"><i class="far fa-clock"></i> Snoozed <span>6</span></a>
+            <a class="nav-link thumb" href="javascript:void(0);"><i class="far fa-bookmark"></i> Important
+              <span>15</span></a>
+            <a class="nav-link thumb" href="javascript:void(0);"><i class="far fa-paper-plane"></i> Sent Mail
+              <span>24</span></a>
+            <a class="nav-link thumb" href="javascript:void(0);"><i class="far fa-hourglass"></i> Drafts
+              <span>2</span></a>
+            <a class="nav-link thumb" href="javascript:void(0);"><i class="far fa-dot-circle"></i> Spam
+              <span>32</span></a>
+            <a class="nav-link thumb" href="javascript:void(0);"><i class="far fa-comments"></i> Chats
+              <span>14</span></a>
+            <a class="nav-link thumb" href="javascript:void(0);"><i class="far fa-user-circle"></i> Contacts
+              <span>547</span></a>
+            <a class="nav-link thumb" href="javascript:void(0);"><i class="fe fe-trash"></i> Trash <span>365</span></a>
+          </nav>
+          <label class="main-content-label main-content-label-sm">Settings</label>
+          <nav class="nav main-nav-column">
+            <a class="nav-link active" href="javascript:void(0);">Email Settings</a>
+          </nav>
+        </div><!-- main-mail-menu -->
+      </div>
+    </div>
+  </div>
+  <!-- /Col -->
+  <div class="col-xl-9 col-lg-8 col-md-12 col-sm-12">
+    <div class="card">
+      <div class="card-header border-bottom">
+        <h4 class="card-title">Velit a labore</h4>
+      </div>
+      <div class="card-body">
+        <div class="email-media">
+          <div class="mt-0 d-sm-flex">
+            <img class="me-2 rounded-circle avatar-xl" src="./assets/img/faces/6.jpg" alt="avatar">
+            <div class="media-body">
+              <div class="float-end d-none d-md-flex tx-8">
+                <small class="me-2  border br-5 p-2"><i class="bx bx-star tx-18" ngbTooltip="Rated"></i></small>
+                <small class="me-2  border br-5 p-2"><i class="bx bx-paperclip tx-18" ngbTooltip="Attach"></i></small>
+                <small class="me-2  border br-5 p-2"><i class="bx bx-reply tx-18" ngbTooltip="Reply"></i></small>
+                <div class="me-2  border br-5 p-2" ngbDropdown>
+                  <a href="javascript:void(0);" ngbDropdownToggle role="button" aria-haspopup="true"
+                    aria-expanded="false"><i class="fe fe-more-vertical  tx-gray-600  tx-18" data-bs-toggle="tooltip"
+                      title="" data-bs-original-title="View more"></i></a>
+                  <div ngbDropdownMenu>
+                    <a class="dropdown-item" href="javascript:void(0);">Reply</a>
+                    <a class="dropdown-item" href="javascript:void(0);">Report Spam</a>
+                    <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                    <a class="dropdown-item" href="javascript:void(0);">Show Original</a>
+                    <a class="dropdown-item" href="javascript:void(0);">Print</a>
+                    <a class="dropdown-item" href="javascript:void(0);">Filter</a>
+                  </div>
+                </div>
+              </div>
+              <div class="media-title  font-weight-bold mt-3">Alica Nestle <span class="tx-13 font-weight-semibold">(
+                  alicnestle@gmail.com )</span></div>
+              <p class="mb-0">to Adam Cotter ( adamcotter@gmail.com ) </p>
+              <small class="me-2 d-md-none">Dec 13 , 2018 12:45 pm</small>
+              <small class="me-2 d-md-none"><i class="fe fe-star text-muted" ngbTooltip="Rated"></i></small>
+              <small class="me-2 d-md-none"><i class="fa fa-reply text-muted" ngbTooltip="Reply"></i></small>
+            </div>
+          </div>
+        </div>
+        <div class="eamil-body mt-5">
+          <h6>Hi Sir/Madam</h6>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+            aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+            dolores eos qui ratione voluptatem sequi nesciunt. </p>
+          <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+          <p> Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain,
+            but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To
+            take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some
+            advantage from it?</p>
+          <p class="mb-0">Thanking you Sir/Madam</p>
+          <hr>
+          <div class="email-attch">
+            <div class="float-end">
+              <a href="javascript:void(0);"><i class="bx bxs-download  border br-5 p-2  tx-18" ngbTooltip="Download"></i></a>
+            </div>
+            <p>3 Attachments<a href="javascript:void(0);" class="d-inline-flex mx-2"> View All Images</a></p>
+            <div class="emai-img">
+              <div class="d-sm-flex">
+                <div class=" m-2">
+                  <a href="javascript:void(0);"><img class="wd-150 br-5 mb-2" src="./assets/img/photos/1.jpg"
+                      alt="placeholder image"></a>
+                  <h6 class="mb-3 mb-lg-0">1.jpg <small class="text-muted">12kb</small></h6>
+                </div>
+                <div class="m-2">
+                  <a href="javascript:void(0);"><img class="wd-150 br-5 mb-2" src="./assets/img/photos/2.jpg"
+                      alt="placeholder image"></a>
+                  <h6 class="mb-3 mb-lg-0">2.jpg <small class="text-muted">18kb</small></h6>
+                </div>
+                <div class="m-2">
+                  <a href="javascript:void(0);"><img class="wd-150 br-5 mb-2" src="./assets/img/photos/3.jpg"
+                      alt="placeholder image"></a>
+                  <h6>3.jpg <small class="text-muted">21kb</small></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a class="btn btn-primary mt-1 mb-1 me-2" href="javascript:void(0);"><i class="fa fa-reply"></i> Reply</a>
+        <a class="btn btn-info mt-1 mb-1" href="javascript:void(0);"><i class="fa fa-share"></i> Forward</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- row closed -->
+
+
+
+<ng-template #content let-modal>
+  <div class="modal-header main-mail-compose-header">
+    <span class="modal-title" id="modal-basic-title">New Message</span>
+    <button type="button" class="close nav" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span class="nav-link" aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <div class="main-mail-compose-body">
+          <div class="form-group mb-0">
+            <label class="form-label">To:</label>
+            <div>
+              <input class="form-control" placeholder="" type="text">
+            </div>
+          </div>
+          <div class="form-group mb-0">
+            <label class="form-label">Subject:</label>
+            <div>
+              <input class="form-control" type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" placeholder="" rows="12"></textarea>
+          </div>
+
+
+        </div>
+      </div>
+    </form>
+    <div class="modal-footer d-flex justify-content-between">
+
+      <nav class="nav mailLinks">
+        <a class="nav-link" data-toggle="tooltip" href="javascript:;" title="" data-original-title="Formatting"><i
+            class="fas fa-font"></i></a>
+        <a class="nav-link" data-toggle="tooltip" href="javascript:;" title="" data-original-title="Add attachment"><i
+            class="fas fa-paperclip"></i></a>
+        <a class="nav-link" data-toggle="tooltip" href="javascript:;" title="" data-original-title="Add photo"><i
+            class="far fa-image"></i></a>
+        <a class="nav-link" data-toggle="tooltip" href="javascript:;" title="" data-original-title="Add link"><i
+            class="fas fa-link"></i></a>
+        <a class="nav-link" data-toggle="tooltip" href="javascript:;" title="" data-original-title="Emoticons"><i
+            class="far fa-smile"></i></a>
+        <a class="nav-link" data-toggle="tooltip" href="javascript:;" title=""
+          data-original-title="Insert files into Drive"><i class="fab fa-google-drive"></i></a>
+        <a class="nav-link" data-toggle="tooltip" href="javascript:;" title="" data-original-title="Delete"><i
+            class="far fa-trash-alt"></i></a>
+      </nav>
+      <button class="btn ripple btn-primary float-end">Send</button>
+
+    </div>
+  </div>
+</ng-template>

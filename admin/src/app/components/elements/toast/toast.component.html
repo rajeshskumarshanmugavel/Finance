@@ -1,0 +1,280 @@
+<app-page-header [title]="'TOAST'" [items]="['Elements']" [active_item]="'Toast'"></app-page-header>
+<!-- Row -->
+<div class="row">
+  <div class="col-xl-12 col-lg-12">
+    <div class="card custom-card" id="basic">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Basic Example</h6>
+          <p class="text-muted card-sub-title">Toasts are as flexible as you need and have very little required markup.
+            At a minimum, we require a single element to contain your “toasted” content and strongly encourage a dismiss
+            button.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse1.toggle()"
+              [attr.aria-expanded]="!isCollapsed1">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+            <ngb-toast *ngIf="show" [autohide]="false" (hidden)="show=false">
+              <ng-template ngbToastHeader>
+                <h6 class="tx-14 mg-b-0 mx-2">Notification</h6><small class="text-muted me-3">11 mins ago</small>
+              </ng-template>
+              Hello, world! This is a toast message.
+            </ngb-toast>
+
+            <div class="" #collapse1="ngbCollapse" [(ngbCollapse)]="isCollapsed1">
+              <pre>
+  <code highlight='<ngb-toast *ngIf="show" [autohide]="false" (hidden)="show=false">
+    <ng-template ngbToastHeader>
+      <h6 class="tx-14 mg-b-0 mx-2">Notification</h6><small class="text-muted me-3">11 mins ago</small>
+    </ng-template>
+    Hello, world! This is a toast message.
+  </ngb-toast>'>
+  </code>
+              </pre>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="card custom-card" id="stacking">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Stacking</h6>
+          <p class="text-muted card-sub-title">When you have multiple toasts, we default to vertiaclly stacking them in
+            a readable manner.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse2.toggle()"
+              [attr.aria-expanded]="!isCollapsed2">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+            <div class="demo-static-toast">
+              <ngb-toast *ngIf="show1" [autohide]="false" (hidden)="show1=false">
+                <ng-template ngbToastHeader>
+                  <h6 class="tx-14 mg-b-0 mx-2">Notification</h6><small class="text-muted me-3">Just now</small>
+                </ng-template>
+                See? Just like this.
+              </ngb-toast>
+              <ngb-toast *ngIf="show2" [autohide]="false" (hidden)="show2=false">
+                <ng-template ngbToastHeader>
+                  <h6 class="tx-14 mg-b-0 mx-2">Notification</h6><small class="text-muted me-3">11 mins ago</small>
+                </ng-template>
+                Hello, world! This is a toast message.
+              </ngb-toast>
+            </div>
+
+            <div class="" #collapse2="ngbCollapse" [(ngbCollapse)]="isCollapsed2">
+              <pre>
+  <code highlight='<div class="demo-static-toast">
+    <ngb-toast *ngIf="show1" [autohide]="false" (hidden)="show1=false">
+      <ng-template ngbToastHeader>
+        <h6 class="tx-14 mg-b-0 mx-2">Notification</h6><small class="text-muted me-3">Just now</small>
+      </ng-template>
+      See? Just like this.
+    </ngb-toast>
+    <ngb-toast *ngIf="show2" [autohide]="false" (hidden)="show2=false">
+      <ng-template ngbToastHeader>
+        <h6 class="tx-14 mg-b-0 mx-2">Notification</h6><small class="text-muted me-3">11 mins ago</small>
+      </ng-template>
+      Hello, world! This is a toast message.
+    </ngb-toast>
+  </div>'>
+  </code>
+              </pre>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="card custom-card" id="place">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+  
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse3.toggle()"
+              [attr.aria-expanded]="!isCollapsed3">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div>
+          <h6 class="card-title mb-1">Placement</h6>
+          <p class="text-muted card-sub-title">Place toasts with custom CSS as you need them. The top right is often
+            used for notifications, as is the top middle.</p>
+        </div>
+        <div class="text-wrap mb-3">
+            <div class="ht-150 pos-relative mb-3">
+              <div class="demo-static-toast pos-absolute t-10">
+                <ngb-toast *ngIf="show3" [autohide]="false" (hidden)="show3=false">
+                  <ng-template ngbToastHeader>
+                    <h6 class="tx-14 mg-b-0 mx-2">Notification</h6><small class="text-muted me-3">11 mins ago</small>
+                  </ng-template>
+                  Hello, world! This is a toast message.
+                </ngb-toast>
+            </div>
+          </div>
+        </div>
+        <div class="text-wrap mb-3">
+            <div class="demo-static-toast d-flex justify-content-center align-items-center">
+                <ngb-toast *ngIf="show4" [autohide]="false" (hidden)="show4=false">
+                  <ng-template ngbToastHeader>
+                    <h6 class="tx-14 mg-b-0 mx-2">Notification</h6><small class="text-muted me-3">11 mins ago</small>
+                  </ng-template>
+                  Hello, world! This is a toast message.
+                </ngb-toast>
+            </div>
+        </div>
+
+        <div class="" #collapse3="ngbCollapse" [(ngbCollapse)]="isCollapsed3">
+          <pre>
+<code highlight='<div class="demo-static-toast d-flex justify-content-center align-items-center">
+  <ngb-toast *ngIf="show4" [autohide]="false" (hidden)="show4=false">
+    <ng-template ngbToastHeader>
+      <h6 class="tx-14 mg-b-0 mx-2">Notification</h6><small class="text-muted me-3">11 mins ago</small>
+    </ng-template>
+    Hello, world! This is a toast message.
+  </ngb-toast>
+</div>'>
+</code>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /row -->
+<div class="row">
+  <div class="col-xl-12">
+    <div class="card custom-card" id="tarns">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Color Toasts</h6>
+          <p class="text-muted card-sub-title">Toasts are slightly translucent, too, so they blend over whatever they
+            might appear over.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse4.toggle()"
+              [attr.aria-expanded]="!isCollapsed4">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+       
+        <div class="text-wrap color-toasts">
+            <div class="row">
+              <div class="col-xl-12">
+                <div class="row">
+                  <div class="col-xl-6 col-lg-6 col-md-12">
+                    <div class="demo-static-toast mb-2 mt-2">
+                      <ngb-toast *ngIf="show5" [autohide]="false" (hidden)="show5=false" class="primary-toast">
+                        <ng-template ngbToastHeader >
+                            <i class="fe fe-home me-2"></i><h6 class="tx-14 mg-b-0 mg-r-auto">Notification</h6><small class="me-3">11 mins ago</small>
+                        </ng-template>
+                        Hello, world! This is a toast message.
+                      </ngb-toast>
+                    </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 col-md-12">
+                    <div class="demo-static-toastmt-2 mb-2">
+                      <ngb-toast *ngIf="show6" [autohide]="false" (hidden)="show6=false" class="secondary-toast">
+                        <ng-template ngbToastHeader >
+                            <i class="fe fe-compass me-2"></i><h6 class="tx-14 mg-b-0 mg-r-auto">Notification</h6><small class="me-3">11 mins ago</small>
+                        </ng-template>
+                        Hello, world! This is a toast message.
+                      </ngb-toast>
+                    </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 col-md-12">
+                    <div class="demo-static-toast mt-2 mb-2">
+                      <ngb-toast *ngIf="show7" [autohide]="false" (hidden)="show7=false" class="success-toast">
+                        <ng-template ngbToastHeader >
+                            <i class="fe fe-check-circle me-2"></i><h6 class="tx-14 mg-b-0 mg-r-auto">Notification</h6><small class="me-3">11 mins ago</small>
+                        </ng-template>
+                        Hello, world! This is a toast message.
+                      </ngb-toast>
+                    </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 col-md-12">
+                    <div class="demo-static-toast mt-2 mb-2">
+                      <ngb-toast *ngIf="show8" [autohide]="false" (hidden)="show8=false" class="info-toast">
+                        <ng-template ngbToastHeader >
+                            <i class="fe fe-info me-2"></i><h6 class="tx-14 mg-b-0 mg-r-auto">Notification</h6><small class="me-3">11 mins ago</small>
+                        </ng-template>
+                        Hello, world! This is a toast message.
+                      </ngb-toast>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="" #collapse4="ngbCollapse" [(ngbCollapse)]="isCollapsed4">
+              <pre>
+  <code highlight='<div class="row">
+    <div class="col-xl-12">
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12">
+          <div class="demo-static-toast mb-2 mt-2">
+            <ngb-toast *ngIf="show5" [autohide]="false" (hidden)="show5=false" class="primary-toast">
+              <ng-template ngbToastHeader >
+                  <i class="fe fe-home me-2"></i><h6 class="tx-14 mg-b-0 mg-r-auto">Notification</h6><small class="me-3">11 mins ago</small>
+              </ng-template>
+              Hello, world! This is a toast message.
+            </ngb-toast>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12">
+          <div class="demo-static-toastmt-2 mb-2">
+            <ngb-toast *ngIf="show6" [autohide]="false" (hidden)="show6=false" class="secondary-toast">
+              <ng-template ngbToastHeader >
+                  <i class="fe fe-compass me-2"></i><h6 class="tx-14 mg-b-0 mg-r-auto">Notification</h6><small class="me-3">11 mins ago</small>
+              </ng-template>
+              Hello, world! This is a toast message.
+            </ngb-toast>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12">
+          <div class="demo-static-toast mt-2 mb-2">
+            <ngb-toast *ngIf="show7" [autohide]="false" (hidden)="show7=false" class="success-toast">
+              <ng-template ngbToastHeader >
+                  <i class="fe fe-check-circle me-2"></i><h6 class="tx-14 mg-b-0 mg-r-auto">Notification</h6><small class="me-3">11 mins ago</small>
+              </ng-template>
+              Hello, world! This is a toast message.
+            </ngb-toast>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12">
+          <div class="demo-static-toast mt-2 mb-2">
+            <ngb-toast *ngIf="show8" [autohide]="false" (hidden)="show8=false" class="info-toast">
+              <ng-template ngbToastHeader >
+                  <i class="fe fe-info me-2"></i><h6 class="tx-14 mg-b-0 mg-r-auto">Notification</h6><small class="me-3">11 mins ago</small>
+              </ng-template>
+              Hello, world! This is a toast message.
+            </ngb-toast>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>'>
+  </code>
+              </pre>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+::ng-deep .ng-select.ng-select-bottom .ng-dropdown-panel {
+    top: auto !important;
+    bottom: 100% !important;
+    margin-bottom: 4px; /* Adjust the margin as needed */
+  }
+
+  ::ng-deep .ng-select .ng-clear-wrapper {
+    display: none !important;
+  }

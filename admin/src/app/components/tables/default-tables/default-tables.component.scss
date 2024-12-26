@@ -1,0 +1,10 @@
+::ng-deep{
+    .dark-mode{
+        .table-hover > tbody > tr:hover > *{
+            color: #fff;
+        }
+        .table-striped > tbody > tr:nth-of-type(odd) > *{
+            color: #ccc;
+        }
+    }
+}

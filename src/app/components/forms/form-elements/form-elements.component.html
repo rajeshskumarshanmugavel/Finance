@@ -1,0 +1,547 @@
+<app-page-header [title]="'FORM ELEMENTS'" [items]="['Forms']" [active_item]="'Form elements'"></app-page-header>
+<!-- row -->
+<div class="row row-sm">
+  <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
+    <div class="card  box-shadow-0">
+      <div class="card-header">
+        <h4 class="card-title mb-1">Default Form</h4>
+        <p class="mb-2">It is Very Easy to Customize and it uses in your website apllication.</p>
+      </div>
+      <div class="card-body pt-0">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <input type="text" class="form-control" id="inputName" placeholder="Name">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+          </div>
+          <div class="form-group mb-0 justify-content-end">
+            <div class="checkbox">
+              <div class="custom-checkbox custom-control">
+                <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-2">
+                <label for="checkbox-2" class="custom-control-label mt-1">Check me Out</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group mb-0 mt-3 justify-content-end">
+            <div>
+              <button type="submit" class="btn btn-primary">Sign in</button>
+              <button type="submit" class="btn btn-secondary ms-4">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
+    <div class="card  box-shadow-0 ">
+      <div class="card-header">
+        <h4 class="card-title mb-1">Vertical Form</h4>
+        <p class="mb-2">It is Very Easy to Customize and it uses in your website apllication.</p>
+      </div>
+      <div class="card-body pt-0">
+        <form>
+          <div class="">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="checkbox">
+              <div class="custom-checkbox custom-control">
+                <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-1">
+                <label for="checkbox-1" class="custom-control-label mt-1">Check me Out</label>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary mt-3 mb-0">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- row -->
+
+<!-- row -->
+<div class="row">
+  <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+    <!--div-->
+    <div class="card">
+      <div class="card-body">
+        <div class="main-content-label mg-b-5">
+          Form Input and Textarea
+        </div>
+        <p class="mg-b-20">It is Very Easy to Customize and it uses in your website apllication.</p>
+        <div class="row row-sm">
+          <div class="col-lg">
+            <input class="form-control" placeholder="Input box" type="text">
+          </div>
+          <div class="col-lg mg-t-10 mg-lg-t-0">
+            <input class="form-control" placeholder="Input box (readonly)" readonly type="text">
+          </div>
+          <div class="col-lg mg-t-10 mg-lg-t-0">
+            <input class="form-control" disabled placeholder="Input box (disabled)" type="text">
+          </div>
+        </div>
+        <div class="row row-sm mg-t-20">
+          <div class="col-lg">
+            <textarea class="form-control" placeholder="Textarea" rows="3"></textarea>
+          </div>
+          <div class="col-lg mg-t-10 mg-lg-t-0">
+            <textarea class="form-control" placeholder="Textarea (readonly)" readonly rows="3"></textarea>
+          </div>
+          <div class="col-lg mg-t-10 mg-lg-t-0">
+            <textarea class="form-control" disabled placeholder="Texarea (disabled)" rows="3"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/div-->
+
+  <!--div-->
+  <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="main-content-label mg-b-5">
+          Form Input Sizes
+        </div>
+        <p class="mg-b-20">It is Very Easy to Customize and it uses in your website apllication.</p>
+        <div class="row row-sm">
+          <div class="col-lg">
+            <input class="form-control form-control-sm mg-b-20" placeholder="Input sm box" type="text">
+            <input class="form-control mg-b-20" placeholder="Input box" type="text">
+            <input class="form-control form-control-lg" placeholder="Input lg box" type="text">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/div-->
+
+  <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="main-content-label mg-b-5">
+          Valid State Input
+        </div>
+        <p class="mg-b-20">It is Very Easy to Customize and it uses in your website apllication.</p>
+        <form class="needs-validation was-validated">
+          <div class="row row-sm">
+            <div class="col-lg-6">
+              <div class="form-group has-success mg-b-0">
+                <input class="form-control" placeholder="Input box (success state)" required="" type="text"
+                  value="This is input">
+                <textarea class="form-control mg-t-20" placeholder="Textarea (success state)" required=""
+                  rows="3">This is textarea</textarea>
+              </div>
+            </div>
+            <div class="col-lg-6 mg-t-20 mg-lg-t-0">
+              <div class="form-group has-danger mg-b-0">
+                <input class="form-control" placeholder="Input box (invalid state)" required="" type="text">
+                <textarea class="form-control mg-t-20" placeholder="Textarea (invalid state)" required=""
+                  rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--/div-->
+
+  <!--div-->
+  <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="main-content-label mg-b-5">
+          File Browser
+        </div>
+        <p class="mg-b-20">It is Very Easy to Customize and it uses in your website apllication.</p>
+        <div class="row row-sm">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="mb-3">
+              <label for="formFile" class="form-label">Default file input example</label>
+              <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="mb-3">
+              <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+              <input class="form-control" type="file" id="formFileMultiple" multiple>
+            </div>
+            <div class="mb-3">
+              <label for="formFileDisabled" class="form-label">Disabled file input example</label>
+              <input class="form-control" type="file" id="formFileDisabled" disabled>
+            </div>
+            <div class="mb-3">
+              <label for="formFileSm" class="form-label">Small file input example</label>
+              <input class="form-control form-control-sm" id="formFileSm" type="file">
+            </div>
+            <div>
+              <label for="formFileLg" class="form-label">Large file input example</label>
+              <input class="form-control form-control-lg" id="formFileLg" type="file">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/div-->
+
+
+  <!--div-->
+  <div class="col-md-12 col-xl-6 col-xs-12 col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="main-content-label mg-b-10">
+          Custom Checkboxes &amp; Radios
+        </div>
+        <p class="mg-b-20">It is Very Easy to Customize and it uses in your website apllication.</p>
+        <div class="row">
+          <div class="col-lg-4">
+            <label class="ckbox"><input type="checkbox"><span>Checkbox Unchecked</span></label>
+          </div>
+          <div class="col-lg-4 mg-t-20 mg-lg-t-0">
+            <label class="ckbox"><input checked type="checkbox"><span>Checkbox Checked</span></label>
+          </div>
+          <div class="col-lg-4 mg-t-20 mg-lg-t-0">
+            <label class="ckbox"><input disabled type="checkbox"><span>Checkbox Disabled</span></label>
+          </div>
+        </div>
+        <div class="row mg-t-15">
+          <div class="col-lg-4">
+            <label class="rdiobox"><input name="rdio" type="radio"> <span class="mx-2">Radio Unchecked</span></label>
+          </div>
+          <div class="col-lg-4 mg-t-20 mg-lg-t-0">
+            <label class="rdiobox"><input checked name="rdio" type="radio"> <span class="mx-2">Radio Checked</span></label>
+          </div>
+          <div class="col-lg-4 mg-t-20 mg-lg-t-0">
+            <label class="rdiobox"><input disabled name="rdio" type="radio"> <span class="mx-2">Radio Disabled</span></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/div-->
+
+  <!--div-->
+  <div class="col-md-12 col-xl-6 col-xs-12 col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="main-content-label mg-b-5">
+          Toggle Switches
+        </div>
+        <p class="mg-b-20">It is Very Easy to Customize and it uses in your website apllication.</p>
+        <div class="main-toggle-group-demo">
+          <div class="main-toggle">
+            <span></span>
+          </div>
+          <div class="main-toggle main-toggle-secondary">
+            <span></span>
+          </div>
+          <div class="main-toggle main-toggle-success">
+            <span></span>
+          </div>
+          <div class="main-toggle main-toggle-dark">
+            <span></span>
+          </div>
+        </div>
+        <div class="main-toggle-group-demo mg-t-10">
+          <div class="main-toggle on">
+            <span></span>
+          </div>
+          <div class="main-toggle main-toggle-secondary on">
+            <span></span>
+          </div>
+          <div class="main-toggle main-toggle-success on">
+            <span></span>
+          </div>
+          <div class="main-toggle main-toggle-dark on">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/div-->
+
+  <!--div-->
+  <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="main-content-label mg-b-5">
+          Input Groups
+        </div>
+        <p class="mg-b-20">It is Very Easy to Customize and it uses in your website apllication.</p>
+        <div class="row row-sm">
+          <div class="col-lg-4">
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">@</span>
+              <input aria-describedby="basic-addon1" aria-label="Username" class="form-control" placeholder="Username"
+                type="text">
+            </div><!-- input-group -->
+          </div>
+          <div class="col-lg-4">
+            <div class="input-group mb-3">
+              <input aria-describedby="basic-addon2" aria-label="Recipient's username" class="form-control"
+                placeholder="Recipient's username" type="text">
+              <span class="input-group-text" id="basic-addon2">@example.com</span>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="input-group mb-3">
+              <span class="input-group-text">$</span>
+              <input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
+              <span class="input-group-text">.00</span>
+            </div><!-- input-group -->
+          </div>
+        </div>
+        <div class="row row-sm">
+          <div class="col-lg-4">
+            <div class="input-group">
+              <div class="input-group-text">
+                <label class="ckbox wd-16 mg-b-0"><input class="mg-0" type="checkbox"><span></span></label>
+              </div>
+              <input class="form-control" placeholder="Text input with checkbox" type="text">
+            </div><!-- input-group -->
+          </div><!-- col-4 -->
+          <div class="col-lg-4 mg-t-20 mg-lg-t-0">
+            <div class="input-group">
+              <div class="input-group-text">
+                <label class="rdiobox wd-16 mg-b-0"><input type="radio"><span></span></label>
+              </div>
+              <input class="form-control" placeholder="Text input with radiobox" type="text">
+            </div><!-- input-group -->
+          </div><!-- col-4 -->
+          <div class="col-lg-4 mg-t-20 mg-lg-t-0">
+            <div class="input-group">
+              <input class="form-control" placeholder="Search for..." type="text">
+              <button class="btn btn-primary br-ts-0 br-bs-0" type="button"><i class="fa fa-search"></i></button>
+            </div><!-- input-group -->
+          </div><!-- col-4 -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/div-->
+
+  <!--div-->
+  <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="main-content-label mg-b-5">
+          Input Mask
+        </div>
+        <p class="mg-b-20">It is Very Easy to Customize and it uses in your website apllication.</p>
+        <div class="row row-sm gy-2">
+          <div class="col-sm-6 col-lg-6 col-xl-3">
+            <div class="input-group">
+              <div class="input-group-text">
+                Date:
+              </div>
+              <input class="form-control" mask="00/00/0000" placeholder="00/00/0000"/>
+            </div><!-- input-group -->
+          </div><!-- col-4 -->
+          <div class="col-sm-6 col-lg-6 col-xl-3">
+            <div class="input-group">
+              <div class="input-group-text">
+                Phone:
+              </div>
+              <input class="form-control" id="phoneMask"  placeholder="(000) 000-0000" mask="(000) 000-0000" prefix="+7" >
+            </div><!-- input-group -->
+          </div>
+          <div class="col-sm-6 col-lg-6 col-xl-3">
+            <div class="input-group">
+              <div class="input-group-text">
+                Suffix.:
+              </div>
+              <input class="form-control" id="phoneExtMask" placeholder="0000" type='text' suffix=" $" mask="0000" >
+            </div><!-- input-group -->
+          </div>
+          <div class="col-sm-6  col-lg-6 col-xl-3">
+            <div class="input-group">
+              <div class="input-group-text">
+                Security:
+              </div><!-- input-group-text -->
+              <input  class="form-control" placeholder="XXX/X0/0000" mask="XXX/X0/0000">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/div-->
+
+  <!--div-->
+
+  <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title mb-1">Color Picker</h4>
+        <p class="mb-2">It is Very Easy to Customize and it uses in your website apllication.</p>
+      </div>
+      <div class="container">
+        <div class="card-body pt-0">
+          <div class="d-flex justify-content-between flex-wrap">
+            <div class="my-1">
+              <input class="form-controls radius-5" [value]="color14" [style.background]="color14" [cpAlphaChannel]="'always'" [cpOutputFormat]="'rgba'" [cpPresetColors]="['#fff', '#2889e9']" [cpAddColorButton]="true" [(colorPicker)]="color14"/>
+            </div>
+            <div class="my-1">
+              <input class="form-controls radius-5" [value]="color13" [style.background]="color13" [cpAlphaChannel]="'disabled'" [cpOutputFormat]="'rgba'" [(colorPicker)]="color13"/>
+
+            </div>
+            <div class="my-1">
+              <input class="form-controls radius-5" [value]="color16" [style.background]="rgbaText" [cpAlphaChannel]="'always'" [cpOutputFormat]="'hex'" [colorPicker]="color16" (colorPickerChange)="rgbaText=onChangeColorHex8($event);color16=$event"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/div-->
+
+  <!--div-->
+  <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="main-content-label mg-b-5">
+          Ng Bootstrap Calendar
+        </div>
+        <div class="row row-sm">
+          <div class="col-lg-3">
+            <div class="input-group">
+              <div class="input-group-text">
+                <i class="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
+              </div>
+              <input class="form-control" (click)="a.toggle()" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker #a="ngbDatepicker">
+            </div><!-- input-group -->
+          </div><!-- col-4 -->
+          <div class="col-lg-3 mg-t-20 mg-lg-t-0">
+            <div class="input-group">
+              <div class="input-group-text">
+                <i class="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
+              </div>
+              <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model1" ngbDatepicker [footerTemplate]="footerTemplate" #b="ngbDatepicker" (click)="b.toggle()">
+            </div><!-- input-group -->
+          </div>
+          <div class="col-lg-4 mg-t-20 mg-lg-t-0">
+            <div class="row">
+              <div class="col-8">
+                <div class="input-group">
+                  <div class="input-group-text">
+                    <i class="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
+                  </div>
+                    <input class="form-control"  #buttonEl placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model2" ngbDatepicker #c ="ngbDatepicker" [placement]="placement" (click)="c.toggle()" [positionTarget]="buttonEl">
+                </div><!-- input-group -->
+              </div>
+              <div class="col-4">
+                <ng-select id="placement" class="" [(ngModel)]="placement">
+                  <ng-option value="top">Top</ng-option>
+                  <ng-option value="bottom">Bottom</ng-option>
+                  <ng-option value="left">Left</ng-option>
+                  <ng-option value="right">Right</ng-option>
+                </ng-select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/div-->
+
+  <!--div-->
+  <div class="col-md-12 col-xl-6 col-xs-12 col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="main-content-label mg-b-5">
+          Datetimepicker Style 2
+        </div>
+        <p class="mg-b-20">It is Very Easy to Customize and it uses in your website apllication.</p>
+        <div class="row row-sm">
+          <div class="input-group col-md-6">
+            <mat-form-field appearance="fill">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-label>Enter a date range</mat-label>
+              <mat-date-range-picker #picker></mat-date-range-picker>
+              <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
+                <input matStartDate formControlName="start" placeholder="Start date">
+                <input matEndDate formControlName="end" placeholder="End date">
+              </mat-date-range-input>
+
+              <mat-error *ngIf="range.controls['start'].hasError('matStartDateInvalid')">Invalid start date</mat-error>
+              <mat-error *ngIf="range.controls['end'].hasError('matEndDateInvalid')">Invalid end date</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/div-->
+
+  <!--div-->
+  <div class="col-md-12 col-xl-6 col-xs-12 col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="main-content-label mg-b-5">
+          Datetimepicker Style 3
+        </div>
+        <p class="mg-b-20">It is Very Easy to Customize and it uses in your website apllication.</p>
+        <div class="row row-sm">
+          <div class="input-group col-md-6">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-datepicker-toggle matSuffix [for]="picker1">
+                <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+              </mat-datepicker-toggle>
+              <mat-label>Choose a date</mat-label>
+              <input matInput [matDatepicker]="picker1">
+              <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/div-->
+
+  <!--div-->
+  <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Select</h3>
+      </div>
+      <div class="card-body">
+        <p>Customize the native <code class="highlighter-rouge">&lt;select&gt;</code>s with custom CSS that changes the
+          element’s initial appearance.</p>
+        <div class="form-group">
+          <label class="form-label">Default Select</label>
+          <ng-select [items]="people$ | async" bindLabel="name" autofocus bindValue="id" [(ngModel)]="selectedPersonId"></ng-select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Customize Select</label>
+          <ng-select #select [items]="cities" [searchable]="false" [(ngModel)]="selectedCity" bindLabel="name" bindValue="name" value="name">
+              <ng-template ng-header-tmp>
+                  <input style="width: 100%; line-height: 24px" type="text" (input)="select.filter($any($event.target).value)"/>
+              </ng-template>
+          </ng-select>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/div-->
+
+</div>
+<!-- row closed -->
+
+
+<ng-template #footerTemplate>
+  <hr class="my-0">
+  <button class="btn btn-primary btn-sm m-2 float-left" (click)="model1 = today; b.close()">Today</button>
+  <button class="btn btn-secondary btn-sm m-2 float-right" (click)="b.close()">Close</button>
+</ng-template>

@@ -1,0 +1,43 @@
+<app-page-header [title]="'IMAGE COMPARE'" [items]="['Apps']" [active_item]="'Image compare'"></app-page-header>
+<!-- Row -->
+<div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-12">
+    <div class="card mg-b-20">
+      <div class="card-body">
+        <div class="main-content-label mg-b-5">
+          Horizontal Image Comparision
+        </div>
+        <p class="mg-b-20">Example of nowa Horizontal Image Comparision.</p>
+        <div class="twentytwenty-container">
+          <img-comparison-slider>
+            <figure slot="first" class="before">
+              <img width="100%" src="./assets/img/photos/compare1.jpg">
+              <figcaption>Before</figcaption>
+            </figure>
+            <figure slot="second" class="after">
+              <img width="100%" src="./assets/img/photos/compare2.jpg">
+              <figcaption>After</figcaption>
+            </figure>
+          </img-comparison-slider>
+        </div>
+      </div>
+    </div>
+    <!-- div -->
+
+    <!-- div -->
+    <div class="card">
+      <div class="card-body">
+        <div class="main-content-label mg-b-5">
+          Vertical Image Comparision
+        </div>
+        <p class="mg-b-20">Example of nowa Vertical Image Comparision.</p>
+        <div class="twentytwenty-container">
+          <img-comparison-slider hover="hover">
+          <img slot="first" width="100%" src="./assets/img/photos/compare1.jpg">
+          <img slot="second" width="100%" src="./assets/img/photos/compare2.jpg">
+        </img-comparison-slider>
+      </div>
+    </div>
+    <!-- div -->
+  </div>
+</div>

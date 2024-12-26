@@ -1,0 +1,1428 @@
+<p></p>
+<app-page-header [title]="'DASHBOARD'" [items]="['Dashboard']" [active_item]="'Dashboard 02'"></app-page-header>
+<!-- row -->
+<div>
+<div *ngIf="role!='networkowner'" class="row">
+  <div class="col-12 col-sm-12">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 px-0">
+      <div class="card">
+        <div class="row index1">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xxl-3">
+            <div class="row border-end bd-xs-e-0 p-3">
+              <div class="col-xxl-4 d-flex align-items-center justify-content-center">
+                <div class="circle-icon bg-primary text-center align-self-center overflow-hidden shadow">
+                  <i class="fe fe-shopping-bag tx-15 text-white"></i>
+                </div>
+              </div>
+              <div class="col-xxl-8 py-0 flex-fill">
+                <div class="pt-4 pb-3">
+                  <div class="d-flex">
+                    <h6 class="mb-2 tx-12">Live Campaigns</h6>
+                    <span
+                      class="badge bg-success-transparent text-success font-weight-semibold ms-auto rounded-pill lh-maincard px-2 my-auto"><i
+                        class="fa fa-caret-up me-1"></i>0.11%</span>
+                  </div>
+                  <div class="pb-0 mt-0">
+                    <div class="d-flex">
+                      <h4 class="tx-18 font-weight-semibold mb-0">4</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xxl-3">
+            <div class="row border-end bd-xl-b-0 bd-md-e-0 bd-xs-e-0 bd-lg-e-0 bd-xl-e-0 p-3">
+              <div class="col-xxl-4 d-flex align-items-center justify-content-center">
+                <div class="circle-icon bg-warning text-center align-self-center overflow-hidden shadow">
+                  <i class="fe fe-dollar-sign tx-15 text-white"></i>
+                </div>
+              </div>
+              <div class="col-xxl-8 flex-fill">
+                <div class="pt-4 pb-3">
+                  <div class="d-flex">
+                    <h6 class="mb-2 tx-12">Total Campaigns</h6>
+                    <span
+                      class="badge bg-danger-transparent text-danger font-weight-semibold ms-auto rounded-pill lh-maincard px-2 my-auto"><i
+                        class="fa fa-caret-up me-1"></i>0.23%</span>
+                  </div>
+                  <div class="pb-0 mt-0">
+                    <div class="d-flex">
+                      <h4 class="tx-18 font-weight-semibold mb-0">17</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xxl-3">
+            <div class="row border-end bd-xs-e-0  p-3">
+              <div class="col-xxl-4 d-flex align-items-center justify-content-center">
+                <div class="circle-icon bg-secondary text-center align-self-center overflow-hidden shadow">
+                  <i class="fe fe-external-link tx-15 text-white"></i>
+                </div>
+              </div>
+              <div class="col-xxl-8 flex-fill">
+                <div class="pt-4 pb-3">
+                  <div class="d-flex">
+                    <h6 class="mb-2 tx-12">Total Impressions</h6>
+                    <span
+                      class="badge bg-success-transparent text-success font-weight-semibold ms-auto rounded-pill lh-maincard px-2 my-auto"><i
+                        class="fa fa-caret-up me-1"></i>1.57%</span>
+                  </div>
+                  <div class="pb-0 mt-0">
+                    <div class="d-flex">
+                      <h4 class="tx-18 font-weight-semibold mb-0">2137</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xxl-3">
+            <div class="row  p-3">
+              <div class="col-xxl-4 d-flex align-items-center justify-content-center">
+                <div class="circle-icon bg-info text-center align-self-center overflow-hidden shadow">
+                  <i class="fe fe-credit-card tx-15 text-white"></i>
+                </div>
+              </div>
+              <div class="col-xxl-8 flex-fill">
+                <div class="pt-4 pb-3">
+                  <div class="d-flex	">
+                    <h6 class="mb-2 tx-12">Open Tickets</h6>
+                    <span
+                      class="badge bg-success-transparent text-success font-weight-semibold ms-auto rounded-pill lh-maincard px-2 my-auto"><i
+                        class="fa fa-caret-up me-1"></i>0.45%</span>
+                  </div>
+                  <div class="pb-0 mt-0">
+                    <div class="d-flex">
+                      <h4 class="tx-18 font-weight-semibold mb-0">8</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 px-0">
+      <div class="row">
+        <div class="col-sm-12 col-lg-12 col-xl-8">
+          <div class="card custom-card overflow-hidden">
+            <div class="card-header border-bottom-0 d-flex">
+              <h3 class="card-title mb-2 ">Sales Activity</h3>
+              <div class="card-options ms-auto">
+                <div class="btn-group p-0">
+                  <button class="btn btn-outline-light btn-sm" type="button">Week</button>
+                  <button class="btn btn-light btn-sm" type="button">Month</button>
+                  <button class="btn btn-outline-light btn-sm" type="button">Year</button>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="row mb-2 ps-lg-5">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                  <p class="mb-1">Total Sales</p>
+                  <h5 class="mb-1">$52,618</h5>
+                  <p class="tx-11 text-muted">This month<span class="text-success ms-2"><i
+                        class="fa fa-caret-up me-2"></i><span
+                        class="badge bg-success text-white tx-11">0.9%</span></span></p>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                  <p class=" mb-1">Total Sales</p>
+                  <h5 class="mb-1">$11,197</h5>
+                  <p class="tx-11 text-muted">This Week<span class="text-danger ms-2"><i
+                        class="fa fa-caret-down me-2"></i><span
+                        class="badge bg-danger text-white tx-11">0.15%</span></span></p>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                  <p class=" mb-1">Total Sales</p>
+                  <h5 class="mb-1">$1,143</h5>
+                  <p class="tx-11 text-muted">Today<span class="text-success ms-2"><i
+                        class="fa fa-caret-up me-2"></i><span
+                        class="badge bg-success text-white tx-11">0.11%</span></span></p>
+                </div>
+              </div>
+              <apx-chart id="statistics2" [series]="chartOptions.series" [chart]="chartOptions.chart"
+                [dataLabels]="chartOptions.dataLabels" [plotOptions]="chartOptions.plotOptions"
+                [yaxis]="chartOptions.yaxis" [fill]="chartOptions.fill" [stroke]="chartOptions.stroke"
+                [tooltip]="chartOptions.tooltip" [xaxis]="chartOptions.xaxis" [grid]="chartOptions.grid"></apx-chart>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-12 col-xl-4">
+          <div class="card">
+            <div class="card-header bg-transparent pb-0">
+              <div>
+                <h3 class="card-title mb-2">Timeline</h3>
+              </div>
+            </div>
+            <div class="card-body mt-0">
+              <div class="latest-timeline mt-4">
+                <ul class="timeline mb-0">
+                  <li>
+                    <div class="featured_icon1 danger">
+                    </div>
+                  </li>
+                  <li class="mt-0 activity">
+                    <div><span class="tx-11 text-muted float-end">11.43 pm</span></div>
+                    <a href="javascript:void(0);" class="tx-12 text-dark">
+                      <p class="mb-1 font-weight-semibold text-dark tx-13">Anita Letterback</p>
+                    </a>
+                    <p class="text-muted mt-0 mb-0 tx-12">Lorem ipsum dolor tempor incididunt . </p>
+                  </li>
+                  <li>
+                    <div class="featured_icon1 success">
+                    </div>
+                  </li>
+                  <li class="mt-0 activity">
+                    <div><span class="tx-11 text-muted float-end">12.22 am</span></div>
+                    <a href="javascript:void(0);" class="tx-12 text-dark">
+                      <p class="mb-1 font-weight-semibold text-dark tx-13">Paddy O'Furniture</p>
+                    </a>
+                    <p class="text-muted mt-0 mb-0 tx-12">Lorem ipsum dolor tempor incididunt . </p>
+                  </li>
+                  <li>
+                    <div class="featured_icon1 primary">
+                    </div>
+                  </li>
+                  <li class="mt-0 activity">
+                    <div><span class="tx-11 text-muted float-end">08.11 pm</span></div>
+                    <a href="javascript:void(0);" class="tx-12 text-dark">
+                      <p class="mb-1 font-weight-semibold text-dark">Olive Yew</p>
+                    </a>
+                    <p class="text-muted mt-0 mb-0 tx-12">Lorem ipsum dolor tempor incididunt . </p>
+                  </li>
+                  <li>
+                    <div class="featured_icon1 warning">
+                    </div>
+                  </li>
+                  <li class="mt-0 activity">
+                    <div><span class="tx-11 text-muted float-end">9.45 pm</span></div>
+                    <a href="javascript:void(0);" class="tx-12 text-dark">
+                      <p class="mb-1 font-weight-semibold text-dark tx-13">Maureen Biologist</p>
+                    </a>
+                    <p class="text-muted mt-0 mb-0 tx-12">Lorem ipsum dolor tempor incididunt. </p>
+                  </li>
+                  <li>
+                    <div class="featured_icon1 teal">
+                    </div>
+                  </li>
+                  <li class="mt-0 activity">
+                    <div><span class="tx-11 text-muted float-end">12.09 am</span></div>
+                    <a href="javascript:void(0);" class="tx-12 text-dark">
+                      <p class="mb-1 font-weight-semibold text-dark tx-13">Peg Legge</p>
+                    </a>
+                    <p class="text-muted mt-0 mb-0 tx-12">Lorem ipsum dolor tempor incididunt . </p>
+                  </li>
+                  <li>
+                    <div class="featured_icon1 secondary">
+                    </div>
+                  </li>
+                  <li class="mt-0 activity pb-4">
+                    <div><span class="tx-11 text-muted float-end">05.28 pm</span></div>
+                    <a href="javascript:void(0);" class="tx-12 text-dark">
+                      <p class="mb-1 font-weight-semibold text-dark tx-13">Letterbac</p>
+                    </a>
+                    <p class="text-muted mt-0 mb-0 tx-12">Lorem ipsum dolor tempor incididunt . </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  -->
+    <!--
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 px-0">
+      <div class="row">
+        <div class="col-sm-12 col-lg-12 col-xl-4">
+          <div class="card">
+            <div class="card-header pb-3">
+              <h3 class="card-title mb-2">COUNTRY STATISTICS</h3>
+            </div>
+            <div class="card-body p-0 customers mt-1">
+              <div class="country-card pt-0">
+                <div class="mb-4">
+                  <div class="d-flex">
+                    <span class="tx-13 font-weight-semibold">India</span>
+                    <div class="ms-auto"><span class="text-danger mx-1"><i class="fe fe-trending-down"></i></span><span
+                        class="number-font">$32,879</span> (65%)</div>
+                  </div>
+                  <div class="progress progress-style ht-5 mt-2 mb-4">
+                    <div class="progress-bar bg-primary wd-60p" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                      aria-valuemax="60"></div>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <div class="d-flex mb-1">
+                    <span class="tx-13 font-weight-semibold">Russia</span>
+                    <div class="ms-auto"><span class="text-info mx-1"><i class="fe fe-trending-up"></i></span><span
+                        class="number-font">$22,710</span> (55%)</div>
+                  </div>
+                  <div class="progress progress-style ht-5 mt-2 mb-4">
+                    <div class="progress-bar bg-info wd-50p" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                      aria-valuemax="60"></div>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <div class="d-flex">
+                    <span class="tx-13 font-weight-semibold">Canada</span>
+                    <div class="ms-auto"><span class="text-danger mx-1"><i class="fe fe-trending-down"></i></span><span
+                        class="number-font">$56,291</span> (69%)</div>
+                  </div>
+                  <div class="progress progress-style ht-5 mt-2 mb-4">
+                    <div class="progress-bar bg-secondary wd-80p" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                      aria-valuemax="60"></div>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <div class="d-flex">
+                    <span class="tx-13 font-weight-semibold">Brazil</span>
+                    <div class="ms-auto"><span class="text-success mx-1"><i class="fe fe-trending-up"></i></span><span
+                        class="number-font">$34,209</span> (60%)</div>
+                  </div>
+                  <div class="progress progress-style ht-5 mt-2 mb-4">
+                    <div class="progress-bar bg-warning wd-60p" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                      aria-valuemax="60"></div>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <div class="d-flex">
+                    <span class="tx-13 font-weight-semibold">United States</span>
+                    <div class="ms-auto"><span class="text-success mx-1"><i class="fe fe-trending-up"></i></span><span
+                        class="number-font">$45,870</span> (86%)</div>
+                  </div>
+                  <div class="progress progress-style ht-5 mt-2 mb-4">
+                    <div class="progress-bar bg-teal wd-80p" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                      aria-valuemax="60"></div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="d-flex">
+                    <span class="tx-13 font-weight-semibold">Germany</span>
+                    <div class="ms-auto"><span class="text-success mx-1"><i class="fe fe-trending-up"></i></span><span
+                        class="number-font">$67,357</span> (73%)</div>
+                  </div>
+                  <div class="progress progress-style ht-5 mt-2 mb-4">
+                    <div class="progress-bar bg-success wd-70p" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                      aria-valuemax="60"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-12 col-lg-12">
+          <div class="card overflow-hidden">
+            <div class="card-header pb-0">
+              <h3 class="card-title mb-2">Weekly Visitors</h3>
+            </div>
+            <div class="card-body pb-0">
+              <div class="row mb-0">
+                <div class="col-6">
+                  <div class="text-muted tx-12 text-center mb-2">Average Male Visitors</div>
+                  <div class="d-flex justify-content-center align-items-center">
+                    <span class="me-3 tx-26 font-weight-semibold">2,132</span>
+                    <span class="text-success font-weight-semibold"><i class="fa fa-caret-up me-2"></i>0.23%</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="text-muted tx-12 text-center mb-2">Average Female Visitors</div>
+                  <div class="d-flex justify-content-center align-items-center">
+                    <span class="me-3 tx-26 font-weight-semibold">1,053</span>
+                    <span class="text-danger font-weight-semibold"><i class="fa fa-caret-down me-2"></i>0.11%</span>
+                  </div>
+                </div>
+              </div>
+              <apx-chart id="Viewers1" [series]="weeklyVisitors.series" [chart]="weeklyVisitors.chart"
+                [dataLabels]="weeklyVisitors.dataLabels" [xaxis]="weeklyVisitors.xaxis" [yaxis]="weeklyVisitors.yaxis"
+                [stroke]="weeklyVisitors.stroke" [tooltip]="weeklyVisitors.tooltip" [grid]="weeklyVisitors.grid">
+              </apx-chart>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-12 col-lg-12">
+          <div class="card">
+            <div class="card-header pb-3">
+              <h3 class="card-title mb-2">MAIN TASKS</h3>
+            </div>
+            <div class="card-body p-0 customers mt-1">
+              <div class="">
+                <label class="p-2 d-flex">
+                  <span class="check-box mb-0 mx-2">
+                    <span class="ckbox"><input type="checkbox"><span></span></span>
+                  </span>
+                  <span class="ms-3 me-5 my-auto">
+                    accurate information at any given point.
+                  </span>
+                  <span class="ms-auto"><span
+                      class="badge badge-primary font-weight-semibold px-2 py-1 tx-11 me-2">Today</span></span>
+                </label>
+                <label class="p-2 mt-2 d-flex">
+                  <span class="check-box mb-0 mx-2">
+                    <span class="ckbox"><input type="checkbox"><span></span></span>
+                  </span>
+                  <span class="ms-3 me-5 my-auto">
+                    sharing the information with clients or stakeholders.
+                  </span>
+                  <span class="ms-auto"><span
+                      class="badge badge-primary font-weight-semibold px-2 py-1 tx-11 me-2">Today</span></span>
+                </label>
+                <label class="p-2 mt-2 d-flex">
+                  <span class="check-box mb-0 mx-2">
+                    <span class="ckbox"><input type="checkbox"><span></span></span>
+                  </span>
+                  <span class="ms-3 me-5 my-auto">
+                    Hearing the information and responding .
+                  </span>
+                  <span class="ms-auto"><span
+                      class="badge badge-primary font-weight-semibold px-2 py-1 tx-11 me-2 float-end">22
+                      hrs</span></span>
+                </label>
+                <label class="p-2 mt-2 d-flex">
+                  <span class="check-box mb-0 mx-2">
+                    <span class="ckbox"><input type="checkbox"><span></span></span>
+                  </span>
+                  <span class="ms-3 me-5 my-auto">
+                    Setting up and customizing your own sales.
+                  </span>
+                  <span class="ms-auto"> <span
+                      class="badge badge-light-transparent font-weight-semibold px-2 py-1 tx-11 me-2">1
+                      Day</span></span>
+                </label>
+                <label class="p-2 mt-2 d-flex">
+                  <span class="check-box mb-0 mx-2">
+                    <span class="ckbox"><input checked="" type="checkbox"><span></span></span>
+                  </span>
+                  <span class="ms-3 me-5 my-auto">
+                    To have a complete 360° overview of sales information, having.
+                  </span>
+                  <span class="ms-auto"> <span
+                      class="badge badge-light-transparent font-weight-semibold px-2 py-1 tx-11 me-2">2
+                      Days</span></span>
+                </label>
+                <label class="p-2 mt-2 d-flex">
+                  <span class="check-box mb-0 mx-2">
+                    <span class="ckbox"><input checked="" type="checkbox"><span></span></span>
+                  </span>
+                  <span class="ms-3 me-5 my-auto">
+                    New Admin Launched.
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  -->
+  <!--
+  <div class="col-xxl-3 col-xl-12 col-lg-12 col-md-12 col-xs-12">
+    <div class="card overflow-hidden">
+      <div class="card-header pb-1">
+        <h3 class="card-title mb-2">Recent Transactions</h3>
+      </div>
+      <div class="card-body p-0 customers mt-1">
+        <div class="list-group list-lg-group list-group-flush">
+          <a href="javascript:void(0);" class="border-0">
+            <div class="list-group-item list-group-item-action border-0">
+              <div class="media mt-0">
+                <span class="me-3 bg-primary-transparent text-primary transaction-icon"><i
+                    class="fe fe-chevrons-right"></i></span>
+                <div class="media-body">
+                  <div class="d-flex align-items-center">
+                    <div class="mt-0">
+                      <h5 class="mb-1 tx-13 font-weight-sembold text-dark"><span class="me-3">montha.K</span>
+
+                      </h5>
+                      <p class="mb-0 tx-12 text-muted">24-08-2021</p>
+                    </div>
+                    <span class="ms-auto wd-25p tx-12">
+                      <span class="text-primary tx-11 text-end d-block">Processing</span>
+                      <span class="float-end text-success font-weight-semibold">
+                        $256,347
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="javascript:void(0);" class="border-0">
+            <div class="list-group-item list-group-item-action border-0">
+              <div class="media mt-0">
+                <span class="me-3 bg-secondary-transparent text-secondary transaction-icon"><i
+                    class="fe fe-bookmark"></i></span>
+                <div class="media-body">
+                  <div class="d-flex align-items-center">
+                    <div class="mt-1">
+                      <h5 class="mb-1 tx-13 font-weight-sembold text-dark">Allie Grater</h5>
+                      <p class="mb-0 tx-12 text-muted">31-12-2021</p>
+                    </div>
+                    <span class="ms-auto wd-45p tx-12">
+                      <span class="float-end text-danger font-weight-semibold">
+                        $12,345
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="javascript:void(0);" class="border-0">
+            <div class="list-group-item list-group-item-action border-0">
+              <div class="media mt-0">
+                <span class="me-3 bg-info-transparent text-info transaction-icon"><i
+                    class="fe fe-more-horizontal"></i></span>
+                <div class="media-body">
+                  <div class="d-flex align-items-center">
+                    <div class="mt-1">
+                      <h5 class="mb-1 tx-13 font-weight-sembold text-dark"><span class="me-3">Gabel</span></h5>
+                      <p class="mb-0 tx-12 text-muted">15-09-2021</p>
+                    </div>
+                    <span class="ms-auto wd-45p  tx-12">
+                      <span class="text-primary tx-11 text-end d-block">Processing</span>
+                      <span class="float-end text-success font-weight-semibold">
+                        $34,567
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="javascript:void(0);" class="border-0">
+            <div class="list-group-item list-group-item-action border-0">
+              <div class="media mt-0">
+                <span class="me-3 bg-success-transparent text-success transaction-icon"><i
+                    class="fe fe-chevrons-right"></i></span>
+                <div class="media-body">
+                  <div class="d-flex align-items-center">
+                    <div class="mt-1">
+                      <h5 class="mb-1 tx-13 font-weight-sembold text-dark"><span class="me-3">Emmanuel</span></h5>
+                      <p class="mb-0 tx-12 text-muted">30-11-2021</p>
+                    </div>
+                    <span class="ms-auto wd-45p tx-12">
+                      <span class="text-primary tx-11 text-end d-block">Processing</span>
+                      <span class="float-end text-danger font-weight-semibold">
+                        $16,746
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="card custom-card overflow-hidden">
+      <div class="card-header border-bottom-0">
+        <div>
+          <h3 class="card-title mb-0">Weekly Budget</h3> <span class="d-block tx-12 mb-0 text-muted"></span>
+        </div>
+      </div>
+      <div class="card-body p-0">
+        <apx-chart id="budget" [series]="budget.series" [chart]="budget.chart" [dataLabels]="budget.dataLabels"
+          [plotOptions]="budget.plotOptions" [yaxis]="budget.yaxis" [fill]="budget.fill" [stroke]="budget.stroke"
+          [tooltip]="budget.tooltip" [xaxis]="budget.xaxis" [grid]="budget.grid"></apx-chart>
+      </div>
+    </div>
+    <div class="card overflow-hidden">
+      <div class="card-header pb-1">
+        <h3 class="card-title mb-2">Recent Customers</h3>
+      </div>
+      <div class="card-body p-0 customers mt-1">
+        <div class="list-group list-lg-group list-group-flush">
+          <a href="javascript:void(0);" class="border-0">
+            <div class="list-group-item list-group-item-action border-0">
+              <div class="media mt-0">
+                <img class="avatar-lg rounded-circle me-3 my-auto shadow" src="./assets/img/faces/2.jpg"
+                  alt="Image description">
+                <div class="media-body">
+                  <div class="d-flex align-items-center">
+                    <div class="mt-0">
+                      <h5 class="mb-1 tx-13 font-weight-sembold text-dark">Samantha Melon</h5>
+                      <p class="mb-0 tx-12 text-muted">User ID: #1234</p>
+                    </div>
+                    <span class="ms-auto wd-45p tx-14">
+                      <span class="float-end badge bg-success">
+                        <span class="font-weight-semibold">paid </span>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="javascript:void(0);" class="border-0">
+            <div class="list-group-item list-group-item-action border-0">
+              <div class="media mt-0">
+                <img class="avatar-lg rounded-circle me-3 my-auto shadow" src="./assets/img/faces/1.jpg"
+                  alt="Image description">
+                <div class="media-body">
+                  <div class="d-flex align-items-center">
+                    <div class="mt-1">
+                      <h5 class="mb-1 tx-13 font-weight-sembold text-dark">Allie Grater</h5>
+                      <p class="mb-0 tx-12 text-muted">User ID: #1234</p>
+                    </div>
+                    <span class="ms-auto wd-45p tx-14">
+                      <span class="float-end badge bg-danger">
+                        <span class="font-weight-semibold">Pending</span>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="javascript:void(0);" class="border-0">
+            <div class="list-group-item list-group-item-action border-0">
+              <div class="media mt-0">
+                <img class="avatar-lg rounded-circle me-3 my-auto shadow" src="./assets/img/faces/5.jpg"
+                  alt="Image description">
+                <div class="media-body">
+                  <div class="d-flex align-items-center">
+                    <div class="mt-1">
+                      <h5 class="mb-1 tx-13 font-weight-sembold text-dark">Gabe Lackmen</h5>
+                      <p class="mb-0 tx-12 text-muted">User ID: #1234</p>
+                    </div>
+                    <span class="ms-auto wd-45p  tx-14">
+                      <span class="float-end badge bg-danger">
+                        <span class="font-weight-semibold">Pending</span>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="javascript:void(0);" class="border-0 mb-3">
+            <div class="list-group-item list-group-item-action border-0">
+              <div class="media mt-0">
+                <img class="avatar-lg rounded-circle me-3 my-auto shadow" src="./assets/img/faces/7.jpg"
+                  alt="Image description">
+                <div class="media-body">
+                  <div class="d-flex align-items-center">
+                    <div class="mt-1">
+                      <h5 class="mb-1 tx-13 font-weight-sembold text-dark">Manuel Labor</h5>
+                      <p class="mb-0 tx-12 text-muted">User ID: #1234</p>
+                    </div>
+                    <span class="ms-auto wd-45p tx-14">
+                      <span class="float-end badge bg-success">
+                        <span class="font-weight-semibold">Paid</span>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+</div>
+</div>
+<!-- row  -->
+<div *ngIf="role!='networkowner'" class="row">
+  <div class="col-12 col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Screen Summary</h4>
+      </div>
+      <div class="card-body pt-0">
+        <div class="table-responsive">
+          <table class="table  table-bordered text-nowrap mb-0" id="example2">
+            <thead>
+              <tr>
+                <th class="text-center">Purchase Date</th>
+                <th>Network Owner Name</th>
+                <th>Screen ID</th>
+                <th>Campaign Name</th>
+                <th>Duration</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-center">10-11-2024</td>
+                <td>Sean Black</td>
+                <td>SCR_12345</td>
+                <td>My New Camp</td>
+                <td>1 Month</td>
+                <td>01-12-2024</td>
+                <td><span class="badge badge-success-transparent">31-12-2024</span></td>
+                <td class="">
+                 Active
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">10-11-2024</td>
+                <td>Sean Black</td>
+                <td>SCR_12345</td>
+                <td>My New Camp</td>
+                <td>1 Month</td>
+                <td>01-12-2024</td>
+                <td><span class="badge badge-success-transparent">31-12-2024</span></td>
+                <td class="">
+                 Active
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">10-11-2024</td>
+                <td>Sean Black</td>
+                <td>SCR_12345</td>
+                <td>My New Camp</td>
+                <td>1 Month</td>
+                <td>01-12-2024</td>
+                <td><span class="badge badge-success-transparent">31-12-2024</span></td>
+                <td class="">
+                 Active
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">10-11-2024</td>
+                <td>Sean Black</td>
+                <td>SCR_12345</td>
+                <td>My New Camp</td>
+                <td>1 Month</td>
+                <td>01-12-2024</td>
+                <td><span class="badge badge-success-transparent">31-12-2024</span></td>
+                <td class="">
+                 Active
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">10-11-2024</td>
+                <td>Sean Black</td>
+                <td>SCR_12345</td>
+                <td>My New Camp</td>
+                <td>1 Month</td>
+                <td>01-12-2024</td>
+                <td><span class="badge badge-success-transparent">31-12-2024</span></td>
+                <td class="">
+                 Active
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">10-11-2024</td>
+                <td>Sean Black</td>
+                <td>SCR_12345</td>
+                <td>My New Camp</td>
+                <td>1 Month</td>
+                <td>01-12-2024</td>
+                <td><span class="badge badge-success-transparent">31-12-2024</span></td>
+                <td class="">
+                 Active
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">10-11-2024</td>
+                <td>Sean Black</td>
+                <td>SCR_12345</td>
+                <td>My New Camp</td>
+                <td>1 Month</td>
+                <td>01-12-2024</td>
+                <td><span class="badge badge-success-transparent">31-12-2024</span></td>
+                <td class="">
+                 Active
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- /row -->
+
+<div *ngIf="role=='networkowner'" class="row">
+  <div class="col-12 col-sm-12">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 px-0">
+      <div class="card">
+        <div class="row index1">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xxl-3">
+            <div class="row border-end bd-xs-e-0 p-3">
+              <div class="col-xxl-4 d-flex align-items-center justify-content-center">
+                <div class="circle-icon bg-primary text-center align-self-center overflow-hidden shadow">
+                  <i class="fe fe-shopping-bag tx-15 text-white"></i>
+                </div>
+              </div>
+              <div class="col-xxl-8 py-0 flex-fill">
+                <div class="pt-4 pb-3">
+                  <div class="d-flex">
+                    <h6 class="mb-2 tx-12">Screens</h6>
+                    <span
+                      class="badge bg-success-transparent text-success font-weight-semibold ms-auto rounded-pill lh-maincard px-2 my-auto"><i
+                        class="fa fa-caret-up me-1"></i>0.11%</span>
+                  </div>
+                  <div class="pb-0 mt-0">
+                    <div class="d-flex">
+                      <h4 class="tx-18 font-weight-semibold mb-0">4</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xxl-3">
+            <div class="row border-end bd-xl-b-0 bd-md-e-0 bd-xs-e-0 bd-lg-e-0 bd-xl-e-0 p-3">
+              <div class="col-xxl-4 d-flex align-items-center justify-content-center">
+                <div class="circle-icon bg-warning text-center align-self-center overflow-hidden shadow">
+                  <i class="fe fe-external-link tx-15 text-white"></i>
+                </div>
+              </div>
+              <div class="col-xxl-8 flex-fill">
+                <div class="pt-4 pb-3">
+                  <div class="d-flex">
+                    <h6 class="mb-2 tx-12">Live Campaigns</h6>
+                    <span
+                      class="badge bg-danger-transparent text-danger font-weight-semibold ms-auto rounded-pill lh-maincard px-2 my-auto"><i
+                        class="fa fa-caret-up me-1"></i>0.23%</span>
+                  </div>
+                  <div class="pb-0 mt-0">
+                    <div class="d-flex">
+                      <h4 class="tx-18 font-weight-semibold mb-0">17</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xxl-3">
+            <div class="row border-end bd-xs-e-0  p-3">
+              <div class="col-xxl-4 d-flex align-items-center justify-content-center">
+                <div class="circle-icon bg-secondary text-center align-self-center overflow-hidden shadow">
+                  <i class="fe fe-dollar-sign tx-15 text-white"></i>
+                </div>
+              </div>
+              <div class="col-xxl-8 flex-fill">
+                <div class="pt-4 pb-3">
+                  <div class="d-flex">
+                    <h6 class="mb-2 tx-12">Payments</h6>
+                    <span
+                      class="badge bg-success-transparent text-success font-weight-semibold ms-auto rounded-pill lh-maincard px-2 my-auto"><i
+                        class="fa fa-caret-up me-1"></i>1.57%</span>
+                  </div>
+                  <div class="pb-0 mt-0">
+                    <div class="d-flex">
+                      <h4 class="tx-18 font-weight-semibold mb-0">£31240</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xxl-3">
+            <div class="row  p-3">
+              <div class="col-xxl-4 d-flex align-items-center justify-content-center">
+                <div class="circle-icon bg-info text-center align-self-center overflow-hidden shadow">
+                  <i class="fe fe-credit-card tx-15 text-white"></i>
+                </div>
+              </div>
+              <div class="col-xxl-8 flex-fill">
+                <div class="pt-4 pb-3">
+                  <div class="d-flex	">
+                    <h6 class="mb-2 tx-12">Pending Approvals</h6>
+                    <span
+                      class="badge bg-success-transparent text-success font-weight-semibold ms-auto rounded-pill lh-maincard px-2 my-auto"><i
+                        class="fa fa-caret-up me-1"></i>0.45%</span>
+                  </div>
+                  <div class="pb-0 mt-0">
+                    <div class="d-flex">
+                      <h4 class="tx-18 font-weight-semibold mb-0">2</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 px-0">
+      <div class="row">
+        <div class="col-sm-12 col-lg-12 col-xl-8">
+          <div class="card custom-card overflow-hidden">
+            <div class="card-header border-bottom-0 d-flex">
+              <h3 class="card-title mb-2 ">Sales Activity</h3>
+              <div class="card-options ms-auto">
+                <div class="btn-group p-0">
+                  <button class="btn btn-outline-light btn-sm" type="button">Week</button>
+                  <button class="btn btn-light btn-sm" type="button">Month</button>
+                  <button class="btn btn-outline-light btn-sm" type="button">Year</button>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="row mb-2 ps-lg-5">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                  <p class="mb-1">Total Sales</p>
+                  <h5 class="mb-1">$52,618</h5>
+                  <p class="tx-11 text-muted">This month<span class="text-success ms-2"><i
+                        class="fa fa-caret-up me-2"></i><span
+                        class="badge bg-success text-white tx-11">0.9%</span></span></p>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                  <p class=" mb-1">Total Sales</p>
+                  <h5 class="mb-1">$11,197</h5>
+                  <p class="tx-11 text-muted">This Week<span class="text-danger ms-2"><i
+                        class="fa fa-caret-down me-2"></i><span
+                        class="badge bg-danger text-white tx-11">0.15%</span></span></p>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                  <p class=" mb-1">Total Sales</p>
+                  <h5 class="mb-1">$1,143</h5>
+                  <p class="tx-11 text-muted">Today<span class="text-success ms-2"><i
+                        class="fa fa-caret-up me-2"></i><span
+                        class="badge bg-success text-white tx-11">0.11%</span></span></p>
+                </div>
+              </div>
+              <apx-chart id="statistics2" [series]="chartOptions.series" [chart]="chartOptions.chart"
+                [dataLabels]="chartOptions.dataLabels" [plotOptions]="chartOptions.plotOptions"
+                [yaxis]="chartOptions.yaxis" [fill]="chartOptions.fill" [stroke]="chartOptions.stroke"
+                [tooltip]="chartOptions.tooltip" [xaxis]="chartOptions.xaxis" [grid]="chartOptions.grid"></apx-chart>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-12 col-xl-4">
+          <div class="card">
+            <div class="card-header bg-transparent pb-0">
+              <div>
+                <h3 class="card-title mb-2">Timeline</h3>
+              </div>
+            </div>
+            <div class="card-body mt-0">
+              <div class="latest-timeline mt-4">
+                <ul class="timeline mb-0">
+                  <li>
+                    <div class="featured_icon1 danger">
+                    </div>
+                  </li>
+                  <li class="mt-0 activity">
+                    <div><span class="tx-11 text-muted float-end">11.43 pm</span></div>
+                    <a href="javascript:void(0);" class="tx-12 text-dark">
+                      <p class="mb-1 font-weight-semibold text-dark tx-13">Anita Letterback</p>
+                    </a>
+                    <p class="text-muted mt-0 mb-0 tx-12">Lorem ipsum dolor tempor incididunt . </p>
+                  </li>
+                  <li>
+                    <div class="featured_icon1 success">
+                    </div>
+                  </li>
+                  <li class="mt-0 activity">
+                    <div><span class="tx-11 text-muted float-end">12.22 am</span></div>
+                    <a href="javascript:void(0);" class="tx-12 text-dark">
+                      <p class="mb-1 font-weight-semibold text-dark tx-13">Paddy O'Furniture</p>
+                    </a>
+                    <p class="text-muted mt-0 mb-0 tx-12">Lorem ipsum dolor tempor incididunt . </p>
+                  </li>
+                  <li>
+                    <div class="featured_icon1 primary">
+                    </div>
+                  </li>
+                  <li class="mt-0 activity">
+                    <div><span class="tx-11 text-muted float-end">08.11 pm</span></div>
+                    <a href="javascript:void(0);" class="tx-12 text-dark">
+                      <p class="mb-1 font-weight-semibold text-dark">Olive Yew</p>
+                    </a>
+                    <p class="text-muted mt-0 mb-0 tx-12">Lorem ipsum dolor tempor incididunt . </p>
+                  </li>
+                  <li>
+                    <div class="featured_icon1 warning">
+                    </div>
+                  </li>
+                  <li class="mt-0 activity">
+                    <div><span class="tx-11 text-muted float-end">9.45 pm</span></div>
+                    <a href="javascript:void(0);" class="tx-12 text-dark">
+                      <p class="mb-1 font-weight-semibold text-dark tx-13">Maureen Biologist</p>
+                    </a>
+                    <p class="text-muted mt-0 mb-0 tx-12">Lorem ipsum dolor tempor incididunt. </p>
+                  </li>
+                  <li>
+                    <div class="featured_icon1 teal">
+                    </div>
+                  </li>
+                  <li class="mt-0 activity">
+                    <div><span class="tx-11 text-muted float-end">12.09 am</span></div>
+                    <a href="javascript:void(0);" class="tx-12 text-dark">
+                      <p class="mb-1 font-weight-semibold text-dark tx-13">Peg Legge</p>
+                    </a>
+                    <p class="text-muted mt-0 mb-0 tx-12">Lorem ipsum dolor tempor incididunt . </p>
+                  </li>
+                  <li>
+                    <div class="featured_icon1 secondary">
+                    </div>
+                  </li>
+                  <li class="mt-0 activity pb-4">
+                    <div><span class="tx-11 text-muted float-end">05.28 pm</span></div>
+                    <a href="javascript:void(0);" class="tx-12 text-dark">
+                      <p class="mb-1 font-weight-semibold text-dark tx-13">Letterbac</p>
+                    </a>
+                    <p class="text-muted mt-0 mb-0 tx-12">Lorem ipsum dolor tempor incididunt . </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  -->
+    <!--
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 px-0">
+      <div class="row">
+        <div class="col-sm-12 col-lg-12 col-xl-4">
+          <div class="card">
+            <div class="card-header pb-3">
+              <h3 class="card-title mb-2">COUNTRY STATISTICS</h3>
+            </div>
+            <div class="card-body p-0 customers mt-1">
+              <div class="country-card pt-0">
+                <div class="mb-4">
+                  <div class="d-flex">
+                    <span class="tx-13 font-weight-semibold">India</span>
+                    <div class="ms-auto"><span class="text-danger mx-1"><i class="fe fe-trending-down"></i></span><span
+                        class="number-font">$32,879</span> (65%)</div>
+                  </div>
+                  <div class="progress progress-style ht-5 mt-2 mb-4">
+                    <div class="progress-bar bg-primary wd-60p" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                      aria-valuemax="60"></div>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <div class="d-flex mb-1">
+                    <span class="tx-13 font-weight-semibold">Russia</span>
+                    <div class="ms-auto"><span class="text-info mx-1"><i class="fe fe-trending-up"></i></span><span
+                        class="number-font">$22,710</span> (55%)</div>
+                  </div>
+                  <div class="progress progress-style ht-5 mt-2 mb-4">
+                    <div class="progress-bar bg-info wd-50p" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                      aria-valuemax="60"></div>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <div class="d-flex">
+                    <span class="tx-13 font-weight-semibold">Canada</span>
+                    <div class="ms-auto"><span class="text-danger mx-1"><i class="fe fe-trending-down"></i></span><span
+                        class="number-font">$56,291</span> (69%)</div>
+                  </div>
+                  <div class="progress progress-style ht-5 mt-2 mb-4">
+                    <div class="progress-bar bg-secondary wd-80p" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                      aria-valuemax="60"></div>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <div class="d-flex">
+                    <span class="tx-13 font-weight-semibold">Brazil</span>
+                    <div class="ms-auto"><span class="text-success mx-1"><i class="fe fe-trending-up"></i></span><span
+                        class="number-font">$34,209</span> (60%)</div>
+                  </div>
+                  <div class="progress progress-style ht-5 mt-2 mb-4">
+                    <div class="progress-bar bg-warning wd-60p" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                      aria-valuemax="60"></div>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <div class="d-flex">
+                    <span class="tx-13 font-weight-semibold">United States</span>
+                    <div class="ms-auto"><span class="text-success mx-1"><i class="fe fe-trending-up"></i></span><span
+                        class="number-font">$45,870</span> (86%)</div>
+                  </div>
+                  <div class="progress progress-style ht-5 mt-2 mb-4">
+                    <div class="progress-bar bg-teal wd-80p" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                      aria-valuemax="60"></div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="d-flex">
+                    <span class="tx-13 font-weight-semibold">Germany</span>
+                    <div class="ms-auto"><span class="text-success mx-1"><i class="fe fe-trending-up"></i></span><span
+                        class="number-font">$67,357</span> (73%)</div>
+                  </div>
+                  <div class="progress progress-style ht-5 mt-2 mb-4">
+                    <div class="progress-bar bg-success wd-70p" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                      aria-valuemax="60"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-12 col-lg-12">
+          <div class="card overflow-hidden">
+            <div class="card-header pb-0">
+              <h3 class="card-title mb-2">Weekly Visitors</h3>
+            </div>
+            <div class="card-body pb-0">
+              <div class="row mb-0">
+                <div class="col-6">
+                  <div class="text-muted tx-12 text-center mb-2">Average Male Visitors</div>
+                  <div class="d-flex justify-content-center align-items-center">
+                    <span class="me-3 tx-26 font-weight-semibold">2,132</span>
+                    <span class="text-success font-weight-semibold"><i class="fa fa-caret-up me-2"></i>0.23%</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="text-muted tx-12 text-center mb-2">Average Female Visitors</div>
+                  <div class="d-flex justify-content-center align-items-center">
+                    <span class="me-3 tx-26 font-weight-semibold">1,053</span>
+                    <span class="text-danger font-weight-semibold"><i class="fa fa-caret-down me-2"></i>0.11%</span>
+                  </div>
+                </div>
+              </div>
+              <apx-chart id="Viewers1" [series]="weeklyVisitors.series" [chart]="weeklyVisitors.chart"
+                [dataLabels]="weeklyVisitors.dataLabels" [xaxis]="weeklyVisitors.xaxis" [yaxis]="weeklyVisitors.yaxis"
+                [stroke]="weeklyVisitors.stroke" [tooltip]="weeklyVisitors.tooltip" [grid]="weeklyVisitors.grid">
+              </apx-chart>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-12 col-lg-12">
+          <div class="card">
+            <div class="card-header pb-3">
+              <h3 class="card-title mb-2">MAIN TASKS</h3>
+            </div>
+            <div class="card-body p-0 customers mt-1">
+              <div class="">
+                <label class="p-2 d-flex">
+                  <span class="check-box mb-0 mx-2">
+                    <span class="ckbox"><input type="checkbox"><span></span></span>
+                  </span>
+                  <span class="ms-3 me-5 my-auto">
+                    accurate information at any given point.
+                  </span>
+                  <span class="ms-auto"><span
+                      class="badge badge-primary font-weight-semibold px-2 py-1 tx-11 me-2">Today</span></span>
+                </label>
+                <label class="p-2 mt-2 d-flex">
+                  <span class="check-box mb-0 mx-2">
+                    <span class="ckbox"><input type="checkbox"><span></span></span>
+                  </span>
+                  <span class="ms-3 me-5 my-auto">
+                    sharing the information with clients or stakeholders.
+                  </span>
+                  <span class="ms-auto"><span
+                      class="badge badge-primary font-weight-semibold px-2 py-1 tx-11 me-2">Today</span></span>
+                </label>
+                <label class="p-2 mt-2 d-flex">
+                  <span class="check-box mb-0 mx-2">
+                    <span class="ckbox"><input type="checkbox"><span></span></span>
+                  </span>
+                  <span class="ms-3 me-5 my-auto">
+                    Hearing the information and responding .
+                  </span>
+                  <span class="ms-auto"><span
+                      class="badge badge-primary font-weight-semibold px-2 py-1 tx-11 me-2 float-end">22
+                      hrs</span></span>
+                </label>
+                <label class="p-2 mt-2 d-flex">
+                  <span class="check-box mb-0 mx-2">
+                    <span class="ckbox"><input type="checkbox"><span></span></span>
+                  </span>
+                  <span class="ms-3 me-5 my-auto">
+                    Setting up and customizing your own sales.
+                  </span>
+                  <span class="ms-auto"> <span
+                      class="badge badge-light-transparent font-weight-semibold px-2 py-1 tx-11 me-2">1
+                      Day</span></span>
+                </label>
+                <label class="p-2 mt-2 d-flex">
+                  <span class="check-box mb-0 mx-2">
+                    <span class="ckbox"><input checked="" type="checkbox"><span></span></span>
+                  </span>
+                  <span class="ms-3 me-5 my-auto">
+                    To have a complete 360° overview of sales information, having.
+                  </span>
+                  <span class="ms-auto"> <span
+                      class="badge badge-light-transparent font-weight-semibold px-2 py-1 tx-11 me-2">2
+                      Days</span></span>
+                </label>
+                <label class="p-2 mt-2 d-flex">
+                  <span class="check-box mb-0 mx-2">
+                    <span class="ckbox"><input checked="" type="checkbox"><span></span></span>
+                  </span>
+                  <span class="ms-3 me-5 my-auto">
+                    New Admin Launched.
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  -->
+  <!--
+  <div class="col-xxl-3 col-xl-12 col-lg-12 col-md-12 col-xs-12">
+    <div class="card overflow-hidden">
+      <div class="card-header pb-1">
+        <h3 class="card-title mb-2">Recent Transactions</h3>
+      </div>
+      <div class="card-body p-0 customers mt-1">
+        <div class="list-group list-lg-group list-group-flush">
+          <a href="javascript:void(0);" class="border-0">
+            <div class="list-group-item list-group-item-action border-0">
+              <div class="media mt-0">
+                <span class="me-3 bg-primary-transparent text-primary transaction-icon"><i
+                    class="fe fe-chevrons-right"></i></span>
+                <div class="media-body">
+                  <div class="d-flex align-items-center">
+                    <div class="mt-0">
+                      <h5 class="mb-1 tx-13 font-weight-sembold text-dark"><span class="me-3">montha.K</span>
+
+                      </h5>
+                      <p class="mb-0 tx-12 text-muted">24-08-2021</p>
+                    </div>
+                    <span class="ms-auto wd-25p tx-12">
+                      <span class="text-primary tx-11 text-end d-block">Processing</span>
+                      <span class="float-end text-success font-weight-semibold">
+                        $256,347
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="javascript:void(0);" class="border-0">
+            <div class="list-group-item list-group-item-action border-0">
+              <div class="media mt-0">
+                <span class="me-3 bg-secondary-transparent text-secondary transaction-icon"><i
+                    class="fe fe-bookmark"></i></span>
+                <div class="media-body">
+                  <div class="d-flex align-items-center">
+                    <div class="mt-1">
+                      <h5 class="mb-1 tx-13 font-weight-sembold text-dark">Allie Grater</h5>
+                      <p class="mb-0 tx-12 text-muted">31-12-2021</p>
+                    </div>
+                    <span class="ms-auto wd-45p tx-12">
+                      <span class="float-end text-danger font-weight-semibold">
+                        $12,345
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="javascript:void(0);" class="border-0">
+            <div class="list-group-item list-group-item-action border-0">
+              <div class="media mt-0">
+                <span class="me-3 bg-info-transparent text-info transaction-icon"><i
+                    class="fe fe-more-horizontal"></i></span>
+                <div class="media-body">
+                  <div class="d-flex align-items-center">
+                    <div class="mt-1">
+                      <h5 class="mb-1 tx-13 font-weight-sembold text-dark"><span class="me-3">Gabel</span></h5>
+                      <p class="mb-0 tx-12 text-muted">15-09-2021</p>
+                    </div>
+                    <span class="ms-auto wd-45p  tx-12">
+                      <span class="text-primary tx-11 text-end d-block">Processing</span>
+                      <span class="float-end text-success font-weight-semibold">
+                        $34,567
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="javascript:void(0);" class="border-0">
+            <div class="list-group-item list-group-item-action border-0">
+              <div class="media mt-0">
+                <span class="me-3 bg-success-transparent text-success transaction-icon"><i
+                    class="fe fe-chevrons-right"></i></span>
+                <div class="media-body">
+                  <div class="d-flex align-items-center">
+                    <div class="mt-1">
+                      <h5 class="mb-1 tx-13 font-weight-sembold text-dark"><span class="me-3">Emmanuel</span></h5>
+                      <p class="mb-0 tx-12 text-muted">30-11-2021</p>
+                    </div>
+                    <span class="ms-auto wd-45p tx-12">
+                      <span class="text-primary tx-11 text-end d-block">Processing</span>
+                      <span class="float-end text-danger font-weight-semibold">
+                        $16,746
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="card custom-card overflow-hidden">
+      <div class="card-header border-bottom-0">
+        <div>
+          <h3 class="card-title mb-0">Weekly Budget</h3> <span class="d-block tx-12 mb-0 text-muted"></span>
+        </div>
+      </div>
+      <div class="card-body p-0">
+        <apx-chart id="budget" [series]="budget.series" [chart]="budget.chart" [dataLabels]="budget.dataLabels"
+          [plotOptions]="budget.plotOptions" [yaxis]="budget.yaxis" [fill]="budget.fill" [stroke]="budget.stroke"
+          [tooltip]="budget.tooltip" [xaxis]="budget.xaxis" [grid]="budget.grid"></apx-chart>
+      </div>
+    </div>
+    <div class="card overflow-hidden">
+      <div class="card-header pb-1">
+        <h3 class="card-title mb-2">Recent Customers</h3>
+      </div>
+      <div class="card-body p-0 customers mt-1">
+        <div class="list-group list-lg-group list-group-flush">
+          <a href="javascript:void(0);" class="border-0">
+            <div class="list-group-item list-group-item-action border-0">
+              <div class="media mt-0">
+                <img class="avatar-lg rounded-circle me-3 my-auto shadow" src="./assets/img/faces/2.jpg"
+                  alt="Image description">
+                <div class="media-body">
+                  <div class="d-flex align-items-center">
+                    <div class="mt-0">
+                      <h5 class="mb-1 tx-13 font-weight-sembold text-dark">Samantha Melon</h5>
+                      <p class="mb-0 tx-12 text-muted">User ID: #1234</p>
+                    </div>
+                    <span class="ms-auto wd-45p tx-14">
+                      <span class="float-end badge bg-success">
+                        <span class="font-weight-semibold">paid </span>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="javascript:void(0);" class="border-0">
+            <div class="list-group-item list-group-item-action border-0">
+              <div class="media mt-0">
+                <img class="avatar-lg rounded-circle me-3 my-auto shadow" src="./assets/img/faces/1.jpg"
+                  alt="Image description">
+                <div class="media-body">
+                  <div class="d-flex align-items-center">
+                    <div class="mt-1">
+                      <h5 class="mb-1 tx-13 font-weight-sembold text-dark">Allie Grater</h5>
+                      <p class="mb-0 tx-12 text-muted">User ID: #1234</p>
+                    </div>
+                    <span class="ms-auto wd-45p tx-14">
+                      <span class="float-end badge bg-danger">
+                        <span class="font-weight-semibold">Pending</span>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="javascript:void(0);" class="border-0">
+            <div class="list-group-item list-group-item-action border-0">
+              <div class="media mt-0">
+                <img class="avatar-lg rounded-circle me-3 my-auto shadow" src="./assets/img/faces/5.jpg"
+                  alt="Image description">
+                <div class="media-body">
+                  <div class="d-flex align-items-center">
+                    <div class="mt-1">
+                      <h5 class="mb-1 tx-13 font-weight-sembold text-dark">Gabe Lackmen</h5>
+                      <p class="mb-0 tx-12 text-muted">User ID: #1234</p>
+                    </div>
+                    <span class="ms-auto wd-45p  tx-14">
+                      <span class="float-end badge bg-danger">
+                        <span class="font-weight-semibold">Pending</span>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="javascript:void(0);" class="border-0 mb-3">
+            <div class="list-group-item list-group-item-action border-0">
+              <div class="media mt-0">
+                <img class="avatar-lg rounded-circle me-3 my-auto shadow" src="./assets/img/faces/7.jpg"
+                  alt="Image description">
+                <div class="media-body">
+                  <div class="d-flex align-items-center">
+                    <div class="mt-1">
+                      <h5 class="mb-1 tx-13 font-weight-sembold text-dark">Manuel Labor</h5>
+                      <p class="mb-0 tx-12 text-muted">User ID: #1234</p>
+                    </div>
+                    <span class="ms-auto wd-45p tx-14">
+                      <span class="float-end badge bg-success">
+                        <span class="font-weight-semibold">Paid</span>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+</div>
+</div>
+<!-- row  -->
+<div *ngIf="role=='networkowner'" class="row">
+  <div class="col-12 col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Screen Summary</h4>
+      </div>
+      <div class="card-body pt-0">
+        <div class="table-responsive">
+          <table class="table table-striped border">
+            <thead>
+                <tr>
+                    <th scope="col" sortable="screenId" (sort)="onSort($event)">Screen ID</th>
+                    <th scope="col" sortable="location" (sort)="onSort($event)">Location</th>
+                    <th scope="col" sortable="resWidth" (sort)="onSort($event)">Resolution (W X H)</th>
+                    <th scope="col" sortable="width" (sort)="onSort($event)">Screen (W X H)</th>
+                    <th scope="col" sortable="loop" (sort)="onSort($event)">Slot</th>
+                    <th scope="col" sortable="NoOFscreens" (sort)="onSort($event)">No Of Screens</th>
+                    <th scope="col" sortable="latitude" (sort)="onSort($event)"> Latitude</th>
+                    <th scope="col" sortable="longitude" (sort)="onSort($event)">Longitude</th>
+                    <th scope="col" sortable="mediaType" (sort)="onSort($event)"> Media Type</th>
+                    <th scope="col" sortable="Environment" (sort)="onSort($event)">environment</th>
+                    <th scope="col" sortable="sector" (sort)="onSort($event)"> Sector</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let screen of service.screens$ | async; track item; let i = index;">
+                    <td><ngb-highlight [result]="screen.NoScreenId" [term]="service.searchTerm"></ngb-highlight></td>
+                    <td><ngb-highlight [result]="screen.location" [term]="service.searchTerm"></ngb-highlight></td>
+                    <td><ngb-highlight [result]="screen.resWidth" [term]="service.searchTerm"></ngb-highlight> X <ngb-highlight [result]="screen.resHeight" [term]="service.searchTerm"></ngb-highlight></td>
+                    <td><ngb-highlight [result]="screen.width" [term]="service.searchTerm"></ngb-highlight> X <ngb-highlight [result]="screen.height" [term]="service.searchTerm"></ngb-highlight></td>
+                    <td><ngb-highlight [result]="screen.loop" [term]="service.searchTerm"></ngb-highlight></td>
+                    <td><ngb-highlight [result]="screen.NoOFscreens" [term]="service.searchTerm"></ngb-highlight></td>
+                    <td><ngb-highlight [result]="screen.latitude" [term]="service.searchTerm"></ngb-highlight></td>
+                    <td><ngb-highlight [result]="screen.longitude" [term]="service.searchTerm"></ngb-highlight></td>
+                    <td><ngb-highlight [result]="screen.mediaType" [term]="service.searchTerm"></ngb-highlight></td>
+                    <td><ngb-highlight [result]="screen.environment" [term]="service.searchTerm"></ngb-highlight></td>
+                    <td><ngb-highlight [result]="screen.sector" [term]="service.searchTerm"></ngb-highlight></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- /row -->

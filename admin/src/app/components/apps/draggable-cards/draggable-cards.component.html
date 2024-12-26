@@ -1,0 +1,52 @@
+<app-page-header [title]="'DRAGGABLE CARDS'" [items]="['Apps']" [active_item]="'Draggable cards'"></app-page-header>
+<!-- Row -->
+<div class="sortable">
+  <div class="row row-sm">
+    <!-- Group-1 -->
+    <div class="col-xl-4 col-sm-12 col-md-6  col-lg-4"
+    dragula="DRAGULA_EVENTS"
+    >
+    <div
+    cdkDropList
+    #todoList="cdkDropList"
+    [cdkDropListData]="todo"
+    [cdkDropListConnectedTo]="[doneList,doneList1]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)"
+    >
+      <div class="example-box" *ngFor="let item of todo" cdkDrag><div class="blog-post" [innerHtml]="item"></div></div>
+    </div>
+    </div>
+    <!-- Group-2 -->
+    <div class="col-xl-4 col-sm-12 col-md-6 col-lg-4"
+     dragula="DRAGULA_EVENTS">
+     <div
+     cdkDropList
+     #doneList="cdkDropList"
+     [cdkDropListData]="done"
+     [cdkDropListConnectedTo]="[todoList,doneList1]"
+     class="example-list"
+     (cdkDropListDropped)="drop($event)">
+       <div class="example-box" *ngFor="let item of done" cdkDrag><div class="blog-post" [innerHtml]="item"></div></div>
+     </div>
+    </div>
+    <!-- Group-3 -->
+
+    <div class="col-xl-4 col-sm-12 col-md-12 col-lg-4"  dragula="DRAGULA_EVENTS">
+      <div
+      cdkDropList
+      #doneList1="cdkDropList"
+      [cdkDropListData]="done1"
+      [cdkDropListConnectedTo]="[todoList,doneList]"
+      class="example-list"
+     (cdkDropListDropped)="drop($event)"
+      >
+      <div class="example-box" *ngFor="let item of done1" cdkDrag><div class="blog-post" [innerHtml]="item"></div></div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+<!-- /row -->

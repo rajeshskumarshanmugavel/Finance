@@ -1,0 +1,57 @@
+::ng-deep {
+  .swal2-timer-progress-bar {
+    background: #6259ca !important;
+  }
+
+  .swal2-styled {
+    font-size: 0.875rem !important;
+  }
+
+  .swal2-styled:focus {
+    box-shadow: none;
+  }
+
+  .swal2-title {
+    color: #334151;
+    font-weight: 500;
+    font-size: 24px;
+  }
+
+  .swal2-content {
+    font-size: 16px;
+  }
+
+  .swal2-default-outline {
+    background-color: var(--primary-bg-color) !important;
+  }
+
+  .dark-theme {
+    .swal2-popup {
+      background-color: #1d1d2a;
+    }
+
+    .swal2-html-container {
+      color: #ccc;
+    }
+
+    .swal2-title {
+      color: #eee;
+    }
+  }
+
+  .transparent-theme {
+    .swal2-popup {
+      background-color: var(--primary-bg-color) !important;
+    }
+
+    .swal2-default-outline {
+      background-color: var(--primary-bg-color) !important;
+    }
+  }
+
+  .swal2-container {
+    z-index: 9999999;
+  }
+
+
+}

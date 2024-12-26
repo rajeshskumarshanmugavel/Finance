@@ -1,0 +1,24 @@
+::ng-deep {
+  app-widget-notification {
+    .btn-close {
+      right: 10px;
+      left: inherit;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+  }
+
+  .rtl {
+    app-widget-notification {
+      .btn-close {
+        left: 10px !important;
+        right: inherit !important;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

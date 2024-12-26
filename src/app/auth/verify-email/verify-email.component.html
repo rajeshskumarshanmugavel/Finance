@@ -1,0 +1,45 @@
+<div class="register-2">
+  <div class="page">
+    <div class="page-content">
+      <div class="container">
+        <div class="row">
+          <div class="col mx-auto">
+            <div class="row justify-content-center">
+              <div class="col-md-4">
+                <div class="text-center mb-6">
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row mt-xl-5 text-center">
+                      <h3>Thank You for Registering</h3>
+                      <div class=" d-flex justify-content-center">
+                        <div class="formGroup" *ngIf="authService.userData as user">
+                          <p class="text-center">We have sent a confirmation email to <strong>{{user.email}}</strong>.
+                          </p>
+                          <p class="text-center">Please check your email and click on the link to verfiy your email
+                            address.</p>
+                        </div>
+
+                        <button type="button" class="btn btn-primary" (click)="authService.SendVerificationMail()">
+                          <i class="fas fa-redo-alt"></i> Resend Verification Email
+                        </button>
+
+                      </div>
+                      <button class="btn btn-secondary mt-4" (click)="backClicked()">
+                        Go Back 
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-white text-center">
+                  <span>Go back to?<span class="btn btn-success" routerLink="/auth/login"> Sign in</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+.main-contact-item.selected {
+  z-index: 0 !important;
+}
+
+::ng-deep {
+  app-contacts {
+    .btn-list>.btn-warning {
+      margin-right: 0 !important;
+    }
+  }
+
+  .rtl {
+    app-contacts {
+      .btn-list>.btn-warning {
+        margin-left: 0 !important;
+      }
+    }
+  }
+}

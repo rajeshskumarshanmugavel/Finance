@@ -1,0 +1,318 @@
+<app-page-header [title]="'BREAD CRUMBS'" [items]="['Elements']" [active_item]="'Bread crumbs'"></app-page-header>
+<!-- row -->
+<div class="row">
+  <div class="col-lg-12 col-md-12">
+    <div class="card custom-card" id="basic">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Basic Styling</h6>
+          <p class="text-muted card-sub-title">The example below is the basic styling of the breadcrumb from Bootstrap.
+          </p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse1.toggle()"
+              [attr.aria-expanded]="!isCollapsed1">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-style mg-b-0">
+                <li class="breadcrumb-item">
+                  <a href="javascript:void(0);">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="javascript:void(0);">Library</a>
+                </li>
+                <li class="breadcrumb-item active">Data</li>
+              </ol>
+            </nav>
+          </div>
+
+          <div class="" #collapse1="ngbCollapse" [(ngbCollapse)]="isCollapsed1">
+            <pre>
+<code highlight='<div class="example">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb breadcrumb-style mg-b-0">
+      <li class="breadcrumb-item">
+        <a href="javascript:void(0);">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="javascript:void(0);">Library</a>
+      </li>
+      <li class="breadcrumb-item active">Data</li>
+    </ol>
+  </nav>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-12 col-md-12">
+    <div class="card custom-card" id="custom">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Custom Styling</h6>
+          <p class="text-muted card-sub-title">The example below is the custom styling of the breadcrumb used by this
+            template.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse2.toggle()"
+              [attr.aria-expanded]="!isCollapsed2">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-style2 mb-0">
+                <li class="breadcrumb-item">
+                  <a href="javascript:void(0);">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="javascript:void(0);">Library</a>
+                </li>
+                <li class="breadcrumb-item active">Data</li>
+              </ol>
+            </nav>
+          </div>
+          
+          <div class="" #collapse2="ngbCollapse" [(ngbCollapse)]="isCollapsed2">
+            <pre>
+<code highlight=' <div class="example">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb breadcrumb-style2 mb-0">
+      <li class="breadcrumb-item">
+        <a href="javascript:void(0);">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="javascript:void(0);">Library</a>
+      </li>
+      <li class="breadcrumb-item active">Data</li>
+    </ol>
+  </nav>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-12 col-md-12">
+    <div class="card custom-card" id="divider">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Icon Divider</h6>
+          <p class="text-muted card-sub-title">The example below is the custom styling of the breadcrumb using different
+            divider.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse3.toggle()"
+              [attr.aria-expanded]="!isCollapsed3">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb  breadcrumb-style mb-2">
+                <li class="breadcrumb-item">
+                  <svg class="svg-icon mb-1 me-1" xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+                  <a href="javascript:void(0);">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="javascript:void(0);">Library</a>
+                </li>
+                <li class="breadcrumb-item active">Data</li>
+              </ol>
+              <ol class="breadcrumb breadcrumb-style2 mb-0">
+                <li class="breadcrumb-item">
+                  <svg class="svg-icon mb-1 me-1" xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+                  <a href="javascript:void(0);">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="javascript:void(0);">Library</a>
+                </li>
+                <li class="breadcrumb-item active">Data</li>
+              </ol>
+            </nav>
+          </div>
+          
+          <div class="" #collapse3="ngbCollapse" [(ngbCollapse)]="isCollapsed3">
+            <pre>
+<code highlight='<div class="example">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb  breadcrumb-style mb-2">
+      <li class="breadcrumb-item">
+        <svg class="svg-icon mb-1 me-1" xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        <a href="javascript:void(0);">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="javascript:void(0);">Library</a>
+      </li>
+      <li class="breadcrumb-item active">Data</li>
+    </ol>
+    <ol class="breadcrumb breadcrumb-style2 mb-0">
+      <li class="breadcrumb-item">
+        <svg class="svg-icon mb-1 me-1" xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        <a href="javascript:void(0);">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="javascript:void(0);">Library</a>
+      </li>
+      <li class="breadcrumb-item active">Data</li>
+    </ol>
+  </nav>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-12 col-md-12">
+    <div class="card custom-card" id="center">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Breadcrumbs-Center align</h6>
+          <p class="text-muted card-sub-title">The example below is the center aligment of the breadcrumb</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse4.toggle()"
+              [attr.aria-expanded]="!isCollapsed4">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <nav class="breadcrumb-3">
+              <ol class="breadcrumb breadcrumb-style1 mb-0">
+                <li class="breadcrumb-item">
+                  <a href="javascript:void(0);">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="javascript:void(0);">Library</a>
+                </li>
+                <li class="breadcrumb-item active">Data</li>
+              </ol>
+            </nav>
+          </div>
+          
+          <div class="" #collapse4="ngbCollapse" [(ngbCollapse)]="isCollapsed4">
+            <pre>
+<code highlight='<div class="example">
+  <nav class="breadcrumb-3">
+    <ol class="breadcrumb breadcrumb-style1 mb-0">
+      <li class="breadcrumb-item">
+        <a href="javascript:void(0);">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="javascript:void(0);">Library</a>
+      </li>
+      <li class="breadcrumb-item active">Data</li>
+    </ol>
+  </nav>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-12 col-md-12">
+    <div class="card custom-card" id="right">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Breadcrumbs-Right align</h6>
+          <p class="text-muted card-sub-title">The example below is the Right aligment of the breadcrumb</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse5.toggle()"
+              [attr.aria-expanded]="!isCollapsed5">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <nav class="breadcrumb-4">
+              <ol class="breadcrumb breadcrumb-style1 mb-0">
+                <li class="breadcrumb-item">
+                  <a href="javascript:void(0);">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="javascript:void(0);">Library</a>
+                </li>
+                <li class="breadcrumb-item active">Data</li>
+              </ol>
+            </nav>
+          </div>
+          
+          <div class="" #collapse5="ngbCollapse" [(ngbCollapse)]="isCollapsed5">
+            <pre>
+<code highlight=' <div class="example">
+  <nav class="breadcrumb-4">
+    <ol class="breadcrumb breadcrumb-style1 mb-0">
+      <li class="breadcrumb-item">
+        <a href="javascript:void(0);">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="javascript:void(0);">Library</a>
+      </li>
+      <li class="breadcrumb-item active">Data</li>
+    </ol>
+  </nav>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /row -->

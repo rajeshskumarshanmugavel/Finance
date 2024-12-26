@@ -1,0 +1,8 @@
+.main-chat-footer .nav-link{
+    margin-left: 10px !important;
+}
+::ng-deep{
+    .rtl .main-chat-footer .nav-link {
+        margin-right: 10px;
+    }
+}

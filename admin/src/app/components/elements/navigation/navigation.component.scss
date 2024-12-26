@@ -1,0 +1,11 @@
+::ng-deep{
+    .rtl {
+        app-navigation{
+            @media (min-width: 768px){
+                .nav-tabs .nav-link {
+                    padding: 10px 20px !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,1334 @@
+<app-page-header [title]="'PROFILE'" [items]="['Pages']" [active_item]="'Profile'"></app-page-header>
+<div class="row">
+  <div class="col-lg-12 col-md-12">
+    <div class="card custom-card">
+      <div class="card-body d-md-flex">
+        <div class="pos-relative w-fitcont">
+          <span class="profile-image"><img class="br-5" alt="" src="./assets/img/faces/profile.jpg"></span>
+          <div class="bg-success text-white wd-1 ht-1 rounded-pill profile-online"></div>
+        </div>
+        <div class="my-md-auto mt-4 prof-details">
+          <h4 class="font-weight-semibold ms-md-4 ms-0 mb-1 pb-0">Sonya Taylor</h4>
+          <p class="tx-13 text-muted ms-md-4 ms-0 mb-2 pb-2 ">
+            <span class="me-3"><i class="far fa-address-card me-2"></i>Ui/Ux
+              Developer</span>
+            <span class="me-3"><i class="fa fa-taxi me-2"></i>West fransisco,Alabama</span>
+            <span><i class="far fa-flag me-2"></i>New Jersey</span>
+          </p>
+          <p class="text-muted ms-md-4 ms-0 mb-2"><span><i class="fa fa-phone me-2"></i></span><span
+              class="font-weight-semibold me-2">Phone:</span><span>+94 12345 6789</span>
+          </p>
+          <p class="text-muted ms-md-4 ms-0 mb-2"><span><i class="fa fa-envelope me-2"></i></span><span
+              class="font-weight-semibold me-2">Email:</span><span>spruko.space@gmail.com</span>
+          </p>
+          <p class="text-muted ms-md-4 ms-0 mb-2"><span><i class="fa fa-globe me-2"></i></span><span
+              class="font-weight-semibold me-2">Website</span><span>sprukotechnologies</span>
+          </p>
+        </div>
+      </div>
+      <div class="card-footer py-0">
+        <div class="profile-tab tab-menu-heading border-bottom-0">
+          <nav ngbNav #nav="ngbNav" class="main-nav-line p-0 tabs-menu profile-nav-line border-0 br-5 mb-0">
+            <ng-container ngbNavItem>
+              <a ngbNavLink class="mb-2 mt-2">About</a>
+              <ng-template ngbNavContent>
+                <div class="main-content-body tab-pane">
+                  <div class="card">
+                    <div class="card-body p-0 border-0 p-0 rounded-10">
+                      <div class="p-4">
+                        <h4 class="tx-15 text-uppercase mb-3">BIOdata</h4>
+                        <p class="m-b-5">Hi I'm Teri Dactyl,has been the industry's standard
+                          dummy text ever since the 1500s, when an unknown printer took a
+                          galley of type. Donec pede justo, fringilla vel, aliquet nec,
+                          vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+                          venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                          Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi.
+                          Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+                          consequat vitae, eleifend ac, enim.</p>
+                        <div class="m-t-30">
+                          <div class=" p-t-10">
+                            <h5 class="text-primary m-b-5 tx-14">Lead designer / Developer
+                            </h5>
+                            <p class="">websitename.com</p>
+                            <p><b>2010-2015</b></p>
+                            <p class="text-muted tx-13 m-b-0">Lorem Ipsum is simply dummy
+                              text of the printing and typesetting industry. Lorem Ipsum
+                              has been the industry's standard dummy text ever since the
+                              1500s, when an unknown printer took a galley of type and
+                              scrambled it to make a type specimen book.</p>
+                          </div>
+
+                          <div class="">
+                            <h5 class="text-primary m-b-5 tx-14">Senior Graphic Designer
+                            </h5>
+                            <p class="">coderthemes.com</p>
+                            <p><b>2007-2009</b></p>
+                            <p class="text-muted tx-13 mb-0">Lorem Ipsum is simply dummy
+                              text of the printing and typesetting industry. Lorem Ipsum
+                              has been the industry's standard dummy text ever since the
+                              1500s, when an unknown printer took a galley of type and
+                              scrambled it to make a type specimen book.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="border-top"></div>
+                      <div class="p-4">
+                        <label class="main-content-label tx-13 mg-b-20">Statistics</label>
+                        <div class="profile-cover__info ms-4 ms-auto p-0">
+                          <ul class="nav p-0 border-bottom-0 mb-0">
+                            <li class="border p-2 br-5 bg-light wd-100 ht-70"><span
+                                class="border-0 mb-0 pb-0">113</span>Projects</li>
+                            <li class="border p-2 br-5 bg-light wd-100 ht-70"><span
+                                class="border-0 mb-0 pb-0">245</span>Followers</li>
+                            <li class="border p-2 br-5 bg-light wd-100 ht-70"><span
+                                class="border-0 mb-0 pb-0">128</span>Following</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="border-top"></div>
+                      <div class="p-4">
+                        <label class="main-content-label tx-13 mg-b-20">Contact</label>
+                        <div class="d-sm-flex">
+                          <div class="mg-sm-r-20 mg-b-10">
+                            <div class="main-profile-contact-list">
+                              <div class="media">
+                                <div class="media-icon bg-primary-transparent text-primary">
+                                  <i class="icon ion-md-phone-portrait"></i>
+                                </div>
+                                <div class="media-body"> <span>Mobile</span>
+                                  <div> +245 354 654 </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mg-sm-r-20 mg-b-10">
+                            <div class="main-profile-contact-list">
+                              <div class="media">
+                                <div class="media-icon bg-success-transparent text-success">
+                                  <i class="icon ion-logo-slack"></i>
+                                </div>
+                                <div class="media-body"> <span>Slack</span>
+                                  <div> @spruko.w </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="">
+                            <div class="main-profile-contact-list">
+                              <div class="media">
+                                <div class="media-icon bg-info-transparent text-info">
+                                  <i class="icon ion-md-locate"></i>
+                                </div>
+                                <div class="media-body"> <span>Current Address</span>
+                                  <div> San Francisco, CA </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="border-top"></div>
+                      <div class="p-4">
+                        <label class="main-content-label tx-13 mg-b-20">Social</label>
+                        <div class="d-flex flex-wrap">
+                          <div class="mg-md-r-20 mg-b-10">
+                            <div class="main-profile-social-list">
+                              <div class="media">
+                                <div class="media-icon bg-primary-transparent text-primary">
+                                  <i class="icon ion-logo-github"></i>
+                                </div>
+                                <div class="media-body"> <span>Github</span> <a href="javascript:void(0);">github.com/spruko</a> </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mg-md-r-20 mg-b-10">
+                            <div class="main-profile-social-list">
+                              <div class="media">
+                                <div class="media-icon bg-success-transparent text-success">
+                                  <i class="icon ion-logo-twitter"></i>
+                                </div>
+                                <div class="media-body"> <span>Twitter</span> <a href="javascript:void(0);">twitter.com/spruko.me</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mg-md-r-20 mg-b-10">
+                            <div class="main-profile-social-list">
+                              <div class="media">
+                                <div class="media-icon bg-info-transparent text-info">
+                                  <i class="icon ion-logo-linkedin"></i>
+                                </div>
+                                <div class="media-body"> <span>Linkedin</span> <a href="javascript:void(0);">linkedin.com/in/spruko</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mg-md-r-20 mg-b-10">
+                            <div class="main-profile-social-list">
+                              <div class="media">
+                                <div class="media-icon bg-danger-transparent text-danger">
+                                  <i class="icon ion-md-link"></i>
+                                </div>
+                                <div class="media-body"> <span>My Portfolio</span> <a href="javascript:void(0);">spruko.com/</a> </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </ng-container>
+            <ng-container ngbNavItem>
+              <a ngbNavLink class="mb-2 mt-2">Edit Profile</a>
+              <ng-template ngbNavContent>
+                <div class="main-content-body tab-pane border-top-0">
+                  <div class="card">
+                    <div class="card-body border-0">
+                      <div class="mb-4 main-content-label">Personal Information</div>
+                      <form class="form-horizontal">
+                        <div class="mb-4 main-content-label">Name</div>
+                        <div class="form-group ">
+                          <div class="row row-sm">
+                            <div class="col-md-3">
+                              <label class="form-label">User Name</label>
+                            </div>
+                            <div class="col-md-9">
+                              <input type="text" class="form-control" placeholder="User Name" value="Mack Adamia">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <div class="row row-sm">
+                            <div class="col-md-3">
+                              <label class="form-label">First Name</label>
+                            </div>
+                            <div class="col-md-9">
+                              <input type="text" class="form-control" placeholder="First Name" value="Mack Adamia">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <div class="row row-sm">
+                            <div class="col-md-3">
+                              <label class="form-label">last Name</label>
+                            </div>
+                            <div class="col-md-9">
+                              <input type="text" class="form-control" placeholder="Last Name" value="Mack Adamia">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <div class="row row-sm">
+                            <div class="col-md-3">
+                              <label class="form-label">Nick Name</label>
+                            </div>
+                            <div class="col-md-9">
+                              <input type="text" class="form-control" placeholder="Nick Name" value="Spruha">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <div class="row row-sm">
+                            <div class="col-md-3">
+                              <label class="form-label">Designation</label>
+                            </div>
+                            <div class="col-md-9">
+                              <input type="text" class="form-control" placeholder="Designation" value="Web Designer">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mb-4 main-content-label">Contact Info</div>
+                        <div class="form-group ">
+                          <div class="row row-sm">
+                            <div class="col-md-3">
+                              <label class="form-label">Email<i>(required)</i></label>
+                            </div>
+                            <div class="col-md-9">
+                              <input type="text" class="form-control" placeholder="Email" value="info@Spruha.in">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <div class="row row-sm">
+                            <div class="col-md-3">
+                              <label class="form-label">Website</label>
+                            </div>
+                            <div class="col-md-9">
+                              <input type="text" class="form-control" placeholder="Website" value="@spruko.w">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <div class="row row-sm">
+                            <div class="col-md-3">
+                              <label class="form-label">Phone</label>
+                            </div>
+                            <div class="col-md-9">
+                              <input type="text" class="form-control" placeholder="phone number" value="+245 354 654">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <div class="row row-sm">
+                            <div class="col-md-3">
+                              <label class="form-label">Address</label>
+                            </div>
+                            <div class="col-md-9">
+                              <textarea class="form-control" name="example-textarea-input" rows="2"
+                                placeholder="Address">San Francisco, CA</textarea>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mb-4 main-content-label">Social Info</div>
+                        <div class="form-group ">
+                          <div class="row row-sm">
+                            <div class="col-md-3">
+                              <label class="form-label">Twitter</label>
+                            </div>
+                            <div class="col-md-9">
+                              <input type="text" class="form-control" placeholder="twitter"
+                                value="twitter.com/spruko.me">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <div class="row row-sm">
+                            <div class="col-md-3">
+                              <label class="form-label">Facebook</label>
+                            </div>
+                            <div class="col-md-9">
+                              <input type="text" class="form-control" placeholder="facebook"
+                                value="https://www.facebook.com/Spruha">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <div class="row row-sm">
+                            <div class="col-md-3">
+                              <label class="form-label">Google+</label>
+                            </div>
+                            <div class="col-md-9">
+                              <input type="text" class="form-control" placeholder="google" value="spruko.com">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <div class="row row-sm">
+                            <div class="col-md-3">
+                              <label class="form-label">Linked in</label>
+                            </div>
+                            <div class="col-md-9">
+                              <input type="text" class="form-control" placeholder="linkedin"
+                                value="linkedin.com/in/spruko">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <div class="row row-sm">
+                            <div class="col-md-3">
+                              <label class="form-label">Github</label>
+                            </div>
+                            <div class="col-md-9">
+                              <input type="text" class="form-control" placeholder="github" value="github.com/sprukos">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mb-4 main-content-label">About Yourself</div>
+                        <div class="form-group ">
+                          <div class="row row-sm">
+                            <div class="col-md-3">
+                              <label class="form-label">Biographical Info</label>
+                            </div>
+                            <div class="col-md-9">
+                              <textarea class="form-control" name="example-textarea-input" rows="4"
+                                placeholder="">pleasure rationally encounter but because pursue consequences that are extremely painful.occur in which toil and pain can procure him some great pleasure..</textarea>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mb-4 main-content-label">Email Preferences</div>
+                        <div class="form-group mb-0">
+                          <div class="row row-sm">
+                            <div class="col-md-3">
+                              <label class="form-label">Verified User</label>
+                            </div>
+                            <div class="col-md-9">
+                              <div class="custom-controls-stacked">
+                                <label class="ckbox mg-b-10-f"><input checked="" type="checkbox"><span><span></span>Accept to
+                                    receive post
+                                    or
+                                    page notification emails</span></label>
+                                <label class="ckbox"><input checked="" type="checkbox"><span> Accept to receive email
+                                    sent to multiple recipients</span></label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </ng-container>
+            <ng-container ngbNavItem>
+              <a ngbNavLink class="mb-2 mt-2">Timeline</a>
+              <ng-template ngbNavContent>
+                <div class="main-content-body  tab-pane border-top-0">
+                  <div class="border-0">
+                    <div class="main-content-body main-content-body-profile">
+                      <div class="main-profile-body p-0">
+                        <div class="row row-sm">
+                          <div class="col-12">
+                            <div class="card mg-b-20 border">
+                              <div class="card-header p-4">
+                                <div class="media">
+                                  <div class="media-user me-2">
+                                    <div class="main-img-user avatar-md"><img alt="" class="rounded-circle"
+                                        src="./assets/img/faces/6.jpg"></div>
+                                  </div>
+                                  <div class="media-body">
+                                    <h6 class="mb-0 mg-t-2 ms-2">Mintrona Pechon
+                                      Pechon</h6><span class="text-primary ms-2">just now</span>
+                                  </div>
+                                  <div class="ms-auto">
+                                    <div ngbDropdown class=" main-contact-star"> <a class="new option-dots2"
+                                        ngbDropdownToggle href="JavaScript:void(0);"><i
+                                          class="fe fe-more-vertical  tx-18"></i></a>
+                                      <div ngbDropdownMenu class="shadow"> <a class="dropdown-item"
+                                          href="javascript:void(0);">Edit
+                                          Post</a> <a class="dropdown-item" href="javascript:void(0);">Delete
+                                          Post</a> <a class="dropdown-item" href="javascript:void(0);">Personal
+                                          Settings</a> </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body">
+                                <p class="mg-t-0">There are many variations of passages
+                                  of Lorem Ipsum available, but the majority have
+                                  suffered alteration in some form, by injected
+                                  humour, or randomised words which don't look even
+                                  slightly believable.</p>
+                                <div class="row row-sm">
+                                  <div class="col">
+                                    <a routerLink="/pages/gallery"><img alt="img" class="wd-200 br-5 mb-2 mt-2 me-4"
+                                        src="./assets/img/media/1.jpg"></a>
+                                    <a routerLink="/pages/gallery"><img alt="img" class="wd-200 br-5"
+                                        src="./assets/img/media/2.jpg"></a>
+                                  </div>
+                                </div>
+                                <div class="media mg-t-15 profile-footer">
+                                  <div class="media-user me-2">
+                                    <div class="demo-avatar-group">
+                                      <div class="demo-avatar-group main-avatar-list-stacked">
+                                        <div class="main-img-user"><img alt="" class="rounded-circle"
+                                            src="./assets/img/faces/12.jpg">
+                                        </div>
+                                        <div class="main-img-user"><img alt="" class="rounded-circle"
+                                            src="./assets/img/faces/12.jpg">
+                                        </div>
+                                        <div class="main-img-user online"><img alt="" class="rounded-circle"
+                                            src="./assets/img/faces/5.jpg">
+                                        </div>
+                                        <div class="main-img-user"><img alt="" class="rounded-circle"
+                                            src="./assets/img/faces/6.jpg">
+                                        </div>
+                                        <div class="main-avatar"> +23 </div>
+                                      </div>
+                                      <!-- demo-avatar-group -->
+                                    </div>
+                                    <!-- demo-avatar-group -->
+                                  </div>
+                                  <div class="media-body">
+                                    <h6 class="mb-0 mg-t-10">28 people like your
+                                      photo</h6>
+                                  </div>
+
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card mg-b-20 border">
+                              <div class="card-header p-4">
+                                <div class="media">
+                                  <div class="media-user me-2">
+                                    <div class="main-img-user avatar-md">
+                                      <img alt="" class="rounded-circle" src="./assets/img/faces/6.jpg">
+                                    </div>
+                                  </div>
+                                  <div class="media-body">
+                                    <h6 class="mb-0 ms-2 mg-t-3">Mintrona Pechon
+                                      Pechon</h6><span class="text-muted ms-2">Sep
+                                      26 2019, 10:14am</span>
+                                  </div>
+                                  <div class="ms-auto">
+                                    <div ngbDropdown class="main-contact-star"> <a class="new option-dots2"
+                                        ngbDropdownToggle href="JavaScript:void(0);"><i
+                                          class="fe fe-more-vertical  tx-18"></i></a>
+                                      <div ngbDropdownMenu class="shadow"> <a class="dropdown-item"
+                                          href="javascript:void(0);">Edit
+                                          Post</a> <a class="dropdown-item" href="javascript:void(0);">Delete
+                                          Post</a> <a class="dropdown-item" href="javascript:void(0);">Personal
+                                          Settings</a> </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body h-100">
+                                <p class="mg-t-0">There are many variations of passages
+                                  of Lorem Ipsum available, but the majority have
+                                  suffered alteration in some form, by injected
+                                  humour, or randomised words which don't look even
+                                  slightly believable.</p>
+                                <div class="row row-sm">
+                                  <div class="col">
+                                    <a routerLink="/pages/gallery"><img alt="img" class="wd-200 br-5 mb-2 mt-2 me-4"
+                                        src="./assets/img/media/4.jpg"></a>
+                                    <a routerLink="/pages/gallery"><img alt="img" class="wd-200 br-5 mb-2 mt-2"
+                                        src="./assets/img/media/1.jpg"></a>
+                                  </div>
+                                </div>
+                                <div class="media mg-t-15 profile-footer">
+                                  <div class="media-user me-2">
+                                    <div class="demo-avatar-group">
+                                      <div class="demo-avatar-group main-avatar-list-stacked">
+                                        <div class="main-img-user"><img alt="" class="rounded-circle"
+                                            src="./assets/img/faces/12.jpg">
+                                        </div>
+                                        <div class="main-img-user online"><img alt="" class="rounded-circle"
+                                            src="./assets/img/faces/7.jpg">
+                                        </div>
+                                        <div class="main-img-user online"><img alt="" class="rounded-circle"
+                                            src="./assets/img/faces/5.jpg">
+                                        </div>
+                                        <div class="main-img-user"><img alt="" class="rounded-circle"
+                                            src="./assets/img/faces/6.jpg">
+                                        </div>
+                                        <div class="main-avatar"> +23 </div>
+                                      </div>
+                                      <!-- demo-avatar-group -->
+                                    </div>
+                                    <!-- demo-avatar-group -->
+                                  </div>
+                                  <div class="media-body">
+                                    <h6 class="mb-0 mg-t-10">28 people like your
+                                      photo</h6>
+                                  </div>
+
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card mg-b-20 border">
+                              <div class="card-header p-4">
+                                <div class="media">
+                                  <div class="media-user me-2">
+                                    <div class="main-img-user avatar-md"><img alt="" class="rounded-circle"
+                                        src="./assets/img/faces/6.jpg"></div>
+                                  </div>
+                                  <div class="media-body">
+                                    <h6 class="mb-0 ms-2 mg-t-3">Mintrona Pechon
+                                      Pechon</h6><span class="text-muted ms-2">Sep
+                                      26 2019, 10:14am</span>
+                                  </div>
+                                  <div class="ms-auto">
+                                    <div ngbDropdown class="main-contact-star"> <a class="new option-dots2"
+                                        ngbDropdownToggle href="JavaScript:void(0);"><i
+                                          class="fe fe-more-vertical  tx-18"></i></a>
+                                      <div ngbDropdownMenu class="shadow"> <a class="dropdown-item"
+                                          href="javascript:void(0);">Edit
+                                          Post</a> <a class="dropdown-item" href="javascript:void(0);">Delete
+                                          Post</a> <a class="dropdown-item" href="javascript:void(0);">Personal
+                                          Settings</a> </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body h-100">
+                                <p class="mg-t-0">There are many variations of passages
+                                  of Lorem Ipsum available, but the majority have
+                                  suffered alteration in some form, by injected
+                                  humour, or randomised words which don't look even
+                                  slightly believable.</p>
+                                <div class="media mg-t-15 profile-footer">
+                                  <div class="media-user me-2">
+                                    <div class="demo-avatar-group">
+                                      <div class="demo-avatar-group main-avatar-list-stacked">
+                                        <div class="main-img-user online"><img alt="" class="rounded-circle"
+                                            src="./assets/img/faces/12.jpg">
+                                        </div>
+                                        <div class="main-img-user"><img alt="" class="rounded-circle"
+                                            src="./assets/img/faces/3.jpg">
+                                        </div>
+                                        <div class="main-img-user"><img alt="" class="rounded-circle"
+                                            src="./assets/img/faces/4.jpg">
+                                        </div>
+                                        <div class="main-img-user online"><img alt="" class="rounded-circle"
+                                            src="./assets/img/faces/10.jpg">
+                                        </div>
+                                        <div class="main-avatar"> +23 </div>
+                                      </div>
+                                      <!-- demo-avatar-group -->
+                                    </div>
+                                    <!-- demo-avatar-group -->
+                                  </div>
+                                  <div class="media-body">
+                                    <h6 class="mb-0 mg-t-10">28 people like your
+                                      photo</h6>
+                                  </div>
+
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card border">
+                              <div class="card-header p-4">
+                                <div class="media">
+                                  <div class="media-user me-2">
+                                    <div class="main-img-user avatar-md"><img alt="" class="rounded-circle"
+                                        src="./assets/img/faces/2.jpg"></div>
+                                  </div>
+                                  <div class="media-body">
+                                    <h6 class="mb-0 ms-2 mg-t-3">Mintrona Pechon
+                                      Pechon</h6><span class="text-muted ms-2">Sep
+                                      26 2019, 10:14am</span>
+                                  </div>
+                                  <div class="ms-auto">
+                                    <div ngbDropdown class="main-contact-star"> <a class="new option-dots2"
+                                        ngbDropdownToggle href="JavaScript:void(0);"><i
+                                          class="fe fe-more-vertical  tx-18"></i></a>
+                                      <div ngbDropdownMenu class="shadow"> <a class="dropdown-item"
+                                          href="javascript:void(0);">Edit
+                                          Post</a> <a class="dropdown-item" href="javascript:void(0);">Delete
+                                          Post</a> <a class="dropdown-item" href="javascript:void(0);">Personal
+                                          Settings</a> </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body h-100">
+                                <p class="mg-t-0">There are many variations of passages
+                                  of Lorem Ipsum available, but the majority have
+                                  suffered alteration in some form, by injected
+                                  humour, or randomised words which don't look even
+                                  slightly believable.</p>
+                                <div class="row row-sm">
+                                  <div class="col">
+                                    <a routerLink="/pages/gallery"><img alt="img" class="wd-200 br-5 mb-2 mt-2 me-3"
+                                        src="./assets/img/media/4.jpg"></a>
+                                    <a routerLink="/pages/gallery"><img alt="img" class="wd-200 br-5 mb-2 mt-2"
+                                        src="./assets/img/media/3.jpg"></a>
+                                  </div>
+                                </div>
+                                <div class="media mg-t-15 profile-footer">
+                                  <div class="media-user me-2">
+                                    <div class="demo-avatar-group">
+                                      <div class="demo-avatar-group main-avatar-list-stacked">
+                                        <div class="main-img-user online"><img alt="" class="rounded-circle"
+                                            src="./assets/img/faces/11.jpg">
+                                        </div>
+                                        <div class="main-img-user"><img alt="" class="rounded-circle"
+                                            src="./assets/img/faces/12.jpg">
+                                        </div>
+                                        <div class="main-img-user"><img alt="" class="rounded-circle"
+                                            src="./assets/img/faces/3.jpg">
+                                        </div>
+                                        <div class="main-img-user online"><img alt="" class="rounded-circle"
+                                            src="./assets/img/faces/5.jpg">
+                                        </div>
+                                        <div class="main-avatar"> +23 </div>
+                                      </div>
+                                      <!-- demo-avatar-group -->
+                                    </div>
+                                    <!-- demo-avatar-group -->
+                                  </div>
+                                  <div class="media-body">
+                                    <h6 class="mb-0 mg-t-10">28 people like your
+                                      photo</h6>
+                                  </div>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- main-profile-body -->
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </ng-container>
+            <ng-container ngbNavItem>
+              <a ngbNavLink class="mb-2 mt-2">Gallery</a>
+              <ng-template ngbNavContent>
+                <div class="main-content-body  border tab-pane border-top-0">
+                  <div class="card-body border">
+                    <div class="masonry row" gallerize>
+                      <div class="col-xl-3 col-lg-4 col-sm-6" *ngFor="let img of imageData">
+                        <div class="brick gallery-item" >
+                          <img  class="img-responsivejs-img-viewer mt-2"  [src]="img.srcUrl">
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+              </ng-template>
+            </ng-container>
+            <ng-container ngbNavItem>
+              <a ngbNavLink class="mb-2 mt-2">Friends</a>
+              <ng-template ngbNavContent>
+                <div class="main-content-body tab-pane border-top-0">
+                  <div class="card-body border pd-b-10">
+                    <!-- row -->
+                    <div class="row row-sm">
+                      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="card custom-card border">
+                          <div class="card-body  user-lock text-center">
+                            <div ngbDropdown class="text-end">
+                              <a href="javascript:void(0);" class="option-dots" ngbDropdownToggle aria-haspopup="true"
+                                aria-expanded="true"> <i class="fe fe-more-vertical"></i> </a>
+                              <div ngbDropdownMenu class="dropdown-menu-right shadow"> <a class="dropdown-item"
+                                  href="javascript:void(0);"><i class="fe fe-message-square me-2"></i>
+                                  Message</a> <a class="dropdown-item" href="javascript:void(0);"><i
+                                    class="fe fe-edit-2 me-2"></i> Edit</a> <a class="dropdown-item"
+                                  href="javascript:void(0);"><i class="fe fe-eye me-2"></i> View</a> <a
+                                  class="dropdown-item" href="javascript:void(0);"><i class="fe fe-trash-2 me-2"></i>
+                                  Delete</a>
+                              </div>
+                            </div>
+                            <a routerLink="/pages/profile">
+                              <img alt="avatar" class="rounded-circle" src="./assets/img/faces/1.jpg">
+                              <h4 class="fs-16 mb-0 mt-3 text-dark fw-semibold">James
+                                Thomas</h4>
+                              <span class="text-muted">Web designer</span>
+                              <div class="mt-3 d-flex mx-auto text-center justify-content-center">
+                                <span class="btn btn-icon me-3 btn-facebook">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-facebook tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                                <span class="btn btn-icon me-3">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-twitter tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                                <span class="btn btn-icon me-3">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-linkedin tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="card custom-card border">
+                          <div class="card-body  user-lock text-center">
+                            <div ngbDropdown class="text-end">
+                              <a href="javascript:void(0);" class="option-dots" ngbDropdownToggle aria-haspopup="true"
+                                aria-expanded="true"> <i class="fe fe-more-vertical"></i> </a>
+                              <div ngbDropdownMenu class="dropdown-menu-right shadow"> <a class="dropdown-item"
+                                  href="javascript:void(0);"><i class="fe fe-message-square me-2"></i>
+                                  Message</a> <a class="dropdown-item" href="javascript:void(0);"><i
+                                    class="fe fe-edit-2 me-2"></i> Edit</a> <a class="dropdown-item"
+                                  href="javascript:void(0);"><i class="fe fe-eye me-2"></i> View</a> <a
+                                  class="dropdown-item" href="javascript:void(0);"><i class="fe fe-trash-2 me-2"></i>
+                                  Delete</a>
+                              </div>
+                            </div>
+                            <a routerLink="/pages/profile">
+                              <img alt="avatar" class="rounded-circle" src="./assets/img/faces/3.jpg">
+                              <h4 class="fs-16 mb-0 mt-3 text-dark fw-semibold">Reynante
+                                Labares</h4>
+                              <span class="text-muted">Web designer</span>
+                              <div class="mt-3 d-flex mx-auto text-center justify-content-center">
+                                <span class="btn btn-icon me-3 btn-facebook">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-facebook tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                                <span class="btn btn-icon me-3">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-twitter tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                                <span class="btn btn-icon me-3">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-linkedin tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="card custom-card border">
+                          <div class="card-body  user-lock text-center">
+                            <div ngbDropdown class="text-end">
+                              <a href="javascript:void(0);" class="option-dots" ngbDropdownToggle aria-haspopup="true"
+                                aria-expanded="true"> <i class="fe fe-more-vertical"></i> </a>
+                              <div ngbDropdownMenu class="dropdown-menu-right shadow"> <a class="dropdown-item"
+                                  href="javascript:void(0);"><i class="fe fe-message-square me-2"></i>
+                                  Message</a> <a class="dropdown-item" href="javascript:void(0);"><i
+                                    class="fe fe-edit-2 me-2"></i> Edit</a> <a class="dropdown-item"
+                                  href="javascript:void(0);"><i class="fe fe-eye me-2"></i> View</a> <a
+                                  class="dropdown-item" href="javascript:void(0);"><i class="fe fe-trash-2 me-2"></i>
+                                  Delete</a>
+                              </div>
+                            </div>
+                            <a routerLink="/pages/profile">
+                              <img alt="avatar" class="rounded-circle" src="./assets/img/faces/4.jpg">
+                              <h4 class="fs-16 mb-0 mt-3 text-dark fw-semibold">Owen
+                                Bongcaras</h4>
+                              <span class="text-muted">Web designer</span>
+                              <div class="mt-3 d-flex mx-auto text-center justify-content-center">
+                                <span class="btn btn-icon me-3 btn-facebook">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-facebook tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                                <span class="btn btn-icon me-3">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-twitter tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                                <span class="btn btn-icon me-3">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-linkedin tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="card custom-card border">
+                          <div class="card-body  user-lock text-center">
+                            <div ngbDropdown class="text-end">
+                              <a href="javascript:void(0);" class="option-dots" ngbDropdownToggle aria-haspopup="true"
+                                aria-expanded="true"> <i class="fe fe-more-vertical"></i> </a>
+                              <div ngbDropdownMenu class="dropdown-menu-right shadow"> <a class="dropdown-item"
+                                  href="javascript:void(0);"><i class="fe fe-message-square me-2"></i>
+                                  Message</a> <a class="dropdown-item" href="javascript:void(0);"><i
+                                    class="fe fe-edit-2 me-2"></i> Edit</a> <a class="dropdown-item"
+                                  href="javascript:void(0);"><i class="fe fe-eye me-2"></i> View</a> <a
+                                  class="dropdown-item" href="javascript:void(0);"><i class="fe fe-trash-2 me-2"></i>
+                                  Delete</a>
+                              </div>
+                            </div>
+                            <a routerLink="/pages/profile">
+                              <img alt="avatar" class="rounded-circle" src="./assets/img/faces/8.jpg">
+                              <h4 class="fs-16 mb-0 mt-3 text-dark fw-semibold">Stephen
+                                Metcalfe</h4>
+                              <span class="text-muted">Administrator</span>
+                              <div class="mt-3 d-flex mx-auto text-center justify-content-center">
+                                <span class="btn btn-icon me-3 btn-facebook">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-facebook tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                                <span class="btn btn-icon me-3">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-twitter tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                                <span class="btn btn-icon me-3">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-linkedin tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="card custom-card border">
+                          <div class="card-body  user-lock text-center">
+                            <div ngbDropdown class="text-end">
+                              <a href="javascript:void(0);" class="option-dots" ngbDropdownToggle aria-haspopup="true"
+                                aria-expanded="true"> <i class="fe fe-more-vertical"></i> </a>
+                              <div ngbDropdownMenu class="dropdown-menu-right shadow"> <a class="dropdown-item"
+                                  href="javascript:void(0);"><i class="fe fe-message-square me-2"></i>
+                                  Message</a> <a class="dropdown-item" href="javascript:void(0);"><i
+                                    class="fe fe-edit-2 me-2"></i> Edit</a> <a class="dropdown-item"
+                                  href="javascript:void(0);"><i class="fe fe-eye me-2"></i> View</a> <a
+                                  class="dropdown-item" href="javascript:void(0);"><i class="fe fe-trash-2 me-2"></i>
+                                  Delete</a>
+                              </div>
+                            </div>
+                            <a routerLink="/pages/profile">
+                              <img alt="avatar" class="rounded-circle" src="./assets/img/faces/2.jpg">
+                              <h4 class="fs-16 mb-0 mt-3 text-dark fw-semibold">Socrates
+                                Itumay</h4>
+                              <span class="text-muted">Project Manager</span>
+                              <div class="mt-3 d-flex mx-auto text-center justify-content-center">
+                                <span class="btn btn-icon me-3 btn-facebook">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-facebook tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                                <span class="btn btn-icon me-3">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-twitter tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                                <span class="btn btn-icon me-3">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-linkedin tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="card custom-card border">
+                          <div class="card-body  user-lock text-center">
+                            <div ngbDropdown class="text-end">
+                              <a href="javascript:void(0);" class="option-dots" ngbDropdownToggle aria-haspopup="true"
+                                aria-expanded="true"> <i class="fe fe-more-vertical"></i> </a>
+                              <div ngbDropdownMenu class="dropdown-menu-right shadow"> <a class="dropdown-item"
+                                  href="javascript:void(0);"><i class="fe fe-message-square me-2"></i>
+                                  Message</a> <a class="dropdown-item" href="javascript:void(0);"><i
+                                    class="fe fe-edit-2 me-2"></i> Edit</a> <a class="dropdown-item"
+                                  href="javascript:void(0);"><i class="fe fe-eye me-2"></i> View</a> <a
+                                  class="dropdown-item" href="javascript:void(0);"><i class="fe fe-trash-2 me-2"></i>
+                                  Delete</a>
+                              </div>
+                            </div>
+                            <a routerLink="/pages/profile">
+                              <img alt="avatar" class="rounded-circle" src="./assets/img/faces/3.jpg">
+                              <h4 class="fs-16 mb-0 mt-3 text-dark fw-semibold">Reynante
+                                Labares</h4>
+                              <span class="text-muted">Web Designer</span>
+                              <div class="mt-3 d-flex mx-auto text-center justify-content-center">
+                                <span class="btn btn-icon me-3 btn-facebook">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-facebook tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                                <span class="btn btn-icon me-3">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-twitter tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                                <span class="btn btn-icon me-3">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-linkedin tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="card custom-card border">
+                          <div class="card-body  user-lock text-center">
+                            <div ngbDropdown class="text-end">
+                              <a href="javascript:void(0);" class="option-dots" ngbDropdownToggle aria-haspopup="true"
+                                aria-expanded="true"> <i class="fe fe-more-vertical"></i> </a>
+                              <div ngbDropdownMenu class="dropdown-menu-right shadow"> <a class="dropdown-item"
+                                  href="javascript:void(0);"><i class="fe fe-message-square me-2"></i>
+                                  Message</a> <a class="dropdown-item" href="javascript:void(0);"><i
+                                    class="fe fe-edit-2 me-2"></i> Edit</a> <a class="dropdown-item"
+                                  href="javascript:void(0);"><i class="fe fe-eye me-2"></i> View</a> <a
+                                  class="dropdown-item" href="javascript:void(0);"><i class="fe fe-trash-2 me-2"></i>
+                                  Delete</a>
+                              </div>
+                            </div>
+                            <a routerLink="/pages/profile">
+                              <img alt="avatar" class="rounded-circle" src="./assets/img/faces/4.jpg">
+                              <h4 class="fs-16 mb-0 mt-3 text-dark fw-semibold">Owen
+                                Bongcaras</h4>
+                              <span class="text-muted">App Developer</span>
+                              <div class="mt-3 d-flex mx-auto text-center justify-content-center">
+                                <span class="btn btn-icon me-3 btn-facebook">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-facebook tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                                <span class="btn btn-icon me-3">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-twitter tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                                <span class="btn btn-icon me-3">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-linkedin tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="card custom-card border">
+                          <div class="card-body  user-lock text-center">
+                            <div ngbDropdown class="text-end">
+                              <a href="javascript:void(0);" class="option-dots" ngbDropdownToggle aria-haspopup="true"
+                                aria-expanded="true"> <i class="fe fe-more-vertical"></i> </a>
+                              <div ngbDropdownMenu class="dropdown-menu-right shadow"> <a class="dropdown-item"
+                                  href="javascript:void(0);"><i class="fe fe-message-square me-2"></i>
+                                  Message</a> <a class="dropdown-item" href="javascript:void(0);"><i
+                                    class="fe fe-edit-2 me-2"></i> Edit</a> <a class="dropdown-item"
+                                  href="javascript:void(0);"><i class="fe fe-eye me-2"></i> View</a> <a
+                                  class="dropdown-item" href="javascript:void(0);"><i class="fe fe-trash-2 me-2"></i>
+                                  Delete</a>
+                              </div>
+                            </div>
+                            <a routerLink="/pages/profile">
+                              <img alt="avatar" class="rounded-circle" src="./assets/img/faces/8.jpg">
+                              <h4 class="fs-16 mb-0 mt-3 text-dark fw-semibold">Stephen
+                                Metcalfe</h4>
+                              <span class="text-muted">Administrator</span>
+                              <div class="mt-3 d-flex mx-auto text-center justify-content-center">
+                                <span class="btn btn-icon me-3 btn-facebook">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-facebook tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                                <span class="btn btn-icon me-3">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-twitter tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                                <span class="btn btn-icon me-3">
+                                  <span class="btn-inner--icon"> <i class="bx bxl-linkedin tx-18 tx-prime"></i>
+                                  </span>
+                                </span>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </ng-container>
+            <ng-container ngbNavItem>
+              <a ngbNavLink class="mb-2 mt-2">Account Settings</a>
+              <ng-template ngbNavContent>
+                <div class="main-content-body tab-pane  border-0">
+                  <div class="card">
+                    <div class="card-body border-0">
+                      <form class="form-horizontal">
+                        <div class="mb-4 main-content-label">Account</div>
+                        <div class="form-group ">
+                          <div class="row row-sm">
+                            <div class="col-md-3">
+                              <label class="form-label">User Name</label>
+                            </div>
+                            <div class="col-md-9">
+                              <input type="text" class="form-control" placeholder="User Name" value="Sonia Taylor">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <div class="row row-sm">
+                            <div class="col-md-3">
+                              <label class="form-label">Email</label>
+                            </div>
+                            <div class="col-md-9">
+                              <input type="text" class="form-control" placeholder="Email" value="info@SoniaTaylor.in">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <div class="row">
+                            <div class="col-md-3">
+                              <label class="form-label">Language</label>
+                            </div>
+                            <div class="col-md-9">
+                              <ng-select class="" tabindex="-1" aria-hidden="true" placeholder="Select Language">
+                                <ng-option>Us English</ng-option>
+                                <ng-option>Arabic</ng-option>
+                                <ng-option>Korean</ng-option>
+                              </ng-select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <div class="row">
+                            <div class="col-md-3">
+                              <label class="form-label">Timezone</label>
+                            </div>
+                            <div class="col-md-9">
+                              <ng-select class="" tabindex="-1" aria-hidden="true" placeholder="Select Timezone">
+                                <ng-option value="Pacific/Midway">
+                                  (GMT-11:00) Midway Island, Samoa</ng-option>
+                                <ng-option value="America/Adak">
+                                  (GMT-10:00) Hawaii-Aleutian</ng-option>
+                                <ng-option value="Etc/GMT+10">
+                                  (GMT-10:00) Hawaii</ng-option>
+                                <ng-option value="Pacific/Marquesas">
+                                  (GMT-09:30) Marquesas Islands</ng-option>
+                                <ng-option value="Pacific/Gambier">
+                                  (GMT-09:00) Gambier Islands</ng-option>
+                                <ng-option value="America/Anchorage">
+                                  (GMT-09:00) Alaska</ng-option>
+                                <ng-option value="America/Ensenada">
+                                  (GMT-08:00) Tijuana, Baja California</ng-option>
+                                <ng-option value="Etc/GMT+8">
+                                  (GMT-08:00) Pitcairn Islands</ng-option>
+                                <ng-option value="America/Los_Angeles">(GMT-08:00) Pacific Time (US
+                                  &amp; Canada)</ng-option>
+                                <ng-option value="America/Denver">
+                                  (GMT-07:00) Mountain Time (US &amp; Canada)</ng-option>
+                                <ng-option value="America/Chihuahua">
+                                  (GMT-07:00) Chihuahua, La Paz, Mazatlan</ng-option>
+                                <ng-option value="America/Dawson_Creek">(GMT-07:00) Arizona
+                                </ng-option>
+                                <ng-option value="America/Belize">
+                                  (GMT-06:00) Saskatchewan, Central America</ng-option>
+                                <ng-option value="America/Cancun">
+                                  (GMT-06:00) Guadalajara, Mexico City, Monterrey
+                                </ng-option>
+                                <ng-option value="Chile/EasterIsland">
+                                  (GMT-06:00) Easter Island</ng-option>
+                                <ng-option value="America/Chicago">
+                                  (GMT-06:00) Central Time (US &amp; Canada)</ng-option>
+                                <ng-option value="America/New_York">
+                                  (GMT-05:00) Eastern Time (US &amp; Canada)</ng-option>
+                                <ng-option value="America/Havana">
+                                  (GMT-05:00) Cuba</ng-option>
+                                <ng-option value="America/Bogota">
+                                  (GMT-05:00) Bogota, Lima, Quito, Rio Branco</ng-option>
+                                <ng-option value="America/Caracas">
+                                  (GMT-04:30) Caracas</ng-option>
+                                <ng-option value="America/Santiago">
+                                  (GMT-04:00) Santiago</ng-option>
+                                <ng-option value="America/La_Paz">
+                                  (GMT-04:00) La Paz</ng-option>
+                                <ng-option value="Atlantic/Stanley">
+                                  (GMT-04:00) Faukland Islands</ng-option>
+                                <ng-option value="America/Campo_Grande">(GMT-04:00) Brazil
+                                </ng-option>
+                                <ng-option value="America/Goose_Bay">
+                                  (GMT-04:00) Atlantic Time (Goose Bay)</ng-option>
+                                <ng-option value="America/Glace_Bay">
+                                  (GMT-04:00) Atlantic Time (Canada)</ng-option>
+                                <ng-option value="America/St_Johns">
+                                  (GMT-03:30) Newfoundland</ng-option>
+                                <ng-option value="America/Araguaina">
+                                  (GMT-03:00) UTC-3</ng-option>
+                                <ng-option value="America/Montevideo">
+                                  (GMT-03:00) Montevideo</ng-option>
+                                <ng-option value="America/Miquelon">
+                                  (GMT-03:00) Miquelon, St. Pierre</ng-option>
+                                <ng-option value="America/Godthab">
+                                  (GMT-03:00) Greenland</ng-option>
+                                <ng-option value="America/Argentina/Buenos_Aires">(GMT-03:00)
+                                  Buenos Aires
+                                </ng-option>
+                                <ng-option value="America/Sao_Paulo">
+                                  (GMT-03:00) Brasilia</ng-option>
+                                <ng-option value="America/Noronha">
+                                  (GMT-02:00) Mid-Atlantic</ng-option>
+                                <ng-option value="Atlantic/Cape_Verde">(GMT-01:00) Cape Verde Is.
+                                </ng-option>
+                                <ng-option value="Atlantic/Azores">
+                                  (GMT-01:00) Azores</ng-option>
+                                <ng-option value="Europe/Belfast">
+                                  (GMT) Greenwich Mean Time : Belfast</ng-option>
+                                <ng-option value="Europe/Dublin">(GMT)
+                                  Greenwich Mean Time : Dublin</ng-option>
+                                <ng-option value="Europe/Lisbon">(GMT)
+                                  Greenwich Mean Time : Lisbon</ng-option>
+                                <ng-option value="Europe/London">(GMT)
+                                  Greenwich Mean Time : London</ng-option>
+                                <ng-option value="Africa/Abidjan">
+                                  (GMT) Monrovia, Reykjavik</ng-option>
+                                <ng-option value="Europe/Amsterdam">
+                                  (GMT+01:00) Amsterdam, Berlin, Bern, Rome,
+                                  Stockholm, Vienna</ng-option>
+                                <ng-option value="Europe/Belgrade">
+                                  (GMT+01:00) Belgrade, Bratislava, Budapest,
+                                  Ljubljana, Prague</ng-option>
+                                <ng-option value="Europe/Brussels">
+                                  (GMT+01:00) Brussels, Copenhagen, Madrid, Paris
+                                </ng-option>
+                                <ng-option value="Africa/Algiers">
+                                  (GMT+01:00) West Central Africa</ng-option>
+                                <ng-option value="Africa/Windhoek">
+                                  (GMT+01:00) Windhoek</ng-option>
+                                <ng-option value="Asia/Beirut">
+                                  (GMT+02:00) Beirut</ng-option>
+                                <ng-option value="Africa/Cairo">
+                                  (GMT+02:00) Cairo</ng-option>
+                                <ng-option value="Asia/Gaza">
+                                  (GMT+02:00) Gaza</ng-option>
+                                <ng-option value="Africa/Blantyre">
+                                  (GMT+02:00) Harare, Pretoria</ng-option>
+                                <ng-option value="Asia/Jerusalem">
+                                  (GMT+02:00) Jerusalem</ng-option>
+                                <ng-option value="Europe/Minsk">
+                                  (GMT+02:00) Minsk</ng-option>
+                                <ng-option value="Asia/Damascus">
+                                  (GMT+02:00) Syria</ng-option>
+                                <ng-option value="Europe/Moscow">
+                                  (GMT+03:00) Moscow, St. Petersburg, Volgograd
+                                </ng-option>
+                                <ng-option value="Africa/Addis_Ababa">
+                                  (GMT+03:00) Nairobi</ng-option>
+                                <ng-option value="Asia/Tehran">
+                                  (GMT+03:30) Tehran</ng-option>
+                                <ng-option value="Asia/Dubai">
+                                  (GMT+04:00) Abu Dhabi, Muscat</ng-option>
+                                <ng-option value="Asia/Yerevan">
+                                  (GMT+04:00) Yerevan</ng-option>
+                                <ng-option value="Asia/Kabul">
+                                  (GMT+04:30) Kabul</ng-option>
+                                <ng-option value="Asia/Yekaterinburg">
+                                  (GMT+05:00) Ekaterinburg</ng-option>
+                                <ng-option value="Asia/Tashkent">
+                                  (GMT+05:00) Tashkent</ng-option>
+                                <ng-option value="Asia/Kolkata">
+                                  (GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi
+                                </ng-option>
+                                <ng-option value="Asia/Katmandu">
+                                  (GMT+05:45) Kathmandu</ng-option>
+                                <ng-option value="Asia/Dhaka">
+                                  (GMT+06:00) Astana, Dhaka</ng-option>
+                                <ng-option value="Asia/Novosibirsk">
+                                  (GMT+06:00) Novosibirsk</ng-option>
+                                <ng-option value="Asia/Rangoon">
+                                  (GMT+06:30) Yangon (Rangoon)</ng-option>
+                                <ng-option value="Asia/Bangkok">
+                                  (GMT+07:00) Bangkok, Hanoi, Jakarta</ng-option>
+                                <ng-option value="Asia/Krasnoyarsk">
+                                  (GMT+07:00) Krasnoyarsk</ng-option>
+                                <ng-option value="Asia/Hong_Kong">
+                                  (GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi
+                                </ng-option>
+                                <ng-option value="Asia/Irkutsk">
+                                  (GMT+08:00) Irkutsk, Ulaan Bataar</ng-option>
+                                <ng-option value="Australia/Perth">
+                                  (GMT+08:00) Perth</ng-option>
+                                <ng-option value="Australia/Eucla">
+                                  (GMT+08:45) Eucla</ng-option>
+                                <ng-option value="Asia/Tokyo">
+                                  (GMT+09:00) Osaka, Sapporo, Tokyo</ng-option>
+                                <ng-option value="Asia/Seoul">
+                                  (GMT+09:00) Seoul</ng-option>
+                                <ng-option value="Asia/Yakutsk">
+                                  (GMT+09:00) Yakutsk</ng-option>
+                                <ng-option value="Australia/Adelaide">
+                                  (GMT+09:30) Adelaide</ng-option>
+                                <ng-option value="Australia/Darwin">
+                                  (GMT+09:30) Darwin</ng-option>
+                                <ng-option value="Australia/Brisbane">
+                                  (GMT+10:00) Brisbane</ng-option>
+                                <ng-option value="Australia/Hobart">
+                                  (GMT+10:00) Hobart</ng-option>
+                                <ng-option value="Asia/Vladivostok">
+                                  (GMT+10:00) Vladivostok</ng-option>
+                                <ng-option value="Australia/Lord_Howe">(GMT+10:30) Lord Howe Island
+                                </ng-option>
+                                <ng-option value="Etc/GMT-11">
+                                  (GMT+11:00) Solomon Is., New Caledonia</ng-option>
+                                <ng-option value="Asia/Magadan">
+                                  (GMT+11:00) Magadan</ng-option>
+                                <ng-option value="Pacific/Norfolk">
+                                  (GMT+11:30) Norfolk Island</ng-option>
+                                <ng-option value="Asia/Anadyr">
+                                  (GMT+12:00) Anadyr, Kamchatka</ng-option>
+                                <ng-option value="Pacific/Auckland">
+                                  (GMT+12:00) Auckland, Wellington</ng-option>
+                                <ng-option value="Etc/GMT-12">
+                                  (GMT+12:00) Fiji, Kamchatka, Marshall Is.</ng-option>
+                                <ng-option value="Pacific/Chatham">
+                                  (GMT+12:45) Chatham Islands</ng-option>
+                                <ng-option value="Pacific/Tongatapu">
+                                  (GMT+13:00) Nuku'alofa</ng-option>
+                                <ng-option value="Pacific/Kiritimati">(GMT+14:00) Kiritimati
+                                </ng-option>
+                              </ng-select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <div class="row row-sm">
+                            <div class="col-md-3 col">
+                              <label class="form-label">Verification</label>
+                            </div>
+                            <div class="col-md-9 col">
+                              <label class="ckbox mg-b-10-f">
+                                <input type="checkbox"><span>Email</span></label>
+                              <label class="ckbox mg-b-10-f">
+                                <input checked="" type="checkbox"><span>SMS</span></label>
+                              <label class="ckbox mg-b-10-f">
+                                <input type="checkbox"><span>Phone</span></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mb-4 main-content-label">Secuirity Settings</div>
+                        <div class="form-group ">
+                          <div class="row row-sm">
+                            <div class="col-md-3">
+                              <label class="form-label">Login Verification</label>
+                            </div>
+                            <div class="col-md-9"> <a class="" href="javascript:void(0);">Settup Verification</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <div class="row row-sm">
+                            <div class="col-md-3">
+                              <label class="form-label">Password Verification</label>
+                            </div>
+                            <div class="col-md-9">
+                              <label class="ckbox mg-b-10-f">
+                                <input type="checkbox"><span>Require Personal
+                                  Details</span></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="mb-4 main-content-label">Notifications</div>
+                          <div class="form-group mb-0">
+                            <div class="row row-sm">
+                              <div class="col-md-3">
+                                <label class="form-label">Configure
+                                  Notifications</label>
+                              </div>
+                              <div class="col-md-9">
+                                <label class="d-block mg-b-15-f">
+                                  <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
+                                    checked="">
+                                  <span class="custom-switch-indicator"></span>
+                                  <span class="text-muted ms-2">Allow all
+                                    Notifications</span>
+                                </label>
+                                <label class="d-block mg-b-15-f">
+                                  <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input">
+                                  <span class="custom-switch-indicator"></span>
+                                  <span class="text-muted ms-2">Disable all
+                                    Notifications</span>
+                                </label>
+                                <label class="d-block mg-b-15-f">
+                                  <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
+                                    checked="">
+                                  <span class="custom-switch-indicator"></span>
+                                  <span class="text-muted ms-2">Notification
+                                    Sounds</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group float-end">
+                          <div class="row row-sm">
+                            <div class="col-md-12"> <a class="mg-r-20 btn btn-primary mb-1"
+                                href="javascript:void(0);">Deactivate
+                                Account</a> <a class="btn btn-secondary mb-1" href="javascript:void(0);">Change Password</a>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </ng-container>
+          </nav>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Row -->
+<div class="row row-sm">
+  <div class="col-lg-12 col-md-12">
+    <div class="custom-card main-content-body-profile">
+      <div [ngbNavOutlet]="nav">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- row closed -->

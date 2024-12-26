@@ -1,0 +1,107 @@
+<p class="mt-6"></p>
+<div class="left-content"><span class="main-content-title mg-b-0 mg-b-lg-1"> Registration Approval</span></div>
+
+<div class="overflow-scroll card" style="padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;">
+    
+
+    <!-- Registration Table -->
+    <table class="table table-striped border">
+        <thead>
+            <tr>
+                <th scope="col">S.No</th>
+                <th scope="col" sortable="userType" (sort)="onSort($event)">User Type</th>
+
+                <th scope="col" sortable="companyType" (sort)="onSort($event)">Company Type</th>
+                <th scope="col" sortable="regNumber" (sort)="onSort($event)">Registration Number</th>
+                <th scope="col" sortable="companyName" (sort)="onSort($event)">Company Name</th>
+                <th scope="col" sortable="vatNumber" (sort)="onSort($event)" >VAT Number</th>
+                <th scope="col" sortable="address" (sort)="onSort($event)" >Address</th>
+                <th scope="col" sortable="postcode" (sort)="onSort($event)" >postcode</th>
+                <th scope="col" sortable="mobile" (sort)="onSort($event)">Mobile Number</th>
+                <th scope="col" sortable="firstName" (sort)="onSort($event)" >First Name</th>
+                <th scope="col" sortable="lastName" (sort)="onSort($event)">Last Name</th>
+                <th scope="col" sortable="email" (sort)="onSort($event)">E-Mail</th>
+                <th scope="col" sortable="landline" (sort)="onSort($event)"> Landline Nunmber</th>
+                <th scope="col">Action</th> 
+            </tr>
+        </thead>
+        <tbody> 
+              <tr *ngFor="let registration of service.registrations$ | async; track item; let i = index;"> 
+
+                <th scope="row">{{ registration.id }}</th>
+                <td><ngb-highlight [result]="registration.userType" [term]="service.searchTerm"></ngb-highlight></td>
+                <td><ngb-highlight [result]="registration.companyType" [term]="service.searchTerm"></ngb-highlight></td>  
+                <td><ngb-highlight [result]="registration.regNumber" [term]="service.searchTerm"></ngb-highlight></td> 
+                <td><ngb-highlight [result]="registration.companyName" [term]="service.searchTerm"></ngb-highlight></td> 
+                <td><ngb-highlight [result]="registration.vatNumber" [term]="service.searchTerm"></ngb-highlight></td> 
+                <td><ngb-highlight [result]="registration.address" [term]="service.searchTerm"></ngb-highlight></td>  
+                <td><ngb-highlight [result]="registration.postcode" [term]="service.searchTerm"></ngb-highlight></td>  
+                <td><ngb-highlight [result]="registration.mobile" [term]="service.searchTerm"></ngb-highlight></td> 
+                <td><ngb-highlight [result]="registration.firstName" [term]="service.searchTerm"></ngb-highlight></td> 
+                <td><ngb-highlight [result]="registration.lastName" [term]="service.searchTerm"></ngb-highlight></td>
+                <td><ngb-highlight [result]="registration.email" [term]="service.searchTerm"></ngb-highlight></td> 
+                <td><ngb-highlight [result]="registration.landline" [term]="service.searchTerm"></ngb-highlight></td>
+               
+              
+                <td>
+                    <a *ngIf="!registration.is_Approved" class="btn btn-success btn-sm br-5" 
+                           href="javascript:void(0)" 
+                          (click)="onApproval(registration.id, registration.userType,registration.firstName,registration.lastName,registration.companyType,registration.companyName,registration.regNumber,registration.vatNumber,registration.email,registration.landline,registration.mobile,registration.address,registration.postcode); openCenter(confirmModal);">
+                          Approve
+                        </a>
+                        <a *ngIf="registration.is_Approved" class="btn btn-success btn-sm br-5 disabled">
+                          Approved
+                        </a>
+                </td>
+            </tr> 
+         </tbody>
+    </table> 
+
+  <!-- Pagination -->
+  <div class="d-flex justify-content-between p-2">
+    <ngb-pagination [collectionSize]="(service.total$ | async)!" [(page)]="service.page" [pageSize]="service.pageSize"></ngb-pagination>
+    <ng-select class="" style="width: auto; overflow: visible;" name="pageSize" [(ngModel)]="service.pageSize">
+        <ng-option value="5">5</ng-option>
+        <ng-option ng-option-selected value="10">10</ng-option>
+        <ng-option value="25">25</ng-option>
+    </ng-select>
+</div>
+
+   
+<!-- Confirm Modal -->
+ <ng-template #confirmModal let-modal>
+    <div class="modal-header">
+        <h5 class="modal-title">Confirm Approval</h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body data-picker-costem">
+        <form>
+            <div class="mb-3">
+                <label class="text-black font-w500">Do you want to Approve?</label>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary light" style="margin-left: 10px;" (click)="modal.dismiss(); onConfirmYes();">Yes</button>
+                <button type="button" class="btn btn-primary light" style="margin-left: 20px;" (click)="modal.dismiss();">No</button>
+            </div>
+        </form>
+    </div> 
+</ng-template> 
+
+<!-- Message Modal -->
+<ng-template #messageModal let-modal>
+    <div class="modal-header">
+        <h5 class="modal-title">{{messageHeader}}</h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body data-picker-costem">
+        <form>
+            <div class="mb-3">
+                <label class="text-black font-w500">{{message}}</label>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary light" style="margin-left: 10px;" (click)="modal.dismiss();">OK</button>
+            </div>
+        </form>
+    </div>
+</ng-template>
+</div>

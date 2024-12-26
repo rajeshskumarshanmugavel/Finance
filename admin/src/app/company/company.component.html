@@ -1,0 +1,288 @@
+<p class="mt-6"></p>
+<div class="left-content">
+    <span class="main-content-title mg-b-0 mg-b-lg-1">Manage Area</span>
+</div>
+
+<div class="overflow-scroll card" style="padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;">
+    <div class="row md-col-12 d-flex justify-content-between">
+        <div class="md-col-6 form-group form-inline">
+            Search: <input class="form-control ms-2" type="text" name="searchTerm" [(ngModel)]="service.searchTerm"/>
+            <span class="ml-3" *ngIf="service.loading$ | async"><span class="spinner-border spinner-border-sm"></span></span>
+        </div>
+        <div class="md-col-6">
+            <button class="demo-button btn btn-primary me-2" (click)="clearFields(); openCenter(addModal)"> Create Company </button>
+        </div>
+    </div>
+    
+    <!-- Agency Table -->
+    <table class="table table-striped border">
+        <thead>
+            <tr>
+                <th scope="col">S.No</th>
+                <th scope="col" sortable="firstName" (sort)="onSort($event)">First Name</th>
+                <th scope="col" sortable="lastName" (sort)="onSort($event)">Last Name</th>
+                <th scope="col" sortable="CompanyName" (sort)="onSort($event)">Company Name</th>
+                <th scope="col" sortable="regNumber" (sort)="onSort($event)">Registration Number</th>
+                <th scope="col" sortable="email" (sort)="onSort($event)">E-Mail</th>
+                <th scope="col" sortable="mobile" (sort)="onSort($event)">mobile Number</th>
+                <th scope="col" sortable="address" (sort)="onSort($event)">Address</th>
+                <th scope="col" sortable="postcode" (sort)="onSort($event)">Post Code</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let company of service.companyes$ | async; track item; let i = index;">
+                <th scope="row">{{ company.id }}</th>
+                <td><ngb-highlight [result]="company.firstName" [term]="service.searchTerm"></ngb-highlight></td>
+                <td><ngb-highlight [result]="company.lastName" [term]="service.searchTerm"></ngb-highlight></td>
+                <td><ngb-highlight [result]="company.companyName" [term]="service.searchTerm"></ngb-highlight></td>
+                <td><ngb-highlight [result]="company.regNumber" [term]="service.searchTerm"></ngb-highlight></td>
+                <td><ngb-highlight [result]="company.email" [term]="service.searchTerm"></ngb-highlight></td>
+                <td><ngb-highlight [result]="company.mobile" [term]="service.searchTerm"></ngb-highlight></td>
+                <td><ngb-highlight [result]="company.address" [term]="service.searchTerm"></ngb-highlight></td>
+                <td><ngb-highlight [result]="company.postcode" [term]="service.searchTerm"></ngb-highlight></td>
+                <td>
+                    <a href="javascript:void(0)" class="btn btn-success btn-sm br-5 me-2" (click)="onEdit(company.id); openCenter(editModal)">
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="16" class="table-edit">
+                                <path  d="M0 0h24v24H0V0z" fill="none"></path>
+                                <path  d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM5.92 19H5v-.92l9.06-9.06.92.92L5.92 19zM20.71 5.63l-2.34-2.34c-.2-.2-.45-.29-.71-.29s-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41z"></path>
+                            </svg>
+                        </i>
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-danger btn-sm br-5" (click)="onDelete(company.id); openCenter(confirmModal);">
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="16" class="table-delete"><path _ngcontent-ng-c60281099="" d="M0 0h24v24H0V0z" fill="none"></path>
+                                <path  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9zm7.5-5l-1-1h-5l-1 1H5v2h14V4h-3.5z"></path>
+                            </svg>
+                        </i>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Pagination -->
+    <div class="d-flex justify-content-between p-2">
+        <ngb-pagination [collectionSize]="(service.total$ | async)!" [(page)]="service.page" [pageSize]="service.pageSize"></ngb-pagination>
+        <ng-select class="" style="width: auto; overflow: visible;" name="pageSize" [(ngModel)]="service.pageSize">
+            <ng-option value="5">5</ng-option>
+            <ng-option ng-option-selected value="10">10</ng-option>
+            <ng-option value="25">25</ng-option>
+        </ng-select>
+    </div>
+    
+    <!-- Add Modal -->
+    <ng-template #addModal let-modal>
+        <div class="modal-header">
+          <h6 class="modal-title">Create Company</h6>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Company Type</label>
+                        <select class="form-select " [(ngModel)]="companyType" [ngModelOptions]="{standalone: true}" >
+                          <option value="" default selected>Select </option> 
+                          <option value="private_company_ltd">Private Company Ltd</option> 
+                          <option value="sold_trader" >Sold Trader</option> 
+                          <option value="public_company_ltd" >Public Company Ltd (PCL)</option> 
+                          <option value="limited_liability_partnership">Limited Liability Partnership (LLP)</option> 
+                          <option value="industry_type">Industry Type</option> 
+                        </select>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Registration Number</label>
+                        <input type="text" class="form-control" (change)="onRegNumberChanged()" [(ngModel)]="regNumber" [ngModelOptions]="{standalone: true}">
+                    </div>     
+              </div>
+              <div class="row">
+                <div class="mb-3 col-md-6">
+                    <label class="text-black font-w500">Company Name</label>
+                    <input type="text" class="form-control" [(ngModel)]="companyName" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label class="text-black font-w500">VAT Number</label>
+                    <input type="text" class="form-control" [(ngModel)]="vatNumber" [ngModelOptions]="{standalone: true}">
+                </div>
+                
+            </div>
+            <div class="row">
+                    <div class="mb-3 col-md-12">
+                    <label class="text-black font-w500"> Company Address</label>
+                    <input type="text" class="form-control" [(ngModel)]="address" [ngModelOptions]="{standalone: true}">
+                </div>
+            </div> 
+            <div class="row">
+                <div class="mb-3 col-md-6">
+                    <label class="text-black font-w500">Postcode</label>
+                    <input type="text" class="form-control" [(ngModel)]="postcode" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label class="text-black font-w500">Mobile Number</label>
+                    <input type="text" class="form-control" [(ngModel)]="mobile" [ngModelOptions]="{standalone: true}">
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col-md-6">
+                    <label class="text-black font-w500">First Name</label>
+                    <input type="text" class="form-control" [(ngModel)]="firstName" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label class="text-black font-w500">Last Name</label>
+                    <input type="text" class="form-control" [(ngModel)]="lastName" [ngModelOptions]="{standalone: true}">
+                </div>
+            </div>
+              <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">E-Mail</label>
+                        <input type="text" class="form-control" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Landline Number</label>
+                        <input type="text" class="form-control" [(ngModel)]="landline" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="row">  
+                    <div class="mb-3" *ngIf="isError">
+                        <label class="mb-1 form-label text-danger">{{errorMessage}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary light" (click)="onCreate(modal);">Create</button>
+                    </div>
+                </div>  
+            </form>
+        </div>
+    </ng-template>
+
+    <!-- Edit Modal -->
+    <ng-template #editModal let-modal>
+        <div class="modal-header">
+          <h6 class="modal-title">Edit Company</h6>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Company Type</label>
+                        <select class="form-select " [(ngModel)]="companyType" [ngModelOptions]="{standalone: true}" >
+                          <option value="" default selected>Select </option> 
+                          <option value="private_company_ltd">Private Company Ltd</option> 
+                          <option value="sold_trader" >Sold Trader</option> 
+                          <option value="public_company_ltd" >Public Company Ltd (PCL)</option> 
+                          <option value="limited_liability_partnership">Limited Liability Partnership (LLP)</option> 
+                          <option value="industry_type">Industry Type</option> 
+                        </select>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Registration Number</label>
+                        <input type="text" class="form-control" (change)="onRegNumberChanged()" [(ngModel)]="regNumber" [ngModelOptions]="{standalone: true}">
+                    </div>     
+              </div>
+              <div class="row">
+                <div class="mb-3 col-md-6">
+                    <label class="text-black font-w500">Company Name</label>
+                    <input type="text" class="form-control" [(ngModel)]="companyName" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label class="text-black font-w500">VAT Number</label>
+                    <input type="text" class="form-control" [(ngModel)]="vatNumber" [ngModelOptions]="{standalone: true}">
+                </div>
+                
+            </div>
+            <div class="row">
+                    <div class="mb-3 col-md-12">
+                    <label class="text-black font-w500"> Company Address</label>
+                    <input type="text" class="form-control" [(ngModel)]="address" [ngModelOptions]="{standalone: true}">
+                </div>
+            </div> 
+            <div class="row">
+                <div class="mb-3 col-md-6">
+                    <label class="text-black font-w500">Postcode</label>
+                    <input type="text" class="form-control" [(ngModel)]="postcode" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label class="text-black font-w500">Mobile Number</label>
+                    <input type="text" class="form-control" [(ngModel)]="mobile" [ngModelOptions]="{standalone: true}">
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col-md-6">
+                    <label class="text-black font-w500">First Name</label>
+                    <input type="text" class="form-control" [(ngModel)]="firstName" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label class="text-black font-w500">Last Name</label>
+                    <input type="text" class="form-control" [(ngModel)]="lastName" [ngModelOptions]="{standalone: true}">
+                </div>
+            </div>
+              <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">E-Mail</label>
+                        <input type="text" class="form-control" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Landline Number</label>
+                        <input type="text" class="form-control" [(ngModel)]="landline" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                
+                <div class="row">  
+                    <div class="mb-3" *ngIf="isError">
+                        <label class="mb-1 form-label text-danger">{{errorMessage}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary light" (click)="onSave(modal);">Save</button>
+                    </div>
+                </div>  
+            </form>
+        </div>
+    </ng-template>
+
+    <!-- Confirm Modal -->
+    <ng-template #confirmModal let-modal>
+        <div class="modal-header">
+            <h5 class="modal-title">Confirm Delete</h5>
+            <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body data-picker-costem">
+            <form>
+                <div class="mb-3">
+                    <label class="text-black font-w500">Do you want to delete?</label>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary light" style="margin-left: 10px;" (click)="modal.dismiss(); onConfirmYes();">Yes</button>
+                    <button type="button" class="btn btn-primary light" style="margin-left: 20px;" (click)="modal.dismiss();">No</button>
+                </div>
+            </form>
+        </div>
+    </ng-template>
+
+    <!-- Message Modal -->
+    <ng-template #messageModal let-modal>
+        <div class="modal-header">
+            <h5 class="modal-title">{{messageHeader}}</h5>
+            <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body data-picker-costem">
+            <form>
+                <div class="mb-3">
+                    <label class="text-black font-w500">{{message}}</label>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary light" style="margin-left: 10px;" (click)="modal.dismiss();">OK</button>
+                </div>
+            </form>
+        </div>
+    </ng-template>
+ </div>

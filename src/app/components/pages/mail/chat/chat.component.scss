@@ -1,0 +1,19 @@
+@media (min-width: 992px) {
+  .main-chat-list {
+    height: calc(100vh - 222px) !important;
+  }
+}
+
+.main-content-body-chat .nav-link{
+    margin-left: 10px !important;
+}
+::ng-deep{
+  app-chat{
+    perfect-scrollbar{
+      overflow: hidden !important;
+    }
+  }
+  .rtl .main-content-body-chat .nav-link{
+      margin-right: 10px;
+  }
+}

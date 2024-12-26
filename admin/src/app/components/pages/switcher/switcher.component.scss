@@ -1,0 +1,22 @@
+
+.switch_section input {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.25rem;
+  outline: none;
+  border: none;
+
+}
+.color-picker {
+  z-index: 9 !important;
+}
+.demo_changer .form_holder {
+  min-height: max-content !important;
+  height: auto !important;
+}
+
+@media (min-width: 992px){
+.demo_changer .form_holder{
+    height: 100vh !important;
+}
+}

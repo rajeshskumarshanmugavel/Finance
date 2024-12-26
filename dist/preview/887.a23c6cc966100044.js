@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknowa=self.webpackChunknowa||[]).push([[887],{3887:(O,n,t)=>{t.r(n),t.d(n,{SharedModule:()=>r});var E=t(177),_=t(8691),s=t(7787),M=t(1652),l=t(2889),o=t(7705);let r=(()=>{class a{static{this.\u0275fac=function(D){return new(D||a)}}static{this.\u0275mod=o.$C({type:a})}static{this.\u0275inj=o.G2t({imports:[E.MD,_.UN,s.iI,l.Id,M.YG]})}}return a})()}}]);

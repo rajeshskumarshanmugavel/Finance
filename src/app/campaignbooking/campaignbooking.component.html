@@ -1,0 +1,309 @@
+<p class="mt-6"></p>
+<div class="left-content">
+    <span class="main-content-title mg-b-0 mg-b-lg-1">Campaign Booking</span>
+</div>
+<div class="overflow-scroll" style="padding-left: 20px; padding-right: 10px; padding-top: 20px; padding-bottom: 10px;">
+    <div *ngIf="page==1" class="layout-container">
+        <div class="map-container">
+          <google-map #map [center]="center" [zoom]="zoom">
+            <map-marker
+              *ngIf="displayedMarkers.length > 0"
+              [position]="displayedMarkers[0].position"
+              [title]="getMarkerTitle(displayedMarkers[0])">
+            </map-marker>
+            <map-marker
+              *ngFor="let marker of displayedMarkers.slice(1)"
+              [position]="marker.position"
+              [title]="getMarkerTitle(marker)"
+              (mouseover)="showTooltip(marker, $event)"
+              (mouseout)="hideTooltip()">
+            </map-marker>
+          </google-map>
+          
+          <div *ngIf="tooltipVisible" class="tooltip" [style.left.px]="tooltipPosition.x" [style.top.px]="tooltipPosition.y">
+            <div>{{ getMarkerTitle(tooltipData) }}</div>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="Campaign-name">
+            <label for="name" class="form-label">Campaign Name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="campaignName" />
+          </div>
+      
+          <div class="postCode">
+            <label for="postcode" class="form-label">Post Code</label>
+            <input 
+              type="text" 
+              class="form-control" 
+              id="postcode" 
+              [(ngModel)]="postcode" 
+              (keyup.enter)="onPostcodeSubmit()" 
+              placeholder="Enter Postcode"
+            />
+            <div *ngIf="postcodeError" class="text-danger mt-2">
+              Invalid Postcode. Please enter a valid postcode.
+            </div>
+          </div>
+          
+      
+          <!-- Range Selector -->
+          <div class="range-selector">
+            <label for="input-number" class="form-label">Select Range (miles):</label>
+            <input type="number" class="form-control" id="input-number" [(ngModel)]="rangeInMiles" (change)="onRangeChange(map)" />
+          </div>
+      
+          <!-- Budget Input -->
+          <div class="budget">
+            <label for="input-number" class="form-label">Budget</label>
+            <input type="number" class="form-control" id="input-number" />
+          </div>
+      
+          <!-- Date Range Picker -->
+          <mat-form-field appearance="fill" class="mt-3">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+            <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
+              <input matStartDate formControlName="start" placeholder="Start date">
+              <input matEndDate formControlName="end" placeholder="End date">
+            </mat-date-range-input>
+      
+            <mat-error *ngIf="range.controls['start'].hasError('matStartDateInvalid')">Invalid start date</mat-error>
+            <mat-error *ngIf="range.controls['end'].hasError('matEndDateInvalid')">Invalid end date</mat-error>
+          </mat-form-field>
+      
+          <!-- Form Submit Button -->
+          <div class="form-group mb-0 mt-3">
+            <div>
+              <button type="submit" class="btn btn-primary float-end" (click)="onNext()">Next</button>
+            </div>
+          </div>
+      
+          <!-- Error Message for Invalid Postcode -->
+          <div *ngIf="postcodeError" class="alert alert-danger mt-3">
+            The entered postcode could not be found. Please try again.
+          </div>
+        </div>
+    </div>
+    <div *ngIf="page==2" class="layout-container">
+        <div class="card">
+            <div class="card-body row row-sm">
+                <div class="col-lg-3 col-md-3">
+                    <div> 
+                        <div class="panel panel-primary"> 
+                            <img src="../../assets/img/screens/digital_signage.jpg" >
+                        </div>
+                    </div>    
+                </div>
+                <div class="col-lg-7 col-md-7">
+                <div class="productdesc">
+                    <div>
+                    <div class="panel panel-primary">
+                        <div class=" tab-menu-heading">
+                        <div class="tabs-menu1">
+                            <!-- Tabs -->
+                            <ul ngbNav #nav="ngbNav" [activeId]="1" class="panel-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>Location</a>
+                                <ng-template ngbNavContent>
+                                <div class="tab-pane">
+                                
+                                    <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                    <tbody>
+                                    <tr>
+                                            <td class="fw-semibold">Status</td>
+                                            <td> Active</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">Screen Type</td>
+                                        <td> Indoor</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="fw-semibold">Media Type </td>
+                                        <td>Small</td>
+                                    </tr>
+                                    </tbody>
+                                    </table>
+                                    </div>
+                                </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>Specifications</a>
+                                <ng-template ngbNavContent>
+                                <div class="tab-pane">
+                                    <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr>
+                                                <td class="fw-semibold">Resolution (W X H)</td>
+                                                <td> 1024 X 768</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-semibold">Screen Resolution</td>
+                                                <td>2080 X 5000</td>
+                                            </tr>
+                                        
+                                        
+                                        <tr>
+                                            <td> Length</td>
+                                            <td>Up to 44 inch</td>
+                                        </tr>
+                                        <tr>
+                                            <td> Network Owner</td>
+                                            <td>Relaiance</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="3">
+                                <a ngbNavLink>Configuration</a>
+                                <ng-template ngbNavContent>
+                                <div class="tab-pane">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="fw-semibold">Spot Duration</td>
+                                                    <td> 10 Seconds</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-semibold">Spots / Hour</td>
+                                                    <td>60</td>
+                                                </tr>
+                                            
+                                            <tr>
+                                                <td> Max Spots per Day</td>
+                                                <td>840</td>
+                                            </tr>
+                                            <tr>
+                                                <td> Min Spots per Day</td>
+                                                <td>800</td>
+                                            </tr>
+                                            <tr>
+                                                <td> Loop Duration</td>
+                                                <td>60</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                </ng-template>
+                            </li>
+                            </ul>
+                        </div>
+                        </div>
+                        <div class="panel-body tabs-menu-body">
+                        <div [ngbNavOutlet]="nav"></div>
+                        </div>
+                    </div>
+                    <div class="text-center  mt-4 btn-list"> 
+                        <a href="product-cart.html" class="btn ripple btn-primary me-2">
+                            <i class="fe fe-shopping-cart"> </i> Add to cart</a>  
+                            <button type="submit" class="btn btn-primary" (click)="onNext2()">Next</button>
+                    </div>
+                    
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="page==3" class="layout-container">
+        <div class="col-lg-6 col-md-6">
+
+            <div class="row"><div class="card-header"><h3  class="card-title mb-2">Select Creative Method</h3></div></div>
+
+            <div class="card productdesc">
+              <div class="card-body">
+                <div class="panel panel-primary">
+                  <div class=" tab-menu-heading">
+                    <div class="tabs-menu1">
+                      <!-- Tabs -->
+                      <ul ngbNav #nav="ngbNav" [activeId]="1" class="panel-tabs">
+                        <li [ngbNavItem]="1">
+                          <a ngbNavLink>Select Own Creative</a>
+                          <ng-template ngbNavContent>
+                            <div class="tab-pane">
+                                                             
+                              <h5 class="mb-2 mt-3 fw-semibold"></h5>
+                              <table class="table table-responsive">
+                                 <tr>
+                                      <td class="fw-semibold">Choose Creative</td>
+                                      <td> <input  id="formFileLg" type="file" class="form-control form-control-lg"></td>
+                                </tr>
+                                
+                                
+                               </table>
+                            </div>
+                          </ng-template>
+                        </li>
+                        <li [ngbNavItem]="2">
+                          <a ngbNavLink>Select Template</a>
+                          <ng-template ngbNavContent>
+                            <div class="tab-pane">
+                              <div class="table-responsive">
+                                <table class="table table-bordered">
+                                  <tbody>
+                                      <tr>
+                                          <td class="fw-semibold">Template 1</td>
+                                      </tr>
+                                      <tr>
+                                          <td class="fw-semibold">Template 2 </td>
+                                      </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </ng-template>
+                        </li>
+                        <li [ngbNavItem]="3">
+                          <a ngbNavLink>BeSpoke</a>
+                          <ng-template ngbNavContent>
+                            <div class="tab-pane">
+                              <div class="table-responsive">
+                                  <table class="table table-bordered">
+                                      <tbody>
+                                          <tr>
+                                              <td class="fw-semibold">Contact MyAdLocal Staffs</td>
+                                              <td> </td>
+                                           </tr>
+                                       </tbody>
+                                    </table>
+                              </div>
+                            </div>
+                          </ng-template>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="panel-body tabs-menu-body">
+                    <div [ngbNavOutlet]="nav"></div>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+            <div class="text-center  mt-4 btn-list"> 
+                <a class="btn ripple btn-primary me-2" (click)="onNext4()">
+                    <i class="fe fe-shopping-cart"> </i> Proceed to Payment</a>  
+               </div>
+          </div>
+    </div>
+    <div *ngIf="page==4">
+        <div class="payment-form">
+            <form (ngSubmit)="handlePayment($event)">
+              <label for="card-element">Credit or debit card</label>
+              <div id="card-element" class="form-control"></div>
+              <div *ngIf="cardError" class="error">{{ cardError }}</div>
+              <button type="submit" class="btn btn-primary mt-3">Submit Payment</button>
+            </form>
+          </div>
+    </div>
+</div>

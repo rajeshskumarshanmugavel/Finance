@@ -1,0 +1,19 @@
+::ng-deep{
+    .rtl{
+        app-form-layouts{
+            .dropdown-menu {
+                inset: auto !important;
+                transform: translate(0) !important;
+            }
+        }
+        input{
+            text-align: right;
+        }
+    }
+    .transparent-theme{
+        .form-control::placeholder{
+            color: #fff;
+        }
+    }
+    
+}

@@ -1,0 +1,10 @@
+::ng-deep {
+  .rtl {
+    app-bread-crumbs {
+      ol, ul {
+        padding-right: 2rem !important;
+        padding-left: 2rem !important;
+      }
+    }
+  }
+}

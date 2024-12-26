@@ -1,0 +1,81 @@
+
+@import "../../../../../assets/scss/variables";
+.dropdown-menu.show{
+    transform: translate(0px, 35px) !important;
+}
+  
+ 
+::ng-deep{
+    .modal.show.modalCusSty .modal-dialog{
+        border-radius: 5px;
+        height: 520px;
+        width: 600px;
+        max-width: 100%;
+        .nav-link {
+            padding: 0.5rem 1rem;
+            color: #38cab3
+        }
+    }
+
+    @media (max-width:768px) {
+        .modal.show.modalCusSty .modal-dialog{
+            width: 90% !important;
+        }
+    }
+
+    @media (max-width:360px) {
+        .nav.mailLinks{
+            width: 180px;
+        }
+    }
+
+    .dark-theme{
+        .main-mail-compose-body .form-group{
+            border: 1px solid #4646547a !important;
+            padding-left: 5px ;
+        }        
+        .main-mail-compose-body {
+            background-color: $dark-theme !important;
+        }
+    }
+    .rtl .main-mail-date {
+        right: initial;
+        margin-right: auto;
+        left: 15px;
+    }
+    .rtl .main-mail-star {
+        margin-left: 15px;
+        margin-right: inherit;
+        left: 0;
+        bottom: 0px;
+        right: inherit !important;
+    }
+
+    .transparent-theme .dropdown-menu>li>a:focus{
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+}
+
+.btn-main-primary {
+    color: #ffffff;
+    background-color: #8667ff;
+    border-color: #8667ff;
+}
+
+
+.main-mail-compose-body{
+    padding: 0px !important;
+}
+.main-mail-compose-body .form-group{
+    border: 1px solid #eaedf7;
+    padding-left: 5px ;
+}
+
+.modal-body{
+    padding: 10px !important;
+}
+
+.modal-title{
+    color: #fff;
+}

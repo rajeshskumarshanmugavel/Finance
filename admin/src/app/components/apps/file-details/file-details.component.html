@@ -1,0 +1,103 @@
+<app-page-header [title]="'FILE DETAILS'" [items]="['Apps']" [active_item]="'File details'"></app-page-header>
+<div class="row row-sm">
+  <div class="col-xl-8 col-lg-8 col-md-12">
+    <div class="card custom-card overflow-hidden">
+      <div class="card-body px-4 pt-4">
+        <a routerLink="/advanced-ui/blog-details"><img src="./assets/img/photos/blog.jpg" alt="img"
+            class="cover-image br-7 w-100"></a>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-4 col-lg-4">
+    <div class="card custom-card">
+      <div class=" card-body ">
+        <h5 class="mb-3">File details :</h5>
+        <div class="">
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="table-responsive">
+                <table class="table mb-0 border-top table-bordered text-nowrap">
+                  <tbody>
+                    <tr>
+                      <th scope="row">File-name</th>
+                      <td>image.jpg</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">File-size</th>
+                      <td>12.45mb</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">uploaded-date</th>
+                      <td>01-12-2020</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">uploaded-by</th>
+                      <td>prityy abodh</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">image-width</th>
+                      <td>1000</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">image-height</th>
+                      <td>600</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">File-formate</th>
+                      <td>jpg</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">File-location</th>
+                      <td>storage/photos/image.jpg</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-8 col-md-12">
+    <div class="card custom-card">
+      <div class="card-body h-100">
+        <owl-carousel-o [options]="customOptions">
+          <ng-container *ngFor="let slide of slidesStore">
+            <ng-template carouselSlide [id]="slide.id">
+              <div class="item m-2">
+                <div class="card">
+                  <div class="card custom-card overflow-hidden mb-0 ">
+                    <a href="javascript:;"><img [src]="slide.src" [alt]="slide.alt"></a>
+                    <div class="card-footer bd-t-0 py-3">
+                      <div class="d-flex">
+                        <div>
+                          <h6 class="mb-0">{{slide.title}}</h6>
+                        </div>
+                        <div class="ms-auto">
+                          <h6 class="text-muted mb-0">{{slide.size}}</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-xl-4">
+    <div class="card custom-card">
+      <div class="card-body">
+        <h5 class="mb-3">Recent Files</h5>
+          <p class="container gallery-item" gallerize>
+            <img  class="img-responsive radius-5" *ngFor="let img of imageData" [src]="img.srcUrl">
+          </p>
+      </div>
+    </div>
+  </div>
+</div>

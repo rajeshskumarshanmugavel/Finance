@@ -1,0 +1,8 @@
+::ng-deep{
+    .rtl .handle-counter .counter-plus {
+        border-radius: 3px 0px 0px 3px !important;
+    }
+    .rtl .handle-counter .counter-minus {
+        border-radius: 0px 3px 3px 0px!important;
+    }
+}

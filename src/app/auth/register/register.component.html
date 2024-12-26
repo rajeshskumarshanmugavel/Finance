@@ -1,0 +1,146 @@
+<div class="page">
+  <div class="page-single">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-5 col-lg-6 col-md-8 col-sm-8 col-xs-10 card-sigin-main py-4 justify-content-center mx-auto">
+          <div class="card-sigin " >
+         <div class="main-card-signin d-md-flex"> 
+               <!-- <div class="wd-100p"><div class="d-flex mb-4"><a routerLink="/dashboard/dashboard01"><img src="./assets/img/brand/favicon.png" class="sign-favicon ht-40" alt="logo"></a></div> -->
+               <div class="">
+                 <div class="main-signup-header">
+                   <h2 class="text-light"> {{userType}} Registration </h2>
+                   <div class="container-fluid">
+                    <form>
+                     
+                      <!--div class="row">
+                        <div class="mb-3 col-md-6">
+                          <label class="text-black font-w500">User Type</label>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="option" id="option1" value="Advertiser" [(ngModel)]="userType" [ngModelOptions]="{standalone: true}">
+                            <label class="form-check-label" for="option1">Advertiser</label>
+                          </div>
+                        
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="option" id="option2" value="Agency" [(ngModel)]="userType" [ngModelOptions]="{standalone: true}">
+                            <label class="form-check-label" for="option2">Agency</label>
+                          </div>
+                        
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="option" id="option3" value="NetworkOwner" [(ngModel)]="userType" [ngModelOptions]="{standalone: true}">
+                            <label class="form-check-label" for="option3">Network Owner</label>
+                          </div>
+                           
+                        </div>
+                      </div-->
+                        <div class="row d-flex align-items-stretch">
+                          <div class="mb-3 col-md-6">
+                            <label class="text-black font-w500">Company Type</label>
+                            <select class="form-select " [(ngModel)]="companyType" [ngModelOptions]="{standalone: true}" style="font-size: 13px;">
+                              <option value="" default selected>Select </option> 
+                              <option value="private_company_ltd">Private Company Ltd</option> 
+                              <option value="sold_trader" >Sold Trader</option> 
+                              <option value="public_company_ltd" >Public Company Ltd (PCL)</option> 
+                              <option value="limited_liability_partnership">Limited Liability Partnership (LLP)</option> 
+                              <option value="industry_type">Industry Type</option> 
+                            </select>
+                          </div>
+                  
+                  <div class="mb-6 col-md-6">
+                    <label class="text-black font-w500">Registration Number</label>
+                    <input type="text" class="form-control" (change)="onRegNumberChanged()" [(ngModel)]="regNumber" [ngModelOptions]="{standalone: true}" >
+                </div>
+                </div>
+                      <!-- </div> -->
+                  <div class="row">
+                    <div class="mb-3 col-md-6">
+                      <label class="text-black font-w500">Company Name</label>
+                      <input type="text" class="form-control" [(ngModel)]="companyName" [ngModelOptions]="{standalone: true}" >
+                    </div>
+                    
+                    <div class="mb-6 col-md-6">
+                        <label class="text-black font-w500">VAT Number</label>
+                        <input type="text" class="form-control" [(ngModel)]="vatNumber" [ngModelOptions]="{standalone: true}" >
+                    </div>
+                 </div>
+                  <div class="row">
+                        
+                          <div class="mb-3 col-md-12">
+                              <label class="text-black font-w500"> Company Address</label>
+                              <input type="text" class="form-control" [(ngModel)]="address" [ngModelOptions]="{standalone: true}">
+                          </div>
+                      </div> 
+                      <div class="row">
+                        <div class="mb-3 col-md-6">
+                          <label class="text-black font-w500">Post Code</label>
+                          <input type="text" class="form-control" [(ngModel)]="postcode" [ngModelOptions]="{standalone: true}">
+                      </div>
+                        <div class="mb-3 col-md-6">
+                          <label class="text-black font-w500">Mobile Number</label>
+                          <input type="text" class="form-control" [(ngModel)]="mobile" [ngModelOptions]="{standalone: true}">
+                      </div>
+                       
+                      </div>  
+                 <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">First Name</label>
+                        <input type="text" class="form-control"[(ngModel)]="firstName" [ngModelOptions]="{standalone: true}" >
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label class="text-black font-w500">Last Name</label>
+                        <input type="text" class="form-control" [(ngModel)]="lastName" [ngModelOptions]="{standalone: true}">
+                    </div>
+                 </div>
+                      
+                    <div class="row">
+                          <div class="mb-3 col-md-6">
+                              <label class="text-black font-w500">E-Mail</label>
+                              <input type="text" class="form-control" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+                          </div>
+                          <div class="mb-3 col-md-6">
+                              <label class="text-black font-w500">Landline Number</label>
+                              <input type="text" class="form-control" [(ngModel)]="landline" [ngModelOptions]="{standalone: true}">
+                          </div>
+                      </div>
+                     
+                      <div class="row">  
+                          <div class="mb-3" *ngIf="isError">
+              
+                              <label class="mb-1 form-label text-danger">{{errorMessage}}</label>
+                          </div>
+                      </div>
+                      <div class="d-grid">
+                          <button type ="button" class="btn btn-primary" (click)="onCreate(modal);">Register</button>
+                     </div>
+                    
+                  </form>
+                  </div>
+                   <div class="main-signup-footer mt-3 text-center">
+                     <p>Already have an account? <a routerLink="/auth/login">Sign In</a></p>
+                   </div>
+                 </div>
+           </div>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <!-- Message Modal -->
+ <ng-template #messageModal let-modal>
+  <div class="modal-header">
+      <h5 class="modal-title">{{messageHeader}}</h5>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body data-picker-costem">
+      <form>
+          <div class="mb-3">
+              <label class="text-black font-w500">{{message}}</label>
+          </div>
+          <div class="form-group">
+              <button type="button" class="btn btn-primary light" style="margin-left: 10px;" (click)="modal.dismiss();">OK</button>
+          </div>
+      </form>
+  </div>
+</ng-template>
+</div>

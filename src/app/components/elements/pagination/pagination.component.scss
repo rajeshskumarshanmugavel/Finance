@@ -1,0 +1,6 @@
+::ng-deep{
+    .pagination-circled .page-item:first-child .page-link, .pagination-circled .page-item:last-child .page-link{
+        border-radius:  100% !important;
+    }
+
+}

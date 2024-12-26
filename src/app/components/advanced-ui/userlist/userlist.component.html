@@ -1,0 +1,79 @@
+<app-page-header [title]="'USERLIST'" [items]="['Advanced UI']" [active_item]="'Userlist'"></app-page-header>
+<!-- Row -->
+<div class="row row-sm">
+  <div class="col-lg-12">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div class="table-responsive  deleted-table">
+
+          <table id="user-datatable" class="table table-bordered text-nowrap border-bottom Userlist">
+            <thead>
+              <tr>
+                <th scope="col" class="wd-2">Photo</th>
+                <th scope="col">Name</th>
+                <th scope="col">Role</th>
+                <th scope="col">Last Active</th>
+                <th scope="col">Country</th>
+                <th scope="col">Verification</th>
+                <th scope="col">Joined Date</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let userlist of countries">
+
+                <td>
+                  <div *ngIf="userlist.status; else elseBlock">
+                        <div class="avatar-md  rounded-circle">
+                          <img alt="avatar" class="rounded-circle" src="{{userlist.img}}">
+                        </div>
+                  </div>
+                  <ng-template #elseBlock>
+                    <div class="avatar avatar-md bg-success text-white rounded-circle">
+                      W
+                    </div>
+                  </ng-template>
+                </td>
+                <td>
+                  <p class="tx-14 font-weight-semibold text-dark mb-1">{{userlist.name}}</p>
+                  <p class="tx-13 text-muted mb-0">{{userlist.mail}}</p>
+                </td>
+                <td>
+                  <ngb-highlight class="text-muted tx-13" [result]="userlist.role" [term]="service.searchTerm"></ngb-highlight>
+                </td>
+                <td>
+                  <span class="badge bg-light text-muted tx-13">{{userlist.lastActive}}</span>
+                </td>
+                <td>
+                  <span class="text-muted tx-13">{{userlist.country}}</span>
+                </td>
+                <td>
+                  <span class="badge font-weight-semibold bg-{{userlist.verificationStatus}}-transparent text-{{userlist.verificationStatus}} tx-11">{{userlist.verification}}</span>
+                </td>
+                <td>
+                  <span class="text-muted tx-13">{{userlist.joinedData}}</span>
+                </td>
+                <td>
+                  <a href="javascript:void(0);" class="btn btn-icon btn-primary-light me-2" ngbTooltip="Edit">
+                    <i class="las la-pen"></i>
+                  </a>
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
+          <div class="d-flex justify-content-between">
+            <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize" (pageChange)="refreshCountries()">
+            </ngb-pagination>
+            <select class="custom-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="refreshCountries()">
+              <option [ngValue]="2">2 items per page</option>
+              <option [ngValue]="4">4 items per page</option>
+              <option [ngValue]="6">6 items per page</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Row -->

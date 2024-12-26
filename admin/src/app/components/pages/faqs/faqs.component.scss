@@ -1,0 +1,78 @@
+
+@import "../../../../assets/scss/variables";
+::ng-deep{
+    
+    .accordion-button{
+        outline: none !important;
+    }
+    .dark-theme{
+        .acc-card.mb-2 .accordion-button:not(.collapsed){
+            background-color: #e7f1ff;
+            color: #000;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #383d52;
+        }
+        .acc-card.mb-2 .accordion-button.collapsed{
+            color: #fff;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #383d52;
+            background-color: #383d52 !important;
+        }
+        .accordion-body{
+            background-color: $dark-theme !important;
+        }
+        .accordion-item {
+            background-color: $dark-theme;
+            border: 1px solid rgb(64 67 83);
+        }
+        .accordion-button::after{
+            filter: invert(1);
+        }
+    }
+    .transparent-theme{
+        
+        .acc-card.mb-2 .accordion-button:not(.collapsed){
+            background-color: var(--primary02);
+            color: #fff;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #4cb0a0;
+        }
+        .acc-card.mb-2 .accordion-button.collapsed{
+            color: #fff;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #4cb0a0;
+            background-color: #248172 !important;
+        }
+        .accordion-button.collapsed:hover{
+            background-color: var(--primary02);
+        }
+        .panel-heading .accordion-button:not(.collapsed){
+            background-color: var(--primary02);
+            color: #fff;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #4cb0a0;
+        }
+        .panel-heading .accordion-button.collapsed{
+            background-color: var(--primary02);
+            color: #fff;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #4cb0a0;
+        }
+        .accordion-body{
+            background-color: #2da28f !important;
+        }
+        .accordion-item {
+            background-color: #2da28f;
+            border: 1px solid #4cb0a0;
+        }
+        .accordion-button::after{
+            filter: invert(1);
+        }
+    }
+}

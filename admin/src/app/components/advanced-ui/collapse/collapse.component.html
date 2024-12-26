@@ -1,0 +1,142 @@
+<app-page-header [title]="'COLLAPSE'" [items]="['Advanced UI']" [active_item]="'Collapse'"></app-page-header>
+<!-- row -->
+<div class="row">
+  <div class="col-lg-12 col-md-12">
+    <div class="card custom-card">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Basic Example</h6>
+          <p class="text-muted card-sub-title mb-0">Click the buttons below to show and hide another element via class changes</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse10.toggle()"
+              [attr.aria-expanded]="!isCollapsed10">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div>
+          <button type="button" class="btn btn-outline-primary mb-1" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample"> Toggle Content </button>
+          <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+            <div>
+              <div class="mt-2">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
+                keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="" #collapse10="ngbCollapse" [(ngbCollapse)]="isCollapsed10">
+          <pre>
+<code highlight=' <div>
+  <button type="button" class="btn btn-outline-primary mb-1" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample"> Toggle Content </button>
+  <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+    <div class="card">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
+        keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      </div>
+    </div>
+  </div>
+</div>
+
+TS:
+public isCollapsed: boolean = false;
+toggle(){
+  this.isCollapsed = !this.isCollapsed;
+}
+ '>
+</code>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-12 col-md-12">
+    <div class="card custom-card">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">Multiple Targets</h6>
+          <p class="text-muted card-sub-title mb-0">Click the buttons below to show and hide another element via class changes.</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse2.toggle()"
+              [attr.aria-expanded]="!isCollapsed2">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div>
+          <div class="btn-list">
+              <a class="btn ripple btn-primary float-start" href="javascript:;" role="button" (click)="first()">Toggle First Content</a>
+              <a class="btn ripple btn-secondary float-start" href="javascript:;" role="button" (click)="second()">Toggle Second Content</a>
+              <a class="btn ripple btn-success float-start" href="javascript:;" role="button" (click)="both()">Toggle Both Contents</a>
+          </div>
+          <div class="row row-sm">
+              <div class="col-md-6 col-12">
+                  <div class="multi-collapse mt-2" >
+                      <div class="card card-body" *ngIf="isFirstCollapsed">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 col-12">
+                  <div class="multi-collapse mt-2" >
+                      <div class="card card-body" *ngIf="isSecondCollapsed">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>      
+      <div class="" #collapse2="ngbCollapse" [(ngbCollapse)]="isCollapsed2">
+        <pre>
+<code highlight='<div>
+  <div class="btn btn-list">
+      <a class="btn ripple btn-primary float-start" href="javascript:;" role="button" (click)="first()">Toggle First Content</a>
+      <a class="btn ripple btn-secondary float-start" href="javascript:;" role="button" (click)="second()">Toggle Second Content</a>
+      <a class="btn ripple btn-success float-start" href="javascript:;" role="button" (click)="both()">Toggle Both Contents</a>
+  </div>
+  <div class="row row-sm">
+      <div class="col-md-6 col-12">
+          <div class="multi-collapse mt-2" >
+              <div class="card card-body" *ngIf="isFirstCollapsed">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+              </div>
+          </div>
+      </div>
+      <div class="col-md-6 col-12">
+          <div class="multi-collapse mt-2" >
+              <div class="card card-body" *ngIf="isSecondCollapsed">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+              </div>
+          </div>
+      </div>
+  </div>
+</div>  
+
+TS:
+public isFirstCollapsed = false;
+public isSecondCollapsed = false;
+first() {
+  this.isFirstCollapsed = !this.isFirstCollapsed;
+}
+second() {
+  this.isSecondCollapsed = !this.isSecondCollapsed;
+}
+both() {
+  this.isFirstCollapsed = !this.isFirstCollapsed;
+  this.isSecondCollapsed = !this.isSecondCollapsed;
+}'>
+</code>
+        </pre>
+      </div>  
+      </div>
+    </div>
+  </div>
+</div>
+<!-- row closed -->

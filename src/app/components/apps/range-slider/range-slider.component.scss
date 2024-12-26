@@ -1,0 +1,24 @@
+// 38cab3
+
+::ng-deep{
+    .ngx-slider .ngx-slider-selection,
+    .ngx-slider .ngx-slider-pointer{
+        background: #38cab3 !important;
+    }
+
+    .dark-theme{
+        .ngx-slider .ngx-slider-bar {
+            background: #404353;
+        }
+        .ngx-slider .ngx-slider-pointer:after {
+            background: #404353;
+        }
+        .ngx-slider .ngx-slider-pointer.ngx-slider-active:after{
+            background: #fff;
+        }
+    }
+    .ngx-slider .ngx-slider-pointer.ngx-slider-active:after{
+        background: #fff;
+    }
+   
+}

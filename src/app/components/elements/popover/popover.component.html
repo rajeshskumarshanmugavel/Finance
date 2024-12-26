@@ -1,0 +1,346 @@
+<app-page-header [title]="'POPOVER'" [items]="['Elements']" [active_item]="'Popover'"></app-page-header>
+<!-- row -->
+<div class="row">
+  <div class="col-xl-12 col-lg-12">
+    <div class="card" id="popover">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">DEFAULT POPOVER</h6>
+          <p class="text-muted card-sub-title">Documentation and examples for adding Bootstrap popovers, like those
+            found in iOS, to any element on your site..</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse1.toggle()"
+              [attr.aria-expanded]="!isCollapsed1">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <div class="tx-10 mb-1 font-weight-bold text-muted text-uppercase">
+              STATIC EXAMPLE
+            </div>
+            <div class="popover-static-demo">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="popover bs-popover-top default">
+                    <div class="popover-arrow"></div>
+                    <h3 class="popover-header">Popover top</h3>
+                    <div class="popover-body">
+                      <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia
+                        quam venenatis vestibulum.</p>
+                    </div>
+                  </div><!-- popover -->
+                </div><!-- col-6 -->
+                <div class="col-md-6 mg-t-30 mg-md-t-0">
+                  <div class="popover bs-popover-bottom default">
+                    <div class="popover-arrow"></div>
+                    <h3 class="popover-header">Popover Bottom</h3>
+                    <div class="popover-body">
+                      <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia
+                        quam venenatis vestibulum.</p>
+                    </div>
+                  </div><!-- popover -->
+                </div><!-- col-6 -->
+                <div class="col-md-6 mg-t-30">
+                  <div class="popover bs-popover-start default">
+                    <div class="popover-arrow"></div>
+                    <h3 class="popover-header">Popover Left</h3>
+                    <div class="popover-body">
+                      <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia
+                        quam venenatis vestibulum.</p>
+                    </div>
+                  </div><!-- popover -->
+                </div><!-- col-6 -->
+                <div class="col-md-6 mg-t-30">
+                  <div class="popover bs-popover-end default">
+                    <div class="popover-arrow"></div>
+                    <h3 class="popover-header">Popover Right</h3>
+                    <div class="popover-body">
+                      <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia
+                        quam venenatis vestibulum.</p>
+                    </div>
+                  </div><!-- popover -->
+                </div><!-- col-6 -->
+              </div><!-- row -->
+            </div>
+          </div>
+          <div class="example border-top-0">
+            <div class="tx-10 mb-1 font-weight-bold text-muted text-uppercase">
+              Live EXAMPLE
+            </div>
+            <div class="pd-20 bg-gray-200">
+              <div class="row row-sm tx-center">
+                <div class="col-sm-6 col-lg-3">
+                  <button type="button" class="btn btn-primary" container="button" popoverClass="popover-default" dplacement="top" popoverTitle="Popover top"
+                    ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Click me</button>
+                </div><!-- col-3 -->
+                <div class="col-sm-6 col-lg-3 mg-t-30 mg-sm-t-0">
+                  <button type="button" class="btn btn-primary" container="button" popoverClass="popover-default1" placement="bottom" popoverTitle="Popover bottom"
+                    ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Click me</button>
+                </div><!-- col-3 -->
+                <div class="col-sm-6 col-lg-3 mg-t-30 mg-lg-t-0">
+                  <button type="button" class="btn btn-primary" container="button" popoverClass="popover-default2" placement="right" popoverTitle="Popover right"
+                    ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Click me</button>
+                </div><!-- col-3 -->
+                <div class="col-sm-6 col-lg-3 mg-t-30 mg-lg-t-0">
+                  <button type="button" class="btn btn-primary" container="button" popoverClass="popover-default3" placement="left" popoverTitle="Popover left"
+                    ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Click me</button>
+                </div><!-- col-3 -->
+              </div><!-- row -->
+            </div>
+          </div>
+
+          <div class="" #collapse1="ngbCollapse" [(ngbCollapse)]="isCollapsed1">
+            <pre>
+<code highlight=' <div class="example border-top-0">
+  <div class="tx-10 mb-1 font-weight-bold text-muted text-uppercase">
+    Live EXAMPLE
+  </div>
+  <div class="pd-20 bg-gray-200">
+    <div class="row row-sm tx-center">
+      <div class="col-sm-6 col-lg-3">
+        <button type="button" class="btn btn-primary" container="button" popoverClass="popover-default" dplacement="top" popoverTitle="Popover top"
+          ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Click me</button>
+      </div><!-- col-3 -->
+      <div class="col-sm-6 col-lg-3 mg-t-30 mg-sm-t-0">
+        <button type="button" class="btn btn-primary" container="button" popoverClass="popover-default1" placement="bottom" popoverTitle="Popover bottom"
+          ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Click me</button>
+      </div><!-- col-3 -->
+      <div class="col-sm-6 col-lg-3 mg-t-30 mg-lg-t-0">
+        <button type="button" class="btn btn-primary" container="button" popoverClass="popover-default2" placement="right" popoverTitle="Popover right"
+          ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Click me</button>
+      </div><!-- col-3 -->
+      <div class="col-sm-6 col-lg-3 mg-t-30 mg-lg-t-0">
+        <button type="button" class="btn btn-primary" container="button" popoverClass="popover-default3" placement="left" popoverTitle="Popover left"
+          ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Click me</button>
+      </div><!-- col-3 -->
+    </div><!-- row -->
+  </div>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="popover2">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">DEFAULT POPOVER</h6>
+          <p class="text-muted card-sub-title">Documentation and examples for adding Bootstrap popovers, like those
+            found in iOS, to any element on your site..</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse2.toggle()"
+              [attr.aria-expanded]="!isCollapsed2">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <div class="popover-static-demo">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="popover popover-head-primary bs-popover-top">
+                    <div class="popover-arrow"></div>
+                    <h3 class="popover-header">Popover top</h3>
+                    <div class="popover-body">
+                      <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia
+                        quam venenatis vestibulum.</p>
+                    </div>
+                  </div><!-- popover -->
+                </div><!-- col-6 -->
+                <div class="col-md-6 mg-t-30 mg-md-t-0">
+                  <div class="popover popover-head-primary bs-popover-bottom">
+                    <div class="popover-arrow"></div>
+                    <h3 class="popover-header">Popover Bottom</h3>
+                    <div class="popover-body">
+                      <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia
+                        quam venenatis vestibulum.</p>
+                    </div>
+                  </div><!-- popover -->
+                </div><!-- col-6 -->
+              </div>
+            </div>
+          </div>
+          <div class="example border-top-0">
+            <div class="pd-20 bg-gray-200">
+              <div class="row row-sm tx-center">
+                <div class="col-sm-6 col-lg-3">
+                  <button type="button" class="btn btn-primary" container="body" popoverClass="popover-head-primary" placement="top" popoverTitle="Popover top"
+                   ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Click me</button>
+                </div><!-- col-3 -->
+                <div class="col-sm-6 col-lg-3 mg-t-30 mg-sm-t-0">
+                  <button type="button" class="btn btn-primary" container="body" popoverClass="popover-head-secondary" placement="bottom" popoverTitle="Popover bottom"
+                   ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Click me</button>
+                </div><!-- col-3 -->
+              </div>
+            </div>
+          </div>
+          <div class="" #collapse2="ngbCollapse" [(ngbCollapse)]="isCollapsed2">
+            <pre>
+<code highlight=' <div class="example">
+  <div class="popover-static-demo">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="popover popover-head-primary bs-popover-top">
+          <div class="popover-arrow"></div>
+          <h3 class="popover-header">Popover top</h3>
+          <div class="popover-body">
+            <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia
+              quam venenatis vestibulum.</p>
+          </div>
+        </div><!-- popover -->
+      </div><!-- col-6 -->
+      <div class="col-md-6 mg-t-30 mg-md-t-0">
+        <div class="popover popover-head-primary bs-popover-bottom">
+          <div class="popover-arrow"></div>
+          <h3 class="popover-header">Popover Bottom</h3>
+          <div class="popover-body">
+            <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia
+              quam venenatis vestibulum.</p>
+          </div>
+        </div><!-- popover -->
+      </div><!-- col-6 -->
+    </div>
+  </div>
+</div>
+<div class="example border-top-0">
+  <div class="pd-20 bg-gray-200">
+    <div class="row row-sm tx-center">
+      <div class="col-sm-6 col-lg-3">
+        <button type="button" class="btn btn-primary" container="body" popoverClass="popover-head-primary" placement="top" popoverTitle="Popover top"
+         ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Click me</button>
+      </div><!-- col-3 -->
+      <div class="col-sm-6 col-lg-3 mg-t-30 mg-sm-t-0">
+        <button type="button" class="btn btn-primary" container="body" popoverClass="popover-head-secondary" placement="bottom" popoverTitle="Popover bottom"
+         ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Click me</button>
+      </div><!-- col-3 -->
+    </div>
+  </div>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="popover3">
+      <div class="card-header pb-0 d-flex justify-content-between align-center">
+        <div>
+          <h6 class="card-title mb-1">DEFAULT POPOVER</h6>
+          <p class="text-muted card-sub-title">Documentation and examples for adding Bootstrap popovers, like those
+            found in iOS, to any element on your site..</p>
+        </div>
+        <div>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+            <span class="custom-control-label" (click)="collapse1.toggle()"
+              [attr.aria-expanded]="!isCollapsed1">showcode</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-wrap">
+          <div class="example">
+            <div class="popover-static-demo">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="popover popover-primary bs-popover-top">
+                    <div class="popover-arrow"></div>
+                    <h3 class="popover-header">Popover top</h3>
+                    <div class="popover-body">
+                      <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia
+                        quam venenatis vestibulum.</p>
+                    </div>
+                  </div><!-- popover -->
+                </div><!-- col-6 -->
+                <div class="col-md-6 mg-t-30 mg-md-t-0">
+                  <div class="popover popover-secondary bs-popover-bottom">
+                    <div class="popover-arrow"></div>
+                    <h3 class="popover-header">Popover Bottom</h3>
+                    <div class="popover-body">
+                      <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia
+                        quam venenatis vestibulum.</p>
+                    </div>
+                  </div><!-- popover -->
+                </div><!-- col-6 -->
+              </div>
+            </div>
+          </div>
+          <div class="example border-top-0">
+            <div class="pd-20 bg-gray-200">
+              <div class="row row-sm tx-center">
+                <div class="col-sm-6 col-lg-3">
+                  <button type="button" class="btn btn-primary" container="body" popoverClass="popover-primary" placement="top" popoverTitle="Popover top"
+                    ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Click me</button>
+                </div><!-- col-3 -->
+                <div class="col-sm-6 col-lg-3 mg-t-30 mg-sm-t-0">
+                  <button type="button" class="btn btn-secondary" container="body"
+                  popoverClass="popover-secondary" placement="bottom" popoverTitle="Popover bottom"
+                    ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Click me</button>
+                </div><!-- col-3 -->
+              </div>
+            </div>
+          </div>
+          <div class="" #collapse1="ngbCollapse" [(ngbCollapse)]="isCollapsed1">
+            <pre>
+<code highlight='<div class="example">
+  <div class="popover-static-demo">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="popover popover-primary bs-popover-top">
+          <div class="popover-arrow"></div>
+          <h3 class="popover-header">Popover top</h3>
+          <div class="popover-body">
+            <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia
+              quam venenatis vestibulum.</p>
+          </div>
+        </div><!-- popover -->
+      </div><!-- col-6 -->
+      <div class="col-md-6 mg-t-30 mg-md-t-0">
+        <div class="popover popover-secondary bs-popover-bottom">
+          <div class="popover-arrow"></div>
+          <h3 class="popover-header">Popover Bottom</h3>
+          <div class="popover-body">
+            <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia
+              quam venenatis vestibulum.</p>
+          </div>
+        </div><!-- popover -->
+      </div><!-- col-6 -->
+    </div>
+  </div>
+</div>
+<div class="example border-top-0">
+  <div class="pd-20 bg-gray-200">
+    <div class="row row-sm tx-center">
+      <div class="col-sm-6 col-lg-3">
+        <button type="button" class="btn btn-primary" container="body" popoverClass="popover-primary" placement="top" popoverTitle="Popover top"
+          ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Click me</button>
+      </div><!-- col-3 -->
+      <div class="col-sm-6 col-lg-3 mg-t-30 mg-sm-t-0">
+        <button type="button" class="btn btn-secondary" container="body"
+        popoverClass="popover-secondary" placement="bottom" popoverTitle="Popover bottom"
+          ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Click me</button>
+      </div><!-- col-3 -->
+    </div>
+  </div>
+</div>'>
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /row -->

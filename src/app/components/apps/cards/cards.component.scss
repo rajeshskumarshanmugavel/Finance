@@ -1,0 +1,16 @@
+::ng-deep{
+    .rtl{
+        app-cards{
+            .card-link+.card-link {
+                margin-right: initial;
+            }
+        }
+    }
+    .text-ellipse{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+    }
+}

@@ -1,0 +1,81 @@
+<div class="page">
+    <div class="page-single">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-lg-6 col-md-8 col-sm-8 col-xs-10 card-sigin-main mx-auto my-auto py-4 justify-content-center">
+                    <div class="card-sigin">
+                         <!-- Demo content-->
+                         <div class="main-card-signin d-md-flex">
+                             <div class="wd-100p"><div class="d-flex mb-4"><a routerLink="/dashboard/dashboard01"><img src="./assets/img/brand/favicon.png" class="sign-favicon ht-40" alt="logo"></a></div>
+                                 <div class="">
+                                    <div class="main-signup-header">
+                                        <h2>Welcome back!</h2>
+                                        <h6 class="font-weight-semibold mb-4">Please sign in to continue.</h6>
+                                        <div class="panel panel-primary">
+                                           <div class="panel-body tabs-menu-body border-0 p-3">
+                                            <form [formGroup]="loginForm">
+                                                <div class="form-group">
+                                                  <p *ngIf="errorMessage > 0" class="text-danger">
+                                                    {{ errorMessage }}
+                                                  </p>
+
+                                                  <p
+                                                    *ngIf="_error"
+                                                    class="text-danger"
+                                                  >
+                                                    {{ _error.message }}
+                                                  </p>
+                                                    <label>Email</label>
+                                                    <input class="form-control" placeholder="Enter your email" type="text" required=""
+                                                    placeholder="app@yourmail.com" formControlName="username" >
+                                                    <div *ngIf="loginForm.controls.email?.touched && loginForm.controls.email.errors?.required"
+                                                    class="text text-danger mt-1">
+                                                        Email is required
+                                                    </div>
+                                                    <div *ngIf="loginForm.controls.email?.touched && loginForm.controls.email.errors?.email"
+                                                    class="text text-danger mt-1">
+                                                        Invalid Email
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Password</label>
+                                                    <input class="form-control" placeholder="Enter your password" type="password" formControlName="password" >
+                                                    <div *ngIf="loginForm.controls.password?.touched && loginForm.controls.password.errors?.required"
+                                                    class="text text-danger mt-1">
+                                                    Password is required
+                                                </div>
+                                                </div><button class="btn btn-primary btn-block" autofocus [class.loader--text]="authService.showLoader"
+                                                [disabled]="!loginForm.valid || authService.showLoader"
+                                                (click)="login()">Sign In</button>
+                                                <div class="mt-4 d-flex mx-auto text-center justify-content-center mb-2">
+                                                    <button (click)="loginGoogle()" class="btn btn-icon me-3" type="button">
+                                                        <span class="btn-inner--icon"> <i class="bx bxl-google tx-18 tx-prime"></i> </span>
+                                                    </button>
+                                                    <button (click)="loginFacebook()" class="btn btn-icon btn-facebook me-3" type="button">
+                                                        <span class="btn-inner--icon"> <i class="bx bxl-facebook tx-18 tx-prime"></i> </span>
+                                                    </button>
+                                                    <button (click)="loginTwitter()" class="btn btn-icon me-3" type="button">
+                                                        <span class="btn-inner--icon"> <i class="bx bxl-twitter tx-18 tx-prime"></i> </span>
+                                                    </button>
+                                                    <button class="btn  btn-icon me-3" type="button">
+                                                        <span class="btn-inner--icon"> <i class="bx bxl-instagram tx-18 tx-prime"></i> </span>
+                                                    </button>
+                                                </div>
+                                             </form>
+                                           </div>
+                                       </div>
+
+                                        <div class="main-signin-footer text-center mt-3">
+                                            <p><a routerLink="/auth/forgot-password" class="mb-3">Forgot password?</a></p>
+                                            <p>Don't have an account? <a routerLink="/auth/register">Create an Account</a></p>
+                                        </div>
+                                    </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>

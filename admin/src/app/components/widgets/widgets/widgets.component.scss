@@ -1,0 +1,11 @@
+.typcn {
+    line-height: 1 !important;
+}
+
+::ng-deep{
+    .dark-theme.rtl
+    { .border-start {
+            border-right: 1px solid #3c3c60 !important;
+        }
+    }
+}
