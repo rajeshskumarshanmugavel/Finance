@@ -40,7 +40,7 @@ const port = 3000;
 var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
-    password : 'Mysql@2012', //'q2m@123'
+    password : 'Finance123@', //'q2m@123'
     database : 'myfinance'
 });
 
@@ -90,7 +90,7 @@ app.post('/api/payments', async (req, res) => {
   }
   try {
       const paymentIntent = await stripe.paymentIntents.create({
-      amount: 1000, 
+      amount: 1000,
       currency: 'usd',
       payment_method: paymentMethodId,
       confirm: true,
@@ -106,7 +106,7 @@ app.post('/api/payments', async (req, res) => {
 });
 
 
-// E-mail 
+// E-mail
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 var transport = nodemailer.createTransport({
@@ -226,12 +226,12 @@ app.get('/api/screen', async (req, res) => {
         for(i = 0; i < results.length; i++) {
           result.push({'id': results[i].ID, 'screenId': 'SCR_' + results[i].ID, 'screenName': results[i].SCREEN_NAME, 'NoScreenId': results[i].NO_SCREEN_ID, 'location': results[i].LOCATION, 'resWidth': results[i].RES_WIDTH, 'resHeight': results[i].RES_HEIGHT, 'width': results[i].WIDTH,'height': results[i].HEIGHT, 'loop': results[i].NUM_LOOPS, 'NoOFscreens': results[i].NO_OF_SCREENS, 'latitude': results[i].LATITUDE, 'longitude': results[i].LONGITUDE, 'mediaType': results[i].MEDIA_TYPE , 'environment':results[i].ENVIRONMENT,'sector':results[i].SECTOR});
             }
-        
+
         res.send(JSON.stringify(result));
     });
   })
-  
-  
+
+
   // Add Screen
   app.post('/api/addscreen', upload.array('imagePaths'), async (req, res) => {
     var screenName = req.body.screenName;
@@ -253,7 +253,7 @@ app.get('/api/screen', async (req, res) => {
     req.files.forEach((file, index) => {
   const customFileName = `screenImage_${index + 1}_${Date.now()}.jpg`;
   const sourcePath = path.join(__dirname, file.path);
-  const destinationPath = path.join(__dirname, 'media/screenImages', customFileName); 
+  const destinationPath = path.join(__dirname, 'media/screenImages', customFileName);
   fs.copyFile(sourcePath, destinationPath, (err) => {
     if (err) throw err;
     console.log('File was copied successfully');
@@ -276,7 +276,7 @@ app.get('/api/screen', async (req, res) => {
     });
   })
 
-  
+
   // Update Screen
   app.post('/api/updatescreen', upload.single('file'), async (req, res) => {
     var id = parseInt(req.body.id);
@@ -294,8 +294,8 @@ app.get('/api/screen', async (req, res) => {
     var mediaType = req.body.mediaType;
     var environment = req.body.environment;
     var sector = req.body.sector;
-  
-    
+
+
     var query = "UPDATE SCREEN SET screen_NAME='" + screenName + "', NO_SCREEN_ID ='" + NoScreenId + "', LOCATION='" + location + "', RES_WIDTH ='" + resWidth + "', RES_HEIGHT ='" + resHeight + "', WIDTH ='" + width + "', HEIGHT ='" + height + "', `NUM_LOOPS` ='" + loop + "', NO_OF_SCREENS='" + NoOFscreens + "', LATITUDE ='" + latitude + "', LONGITUDE ='" + longitude + "', MEDIA_TYPE ='" + mediaType + "', ENVIRONMENT ='" + environment + "', SECTOR ='" + sector + "' WHERE ID=" + id;
     connection.query(query, function (error, results, fields) {
         if (error) {
@@ -306,9 +306,9 @@ app.get('/api/screen', async (req, res) => {
       res.send(JSON.stringify({status: true}));
   });
   })
-        
-  
-  
+
+
+
   // Delete Screen
   app.get('/api/deletescreen', async (req, res) => {
       var id = parseInt(req.query.id);
@@ -321,8 +321,8 @@ app.get('/api/screen', async (req, res) => {
           res.send(JSON.stringify({status: true}));
       });
   })
-  
-  
+
+
 
 // Get Admin Dashboard
 app.get('/api/getAdminDashboardData', async (req, res) => {
@@ -384,7 +384,7 @@ app.get('/api/login', async (req, res) => {
 
     if (result) {
         res.send(JSON.stringify({'status': true, 'authToken': '', 'role': 'advertiser', 'role2': '', 'id': results[0].ID, 'firstName': results[0].FIRSTNAME, 'lastName': results[0].LASTNAME}));
-    } 
+    }
     else {
         connection.query("SELECT ID, PASSWORD, FIRSTNAME, LASTNAME FROM AGENCY WHERE EMAIL='" + req.query.username + "'", function (error, results, fields) {
             if(error) {
@@ -397,7 +397,7 @@ app.get('/api/login', async (req, res) => {
                 var result = bcrypt.compareSync(req.query.password, results[0].PASSWORD);
                 if (result) {
                     res.send(JSON.stringify({'status': true, 'authToken': '', 'role': 'agency', 'role2': '', 'id': results[0].ID, 'firstName': results[0].FIRSTNAME, 'lastName': results[0].LASTNAME}));
-                } 
+                }
                 else {
                     res.send(JSON.stringify({'status': false}));
                 }
@@ -409,12 +409,12 @@ app.get('/api/login', async (req, res) => {
                       res.send(JSON.stringify({status: false}));
                       return;
                   }
-      
+
                   if(results.length > 0) {
                       var result = bcrypt.compareSync(req.query.password, results[0].PASSWORD);
                       if (result) {
                           res.send(JSON.stringify({'status': true, 'authToken': '', 'role': 'networkowner', 'role2': '', 'id': results[0].ID, 'firstName': results[0].FIRSTNAME, 'lastName': results[0].LASTNAME}));
-                      } 
+                      }
                       else {
                           res.send(JSON.stringify({'status': false}));
                       }
@@ -445,7 +445,7 @@ app.get('/api/adminlogin', async (req, res) => {
 
       if (result) {
           res.send(JSON.stringify({'status': true, 'authToken': '', 'role': results[0].ROLE, 'role2': results[0].ROLE2, 'id': results[0].ID, 'firstName': results[0].FIRSTNAME, 'lastName': results[0].LASTNAME}));
-      } 
+      }
       else {
           connection.query("SELECT ID, PASSWORD, FIRSTNAME, LASTNAME FROM STAFF WHERE EMAIL='" + req.query.username + "'", function (error, results, fields) {
               if(error) {
@@ -458,7 +458,7 @@ app.get('/api/adminlogin', async (req, res) => {
                   var result = bcrypt.compareSync(req.query.password, results[0].PASSWORD);
                   if (result) {
                       res.send(JSON.stringify({'status': true, 'authToken': '', 'role': 'staff', 'role2': '', 'id': results[0].ID, 'firstName': results[0].FIRSTNAME, 'lastName': results[0].LASTNAME}));
-                  } 
+                  }
                   else {
                       res.send(JSON.stringify({'status': false}));
                   }
@@ -526,8 +526,8 @@ app.post('/api/updateadvertiser', upload.single('file'), async (req, res) => {
   var mobile = req.body.mobile;
   var address = req.body.address;
   var postcode = req.body.postcode;
-  
-  var query = "UPDATE ADVERTISER SET FIRSTNAME='" + firstName + "', LASTNAME='" + lastName + "', COMPANY_TYPE='" + companyType + "', COMPANY_NAME='" + companyName + "', REG_NO='" + regNumber + "', VAT_NO='" + vatNumber + "', EMAIL='" + email + 
+
+  var query = "UPDATE ADVERTISER SET FIRSTNAME='" + firstName + "', LASTNAME='" + lastName + "', COMPANY_TYPE='" + companyType + "', COMPANY_NAME='" + companyName + "', REG_NO='" + regNumber + "', VAT_NO='" + vatNumber + "', EMAIL='" + email +
                    "', LANDLINE='" + landline  + "', MOBILE='" + mobile + "', ADDRESS='" + address + "', POSTCODE='" + postcode + "' WHERE ID=" + id;
   connection.query(query, function (error, results, fields) {
       if (error) {
@@ -596,7 +596,7 @@ app.post('/api/updatestaff', upload.single('file'), async (req, res) => {
     var phone = req.body.phone;
     var address = req.body.address;
 
-    var query = "UPDATE STAFF SET FIRSTNAME='" + firstName + "', LASTNAME='" + lastName + "', EMAIL='" + email + 
+    var query = "UPDATE STAFF SET FIRSTNAME='" + firstName + "', LASTNAME='" + lastName + "', EMAIL='" + email +
                     "', PHONE='" + phone  + "', ADDRESS='" + address + "' WHERE ID=" + id;
     connection.query(query, function (error, results, fields) {
         if (error) {
@@ -679,8 +679,8 @@ app.post('/api/updateagency', upload.single('file'), async (req, res) => {
   var mobile = req.body.mobile;
   var address = req.body.address;
   var postcode = req.body.postcode;
-  
-  var query = "UPDATE AGENCY SET FIRSTNAME='" + firstName + "', LASTNAME='" + lastName + "', COMPANY_TYPE='" + companyType + "', COMPANY_NAME='" + companyName + "', REG_NO='" + regNumber + "', VAT_NO='" + vatNumber + "', EMAIL='" + email + 
+
+  var query = "UPDATE AGENCY SET FIRSTNAME='" + firstName + "', LASTNAME='" + lastName + "', COMPANY_TYPE='" + companyType + "', COMPANY_NAME='" + companyName + "', REG_NO='" + regNumber + "', VAT_NO='" + vatNumber + "', EMAIL='" + email +
                    "', LANDLINE ='" + landline  + "', MOBILE='" + mobile + "', ADDRESS='" + address + "', POSTCODE='" + postcode + "' WHERE ID=" + id;
   connection.query(query, function (error, results, fields) {
       if (error) {
@@ -759,8 +759,8 @@ app.post('/api/updatenetworkowner', upload.single('file'), async (req, res) => {
   var mobile = req.body.mobile;
   var address = req.body.address;
   var postcode = req.body.postcode;
-  
-  var query = "UPDATE NETWORKOWNER SET FIRSTNAME='" + firstName + "', LASTNAME='" + lastName + "', COMPANY_TYPE='" + companyType + "', COMPANY_NAME='" + companyName + "', REG_NO='" + regNumber + "', VAT_NO='" + vatNumber + "', EMAIL='" + email + 
+
+  var query = "UPDATE NETWORKOWNER SET FIRSTNAME='" + firstName + "', LASTNAME='" + lastName + "', COMPANY_TYPE='" + companyType + "', COMPANY_NAME='" + companyName + "', REG_NO='" + regNumber + "', VAT_NO='" + vatNumber + "', EMAIL='" + email +
                    "', LANDLINE ='" + landline  + "', MOBILE ='" + mobile + "', ADDRESS='" + address + "', POSTCODE='" + postcode + "' WHERE ID=" + id;
   connection.query(query, function (error, results, fields) {
       if (error) {
@@ -803,7 +803,7 @@ connection.query('SELECT ID, NAME FROM '  + Option  , function (error, results, 
 app.post('/api/addmaster', upload.single('file'), async (req, res) => {
   var Option = req.query.selectedOption;
   var Name = req.body.Name;
-  
+
   var values = "'" + Name + "'";
 if (Option === 'industrytype') {
   connection.query("INSERT INTO " + Option +"(NAME) VALUES(" + values + ")", function (error, results, fields) {
@@ -814,7 +814,7 @@ if (Option === 'industrytype') {
     }
     res.send(JSON.stringify({status: true}));
 });
-   
+
   } else if (Option === 'networktype') {
     connection.query("INSERT INTO " + Option +"(NAME) VALUES(" + values + ")", function (error, results, fields) {
       if (error) {
@@ -824,7 +824,7 @@ if (Option === 'industrytype') {
       }
       res.send(JSON.stringify({status: true}));
   });
- 
+
   }
   else {
     res.status(400).send({ error: 'Invalid option' });
@@ -834,7 +834,7 @@ if (Option === 'industrytype') {
 //Update Master
 app.post('/api/updatemaster', upload.single('file'), async (req, res) => {
   var Option = req.query.selectedOption;
- 
+
   var id = parseInt(req.body.id);
    var Name = req.body.Name;
 
@@ -848,7 +848,7 @@ if (Option === 'industrytype') {
         }
         res.send(JSON.stringify({status: true}));
     });
-   
+
   } else if (Option === 'networktype') {
     var query = "UPDATE "   + Option +  " SET NAME='" + Name + "' WHERE ID=" + id;
     connection.query(query, function (error, results, fields) {
@@ -859,7 +859,7 @@ if (Option === 'industrytype') {
         }
         res.send(JSON.stringify({status: true}));
     });
- 
+
   }
   else {
     res.status(400).send({ error: 'Invalid option' });
@@ -874,7 +874,7 @@ app.get('/api/deletemaster', async (req, res) => {
   var id = parseInt(req.query.id);
     // console.log('Deleted ID:', id);
     if (Option === 'industrytype') {
-      
+
     connection.query("DELETE FROM " + Option + " WHERE ID  = " + id, function (error, results, fields) {
         if (error) {
             console.log(error);
@@ -892,7 +892,7 @@ app.get('/api/deletemaster', async (req, res) => {
       }
       res.send(JSON.stringify({status: true}));
   });
- 
+
   }
   else {
     res.status(400).send({ error: 'Invalid option' });
@@ -907,8 +907,8 @@ app.get('/api/deletemaster', async (req, res) => {
    if (!req.file ) {
       return res.status(400).send('No file uploaded.');
     }
- 
-  const filename = req.file.filename;  
+
+  const filename = req.file.filename;
   const sourcePath = path.join(__dirname, './upload', filename);  // Source file path
   const destinationPath = path.join(__dirname, './media/userguide/userguide.pdf');      // Destination file path
 
@@ -919,10 +919,10 @@ app.get('/api/deletemaster', async (req, res) => {
         return;
         }
     res.send(JSON.stringify({status: true}));
-  
+
     });
 });
- 
+
 
 //Upload Picture or Video
 
@@ -931,7 +931,7 @@ app.get('/api/deletemaster', async (req, res) => {
         if (!req.file ) {
           return res.status(400).send('No file uploaded.');
         }
-       const filename = req.file.filename;  
+       const filename = req.file.filename;
 
       // Determine custom filename prefix based on MIME type
       let prefix = '';
@@ -944,17 +944,17 @@ app.get('/api/deletemaster', async (req, res) => {
         res.send(JSON.stringify({status: false}));
       }
       const customFilename = `${prefix}_${Date.now()}_${req.file.originalname}`;
-      const sourcePath = path.join(__dirname, './upload', filename);  
-      const destinationPath = path.join(__dirname, './media/template/',customFilename);     
+      const sourcePath = path.join(__dirname, './upload', filename);
+      const destinationPath = path.join(__dirname, './media/template/',customFilename);
         fs.copyFile(sourcePath, destinationPath, (err) => {
           if(err) {
             res.send(JSON.stringify({status: false}));
             return;
             }
         res.send(JSON.stringify({status: true}));
-      
+
         });
-   
+
 });
 
 //Add Register
@@ -1025,9 +1025,9 @@ app.post('/api/approve-registration', upload.single('file'), async (req, res) =>
   const password = await bcrypt.hash(plainPassword, 10);
   console.log("PASSWORD:", password);
  // var password ="123";
- 
+
   var values = "'" + firstName + "','" + lastName + "','" + companyType + "','" + companyName + "','" + regNumber + "','" + vatNumber + "','" + email + "','" + landline + "','" + mobile + "','" + address + "','" + postcode + "','" + password + "', 1";
-  
+
   if (userType === 'Advertiser') {
   connection.query("INSERT INTO ADVERTISER(FIRSTNAME, LASTNAME, COMPANY_TYPE, COMPANY_NAME, REG_NO, VAT_NO, EMAIL, LANDLINE, MOBILE, ADDRESS, POSTCODE, PASSWORD, INDUSTRY_TYPE) VALUES(" + values + ")", function (error, results, fields) {
       if (error) {
@@ -1073,8 +1073,8 @@ else {
 
 app.get('/api/orders', async (req, res) => {
   const result = [];
-  const query = `SELECT 
-      ORDERID, ORDERNUMBER, ORDERDATE, CUSTOMERID, PRODUCTID, PRODUCTNAME, QUANTITY, UNITCOST, LINETOTAL, TAXAMOUNT, LINETOTALWITHTAX, TOTALAMOUNT, DISCOUNTAMOUNT, TAXAMOUNTORDER, PAYMENTMETHOD, PAYMENTSTATUS, STATUS, 
+  const query = `SELECT
+      ORDERID, ORDERNUMBER, ORDERDATE, CUSTOMERID, PRODUCTID, PRODUCTNAME, QUANTITY, UNITCOST, LINETOTAL, TAXAMOUNT, LINETOTALWITHTAX, TOTALAMOUNT, DISCOUNTAMOUNT, TAXAMOUNTORDER, PAYMENTMETHOD, PAYMENTSTATUS, STATUS,
       CREATEDAT, UPDATEDAT   FROM    ORDERS`;
 
   connection.query(query, function (error, results, fields) {
